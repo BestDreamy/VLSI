@@ -1,7 +1,8 @@
 `timescale 1ns / 1ps
-modudle multiplier_tb;
 
-wire[3: 0] a, b;
+module multiplier_tb();
+
+reg[3: 0] a, b;
 wire[7: 0] z;
 
 multiplier multiplier_ins(

@@ -1,0 +1,8 @@
+*design* DebussyLib (btIdent Verdi_Q-2020.03)
+Command arguments:
+    +define+verilog
+    sim.fsdb
+
+*Error* no source file
+
+Total	1 error(s),   0 warning(s)

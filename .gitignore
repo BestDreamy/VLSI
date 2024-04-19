@@ -3,3 +3,4 @@
 !*.v
 !*.py
 !.gitignore
+!*.rpt

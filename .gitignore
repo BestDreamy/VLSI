@@ -4,5 +4,6 @@
 !*.py
 !*.rpt
 !*.log
+!*.svf
 !.gitignore
 !README.md

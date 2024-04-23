@@ -5,5 +5,6 @@
 !*.rpt
 !*.log
 !*.svf
+!*.tcl
 !.gitignore
 !README.md

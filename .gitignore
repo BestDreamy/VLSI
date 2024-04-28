@@ -6,5 +6,7 @@
 !*.log
 !*.svf
 !*.tcl
+!*.fsdb
+!*.sdf
 !.gitignore
 !README.md

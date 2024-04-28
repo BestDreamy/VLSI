@@ -19,7 +19,7 @@ create_clock -name "clk" -period 2 -waveform {0 1} {clk}
 # change_selection [get_s { {data[2]} {data[1]} {data[0]} {data[3]} {4_pins(data[], ...)} }] 
 # change_selection -add [get_s a_en]
 # change_selection -add [get_s b_en]
-set input "a[0] a[1] a[2] a[3] b[0] b[1] b[2] b[3]"
+set input "data[0] data[1] data[2] data[3] a_en b_en"
 set_input_delay -clock clk -max -rise 1   $input 
 set_input_delay -clock clk -max -fall 1   $input
 set_input_delay -clock clk -min -rise 0.2 $input

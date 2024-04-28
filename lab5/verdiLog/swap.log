@@ -1,0 +1,42 @@
+version: (200506)
+
+available memory: 64M bytes
+used memory: 229376 bytes [need 224K bytes if disable swap]
+
+used block: 14 [memory(14) file(0)]
+                 [ 8K(12) 64K(2) { total 224K bytes } ]
+overhead: (9522) bytes for (14) blocks [Average: (680) bytes/block]
+
+write  => 0(times) 0K(bytes) [0K bytes to file]
+read   => 2(times) 64K(bytes) [9K bytes compressed data from file]
+access => 520662(times) 4078M(bytes)
+          [hit ratio: 99.9996%]
+
+time: write(0) read(0)  unit: second
+
+swap file directory: (/home/user001/vlsi/lab5/verdiLog)
+used swap file number: (3)
+
+
+
+swap file manager:
+arrSize: (256)
+idxCnt: (4)
+closeHead: (1)
+closeTail: (3)
+openCnt: (3)
+fid(3): fd(1073741825) fileName(/home/user001/vlsi/lab5/simv.daidir/kdb.elab++/work.lib++/multiplier_netlist.v.tdc)
+	size(10813) lastModTime(1714307998) curModTime(1714307998)
+	mode(rb)	hot(0) cool(2) pos(0)
+fid(2): fd(27) fileName(/home/user001/vlsi/lab5/verdiLog/_swap_0001#8323328#100064)
+	size(0) lastModTime(0) curModTime(1714308033)
+	mode(w+b)	hot(3) cool(1) pos(0)
+fid(1): fd(1073741824) fileName(/home/user001/vlsi/lab5/simv.daidir/kdb.elab++/work.lib++/tb.v.tdc)
+	size(2115) lastModTime(1714307998) curModTime(1714307998)
+	mode(rb)	hot(2) cool(0) pos(0)
+fid(0): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+==================================================
+mySelf(1629f150) pre(16290a70) next(0)
+version(200506)
+date(Feb 11 2019 22:10:27)

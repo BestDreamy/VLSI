@@ -1,0 +1,3 @@
+Command Line: /home/tools/synopsys/verdi/Q-2020.03/platform/LINUXAMD64/bin/Novas -ssf sim.fsdb
+uname(Linux 2024-vlsi-22 3.10.0-1160.24.1.el7.x86_64 #1 SMP Thu Apr 8 19:51:47 UTC 2021 x86_64)
+au time 128.024402 17.990458 3.866018 delta 222253056 222253056 total 668225536 668225536

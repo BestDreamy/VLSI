@@ -19,10 +19,55 @@ rst = 0;
 end
 
 initial begin
+#15
+a_en = 1; b_en = 0; data = 1;
+#5
+a_en = 0; b_en = 1; data = 2;
+
+#5
+a_en = 1; b_en = 0; data = 1;
+#5
+a_en = 0; b_en = 1; data = 3;
+
+#5
+a_en = 1; b_en = 0; data = 1;
+#5
+a_en = 0; b_en = 1; data = 4;
+
+#5
+a_en = 1; b_en = 0; data = 1;
+#5
+a_en = 0; b_en = 1; data = 5;
+
+#5
+a_en = 1; b_en = 0; data = 1;
+#5
+a_en = 0; b_en = 1; data = 6;
+
+#5
+a_en = 1; b_en = 0; data = 1;
+#5
+a_en = 0; b_en = 1; data = 7;
+
+#5
+a_en = 1; b_en = 0; data = 1;
+#5
+a_en = 0; b_en = 1; data = 8;
+
+#5
+a_en = 1; b_en = 0; data = 1;
+#5
+a_en = 0; b_en = 1; data = 9;
+
+#5
+a_en = 1; b_en = 0; data = 2;
+#5
+a_en = 0; b_en = 1; data = 2;
+$finish;
 end
 
 initial begin
-	$sdf_annotate("./syn/post/multiplier.sdf", multiplier);
+	$sdf_annotate("./syn/dc/multiplier.sdf", multiplier_tb);
 end
 
 multiplier_tb multiplier_tb_ins(

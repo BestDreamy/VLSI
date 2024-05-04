@@ -1,0 +1,64 @@
+# Set Designer
+set company {ShanghaiTech}
+
+# /home/user001/lab6/lab6_code_scripts
+set std_path        "/home/user001/vlsi/lab6/lab6_hw_lib/M31_db"
+set sram_path       "/home/user001/vlsi/lab6/lab6_hw_lib/db"
+set std_max         "M31GPSC900HL055PR_125CSS1P08_cworst_ccs.db"
+set std_min         "M31GPSC900HL055PR_N40CFF1P32_cbest_ccs.db"
+set sram_min_1024   "mem55lpw1024d16sp_ff1p32vn40c.db"
+set sram_max_1024   "mem55lpw1024d16sp_ss1p08v125c.db"
+set sram_min_256    "mem55lpw256d16sp_ff1p32vn40c.db"
+set sram_max_256    "mem55lpw256d16sp_ss1p08v125c.db"
+
+# Set File Direction
+set my_lib_path " $sram_path $std_path"
+set search_path "$search_path $my_lib_path"
+set search_path "$search_path /home/tools/synopsys/syn/O-2018.06-SP5-2/dw/dw01/lib/dw01"
+
+set design_dw_lib /home/tools/synopsys/syn/O-2018.06-SP5-2/libraries/syn/dw_foundation.sldb
+
+# Define the target logic library, symbol library and link library
+set_app_var target_library  "$std_max"
+set_app_var link_library "* $sram_max_256 $sram_max_1024 $std_max $design_dw_lib"
+set_app_var synthetic_library  "$std_max $design_dw_lib"
+set_app_var symbol_library ""
+# Synopsys Lib
+#
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#  History
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# history keep 200
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#  Aliases
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+alias h history
+alias rc "report_constraint -all_violators"
+alias rt report_timing
+alias ra report_area
+alias rq report_qor
+alias page_on {set sh_enable_page_mode true}
+alias page_off {set sh_enable_page_mode false}
+alias fr "remove_design -designs"
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# Verify Settings
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+echo "\n=================================================================="
+echo "\nLibrary Settings:"
+echo "search_path:             $search_path"
+echo "link_library:            $link_library"
+echo "target_library:          $target_library"
+echo "symbol_library:          $symbol_library"
+echo "\n=================================================================="
+
+echo "\nI am ready...\n"
+
+

@@ -8,5 +8,6 @@
 !*.tcl
 !*.fsdb
 !*.sdf
+!.synopsys_dc.setup
 !.gitignore
 !README.md

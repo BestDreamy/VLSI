@@ -1,0 +1,75 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mmForMLP
+Version: O-2018.06-SP5-2
+Date   : Sat May  4 17:49:59 2024
+****************************************
+
+Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_ccs
+Wire Load Model Mode: enclosed
+
+  Startpoint: memForWeight_0/ram1rw_4/ram
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: partialSum_reg[22]
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: Int_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mmForMLP           MW0K                  M31GPSC900HL055PR_125CSS1P08_cworst_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock Int_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.55       0.55
+  memForWeight_0/ram1rw_4/ram/CLK (mem55lpw1024d16sp)     0.00       0.55 r
+  memForWeight_0/ram1rw_4/ram/Q[4] (mem55lpw1024d16sp)
+                                                          1.58       2.13 f
+  U2150/O (NAND2X6AR9)                                    0.05       2.18 r
+  U839/O (INVX4AR9)                                       0.04       2.21 f
+  U568/O (NOR2X1AR9)                                      0.06       2.27 r
+  U999/O (AND2X1AR9)                                      0.09       2.36 r
+  U1660/O (NOR2X2AR9)                                     0.04       2.40 f
+  U1652/O (NAND2X2AR9)                                    0.03       2.43 r
+  U2033/O (NAND2X2AR9)                                    0.05       2.47 f
+  U489/O (AOI12X1AR9)                                     0.09       2.57 r
+  U460/O (NOR2X2AR9)                                      0.05       2.62 f
+  U453/O (OAI12X1AR9)                                     0.05       2.66 r
+  U1506/O (INVX1AR9)                                      0.05       2.71 f
+  U1482/O (OAI12X1IAR9)                                   0.05       2.76 r
+  U419/O (NAND2X1AR9)                                     0.07       2.84 f
+  U716/O (CLKXNOR2X1AR9)                                  0.14       2.98 r
+  U2183/O (CLKXNOR2X1AR9)                                 0.15       3.13 f
+  U386/O (OAI12X1IAR9)                                    0.07       3.20 r
+  U2185/O (NAND2X2AR9)                                    0.06       3.26 f
+  U1928/O (NOR2X2OAR9)                                    0.07       3.34 r
+  U374/O (NOR2X1OAR9)                                     0.05       3.39 f
+  U687/O (NAND2X2AR9)                                     0.04       3.43 r
+  U1259/O (NOR2X2OAR9)                                    0.03       3.46 f
+  U1455/O (NAND2X4AR9)                                    0.04       3.50 r
+  U1833/O (NAND2X8OAR9)                                   0.05       3.55 f
+  U2067/O (AOI12X2AR9)                                    0.06       3.61 r
+  U2409/O (CLKXNOR2X1AR9)                                 0.14       3.75 f
+  U2408/O (OAI12X2IAR9)                                   0.05       3.79 r
+  partialSum_reg[22]/D (DFFRBQBX4J1AR9)                   0.00       3.79 r
+  data arrival time                                                  3.79
+
+  clock Int_clk (rise edge)                               3.00       3.00
+  clock network delay (ideal)                             0.55       3.55
+  clock uncertainty                                      -0.50       3.05
+  partialSum_reg[22]/CK (DFFRBQBX4J1AR9)                  0.00       3.05 r
+  library setup time                                     -0.01       3.04
+  data required time                                                 3.04
+  --------------------------------------------------------------------------
+  data required time                                                 3.04
+  data arrival time                                                 -3.79
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.76
+
+
+1

@@ -323,27 +323,25 @@ argv[0]=./simv
 312 pliAppHDL_DumpVarComplete: profile - 
           CPU/Mem usage: 0.080 sys,  0.290 user,  303.94M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.000 sys,  0.000 user,  8.89M mem
-              accu incr: 0.000 sys,  0.000 user,  1.05M mem
-
-          Count usage: 113 var,  128 idcode,  121 callback
-                 incr: 0 var,  0 idcode,  0 callback
-                 accu: 113 var,  128 idcode,  121 callback
-            accu incr: 0 var,  0 idcode,  0 callback
-313 Elapsed time:    0:00:05    Sun Apr 28 20:40:17 2024
-314 End of simulation at 100000
-315 Elapsed time:    0:00:05    Sun Apr 28 20:40:17 2024
-316 Begin FSDB profile info:
-317 FSDB Writer : bc1(627) bcn(18) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.006092) io wait(0.000000) theadpool wait(0.000000)
+                   accu: 0.000 sy311 End of simulation at 830294778000
+312 Elapsed time:    0:08:58    Sun Apr 28 20:45:13 2024
+313 Begin FSDB profile info:
+314 FSDB Writer : bc1(830295334) bcn(18) mtf/stf(0/4)
+FSDB Writer elapsed time : flush(0.022549) io wait(0.000000) theadpool wait(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-318 End FSDB profile info
-319 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
-320                      - BlockUsed:1 Acquire:883 BufferUsed:10579
-321                      - Flush:3 Expand:0 ProducerWait:0 ConsumerWait:0
-322                      - MainProducerTime:0.393087999 TotalConsumerTime:0.000000000
-323                      - ElapsedTime:5.072617000
-324 Producer   0 profile - BlockUsed:1 Acquire:883 BufferUsed:10579
+315 End FSDB profile info
+316 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
+317                      - BlockUsed:7326 Acquire:1245442953 BufferUsed:14115020750
+318                      - Flush:3 Expand:0 ProducerWait:0 ConsumerWait:7261
+319                      - MainProducerTime:140.773311047 TotalConsumerTime:92.386389538
+320                      - ElapsedTime:537.149424000
+321 Producer   0 profile - BlockUsed:7326 Acquire:1245442953 BufferUsed:14115020750
+322 Consumer   0 profile - Affinity:-1 CPUTime:92.386389538 LifeTime:537.057541304 (0.17%)
+323                      - BlockUsed:7326 Acquire:1245442953 BufferUsed:14115020750
+324 SimExit
+325 Elapsed time:    0:08:58    Sun Apr 28 20:45:13 2024
+326 Sim process exit
+ profile - BlockUsed:1 Acquire:883 BufferUsed:10579
 325 Consumer   0 profile - Affinity:-1 CPUTime:0.000000000 LifeTime:0.000000000 (-nan%)
 326                      - BlockUsed:1 Acquire:883 BufferUsed:10579
 327 SimExit

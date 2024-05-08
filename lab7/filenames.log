@@ -358,3 +358,6 @@
 /home/user001/vlsi/lab6/lab6_hw_lib/tlup/HLMC_cl055lp_1p7m_1tm4x_rcworst.tlup
 /home/user001/vlsi/lab6/lab6_hw_lib/tlup/HLMC_cl055lp_1p7m_1tm4x_rcbest.tlup
 /home/user001/vlsi/lab6/lab6_hw_lib/tech2itf
+/home/user001/vlsi/lab7/mmForMLP.mwlib
+/home/user001/vlsi/lab7/scripts/pin_guide.tcl
+/home/user001/vlsi/lab7/scripts/power.tcl

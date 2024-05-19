@@ -13,8 +13,8 @@ if {![file exists ${report_dir}]} {
 set mw_design_lib ${topLevel}.mwlib
 
 set mw_tech_file ${work_path}/lab6_hw_lib/HL055P_7M6X1T4_RDL.tf
-set tluplus_max  ${work_path}/lab6_hw_lib/tlup/HLMC_cl055lp_1p7m_1tm4x_rcworst.tlup
-set tluplus_min  ${work_path}/lab6_hw_lib/tlup/HLMC_cl055lp_1p7m_1tm4x_rcbest.tlup
+set tluplus_max /home/user001/vlsi/lab8/tlup_new/HLMC_cl055lp_1p7m_1tm4x_rcworst.tlup
+set tluplus_min /home/user001/vlsi/lab8/tlup_new/HLMC_cl055lp_1p7m_1tm4x_rcbest.tlup
 set tech2itf_map ${work_path}/lab6_hw_lib/tech2itf
 
 set mw_phys_refs ""

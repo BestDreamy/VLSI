@@ -31,3 +31,6 @@ create_power_straps -direction vertical -nets GNDK -layer M4 -width 1.0 -start_a
 
 create_power_straps -direction horizontal  -nets VCCK -layer M5 -width 1.0 -start_at 0.00 -step 10 -stop 490.0 -configure step_and_stop
 create_power_straps -direction horizontal  -nets GNDK -layer M5 -width 1.0 -start_at 5.00 -step 10 -stop 500.0 -configure step_and_stop
+
+
+save_mw_cel -as lab7

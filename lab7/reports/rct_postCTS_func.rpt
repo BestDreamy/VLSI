@@ -1,0 +1,73 @@
+ 
+****************************************
+Report : clock tree
+Design : mmForMLP
+Version: O-2018.06-SP5-3
+Date   : Sun May 19 22:32:23 2024
+****************************************
+
+Information: Float pin scale factor for the 'max' operating condition of scenario 'default' is set to 1.000 (CTS-375)
+
+============ Global Skew Report ================
+
+Clock Tree Name                : "Int_clk"
+Clock Period                   : 3.00000        
+Clock Tree root pin            : "clk"
+Number of Levels               : 5
+Number of Sinks                : 62
+Number of CT Buffers           : 33
+Number of CTS added gates      : 0
+Number of Preexisting Gates    : 0
+Number of Preexisting Buf/Inv  : 0
+Total Number of Clock Cells    : 33
+Total Area of CT Buffers       : 183.92401      
+Total Area of CT cells         : 183.92401      
+Max Global Skew                : 0.00855   
+Number of MaxTran Violators    : 0
+Number of MaxCap Violators     : 0
+Number of MaxFanout Violators  : 0
+
+
+Operating Condition               worst
+Clock global Skew                 0.009
+Longest path delay                0.168
+Shortest path delay               0.159
+
+The longest path delay end pin: partialSum_reg[27]/CK
+The shortest path delay end pin: memForAorB_1/ram1rw_4/ram/CLK
+
+The longest Path:
+Pin                                         Cap       Fanout    Trans     Incr      Arri
+----------------------------------------------------------------------------------------------------
+clk                                         0.000            1  0.000     0.000     0.000     r
+clk                                         0.076            4  0.000     0.000     0.000     r
+CLKINVX3AR9_G1B1I4/I                        0.076            1  0.019     0.008     0.008     r
+CLKINVX3AR9_G1B1I4/O                        0.017            1  0.034     0.029     0.037     f
+CLKINVX12AR9_G1B2I5_1/I                     0.017            1  0.034     0.001     0.038     f
+CLKINVX12AR9_G1B2I5_1/O                     0.027            2  0.040     0.034     0.072     r
+CLKINVX12AR9_G1B3I5/I                       0.027            1  0.040     0.001     0.074     r
+CLKINVX12AR9_G1B3I5/O                       0.025            1  0.041     0.037     0.111     f
+CLKINVX12AR9_G1B4I4/I                       0.025            1  0.042     0.004     0.115     f
+CLKINVX12AR9_G1B4I4/O                       0.025            6  0.065     0.050     0.165     r
+partialSum_reg[27]/CK                       0.025            0  0.065     0.003     0.168     r
+[clock delay]                                                                       0.168
+----------------------------------------------------------------------------------------------------
+
+The Shortest Path:
+Pin                                         Cap       Fanout    Trans     Incr      Arri
+----------------------------------------------------------------------------------------------------
+clk                                         0.000            1  0.000     0.000     0.000     r
+clk                                         0.076            4  0.000     0.000     0.000     r
+CLKINVX12AR9_G1B1I2_1/I                     0.076            1  0.003     0.001     0.001     r
+CLKINVX12AR9_G1B1I2_1/O                     0.040            2  0.037     0.023     0.024     f
+CLKINVX12AR9_G1B2I1_1/I                     0.040            1  0.038     0.003     0.027     f
+CLKINVX12AR9_G1B2I1_1/O                     0.027            1  0.042     0.036     0.063     r
+CLKINVX12AR9_G1B3I1/I                       0.027            1  0.043     0.004     0.066     r
+CLKINVX12AR9_G1B3I1/O                       0.043            2  0.045     0.040     0.107     f
+CLKINVX16AR9_G1B4I12/I                      0.043            1  0.046     0.003     0.109     f
+CLKINVX16AR9_G1B4I12/O                      0.035            1  0.054     0.043     0.152     r
+memForAorB_1/ram1rw_4/ram/CLK               0.035            0  0.056     0.007     0.159     r
+[clock delay]                                                                       0.159
+----------------------------------------------------------------------------------------------------
+
+1

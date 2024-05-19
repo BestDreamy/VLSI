@@ -1,0 +1,56 @@
+ 
+****************************************
+Report : clock tree
+Design : mmForMLP
+Version: O-2018.06-SP5-3
+Date   : Sun May 19 22:32:15 2024
+****************************************
+
+
+============ Global Skew Report ================
+
+Clock Tree Name                : "Int_clk"
+Clock Period                   : 3.00000        
+Clock Tree root pin            : "clk"
+Number of Levels               : 1
+Number of Sinks                : 62
+Number of CT Buffers           : 0
+Number of CTS added gates      : 0
+Number of Preexisting Gates    : 0
+Number of Preexisting Buf/Inv  : 0
+Total Number of Clock Cells    : 0
+Total Area of CT Buffers       : 0.00000        
+Total Area of CT cells         : 0.00000        
+Max Global Skew                : 0.00000   
+Number of MaxTran Violators    : 0
+Number of MaxCap Violators     : 0
+Number of MaxFanout Violators  : 1
+
+
+Operating Condition               worst
+Clock global Skew                 0.000
+Longest path delay                0.000
+Shortest path delay               0.000
+
+The longest path delay end pin: memForWeight_0/ram1rw_4/ram/CLK
+The shortest path delay end pin: memForWeight_0/ram1rw_4/ram/CLK
+
+The longest Path:
+Pin                                         Cap       Fanout    Trans     Incr      Arri
+----------------------------------------------------------------------------------------------------
+clk                                         0.000            1  0.000     0.000     0.000     r
+clk                                         0.106           62  0.000     0.000     0.000     r
+memForWeight_0/ram1rw_4/ram/CLK             0.106            0  0.000     0.000     0.000     r
+[clock delay]                                                                       0.000
+----------------------------------------------------------------------------------------------------
+
+The Shortest Path:
+Pin                                         Cap       Fanout    Trans     Incr      Arri
+----------------------------------------------------------------------------------------------------
+clk                                         0.000            1  0.000     0.000     0.000     r
+clk                                         0.106           62  0.000     0.000     0.000     r
+memForWeight_0/ram1rw_4/ram/CLK             0.106            0  0.000     0.000     0.000     r
+[clock delay]                                                                       0.000
+----------------------------------------------------------------------------------------------------
+
+1

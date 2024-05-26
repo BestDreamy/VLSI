@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running icc_shell Version O-2018.06-SP5-3 for linux64 -- Jun 06, 2019
-#@ # Date:   Sun May 19 22:16:24 2024
+#@ # Date:   Sun May 26 22:33:04 2024
 #@ # Run by: user001@2024-vlsi-22
 #@ 
 
@@ -39441,7 +39441,7 @@ source scripts/icc_setup.tcl
 
 #@ 
 #@ remove_sdc
-#@ # GUI Debug: Building dc from empty. -- Time: 2sec 3ms
+#@ # GUI Debug: Building dc from empty. -- Time: 2sec 70ms
 
 #@ source $mw_sdc
 #@ # -- Starting source /home/user001/vlsi/lab6/dc_output/mmForMLP.sdc
@@ -39574,187 +39574,83 @@ win_set_select_class -visible {cell port plan_group block_shielding plangroup_pa
 win_set_filter -class cell -filter {cell_array cell_cover hard_macro_margin hard_margin route_blockage_margin soft_margin}
 win_set_filter -class placement_blockage -filter {wiring} -layer {}
 win_set_select_class {cell port plan_group group shape via placement_blockage }
-::iccGUI::open_mw_cel  lab7
-open_mw_cel lab7
-source scripts/place.tcl
-#@ # -- Starting source scripts/place.tcl
+::iccGUI::open_mw_cel  placement
+open_mw_cel placement
+source scripts/fixhold.tcl
+#@ # -- Starting source scripts/fixhold.tcl
 
-#@ set_attribute [all_macro_cells ] is_fixed true
-#@ set_attribute [all_macro_cells ] is_placed true
-#@ 
-#@ check_tlu_plus_files
-#@ # GUI Debug: Building dc from empty. -- Time: 255ms
-
-#@ 
-#@ set clock_nets [get_net -of [all_fanout -flat -clock_tree] -top_net_of_hierarchical_group]
-#@ set_ideal_network -no_propagate $clock_nets
-#@ 
-#@ group_path -name INPUTS -from [all_inputs]
-#@ group_path -name OUTPUTS -to [all_outputs]
-#@ group_path -name REG2REG -from [all_registers] -to [all_registers]
-#@ group_path -name REG2MEM -from [all_registers] -to [all_macro_cells]
-#@ group_path -name MEM2REG -from [all_macro_cells] -to [all_registers]
-#@ 
 #@ remove_clock_uncertainty [all_clocks]
-#@ set_clock_uncertainty -setup  0.3 [all_clocks]
+#@ # GUI Debug: Building dc from empty. -- Time: 1sec 170ms
+
+#@ set_clock_uncertainty -setup  0.25 [all_clocks]
 #@ set_clock_uncertainty -hold  0.05 [all_clocks]
 #@ 
-#@ create_placement_blockage -coordinate {{ 15.42 392.6} {139.46 483.6}} -name placement_blockage_1 -type soft
-#@ create_placement_blockage -coordinate {{360.44 291.8} {484.48 483.6}} -name placement_blockage_2 -type soft
-#@ create_placement_blockage -coordinate {{360.44    15} {484.48 206.8}} -name placement_blockage_3 -type soft
-#@ create_placement_blockage -coordinate {{ 15.42    15} {139.46   106}} -name placement_blockage_4 -type soft
+#@ set holdDels [get_lib_cell {
+#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/DEL0N1X1CR9
+#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/DEL0N2X1CR9
+#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/DEL0N3X1CR9
+#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/DEL0N5X1CR9
+#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/BUFX2AR9
+#@ }]
 #@ 
-#@ set_ignored_layer 	-rc_congestion_ignored_layers "M6 T4M2 RDL" 	-min_routing_layer M2 	-max_routing_layer M5
+#@ set_prefer -min $holdDels
 #@ 
-#@ create_placement
-#@ legalize_placement
+#@ set_fix_hold [all_clocks]
+#@ set_fix_hold_options -prioritize_tns -preferred_buffer
 #@ 
-#@ place_opt -skip_initial_placement -power -effort high -congestion
+#@ psynopt -power
+#@ # -- End source scripts/fixhold.tcl
+
+device_pg_connection -power_net VCCK -ground_net GNDK
+derive_pg_connection -power_net VCCK -ground_net GNDK
+verify_pg_nets
+source scripts/route.tcl
+#@ # -- Starting source scripts/route.tcl
+
+#@ derive_pg_connection -power_net VCCK -ground_net GNDK
 #@ 
-#@ set step placement
+#@ verify_pg_nets
+#@ 
+#@ route_zrt_group -all_clock_nets -max_detail_route_iterations 10
+#@ 
+#@ route_opt -skip_initial_route -power
+#@ 
+#@ verify_zrt_route
+#@ 
+#@ route_zrt_detail -incremental true -initial_drc_from_input true
+#@ 
+#@ route_zrt_detail -incremental true -max_number_iterations 15
+#@ 
+#@ insert_zrt_redundant_vias
+#@ 
+#@ report_design_physical -route
+#@ 
+#@ insert_stdcell_filler -cell_with_metal "FILLERC16CR9 FILLERC8CR9" -connect_to_power VCCK -connect_to_ground GNDK -between_std_cells_only
+#@ 
+#@ insert_stdcell_filler -cell_without_metal "FILLER16AR9 FILLER8AR9 FILLER4AR9 FILLER3AR9  FILLER2AR9 FILLER1AR9" -connect_to_power VCCK -connect_to_ground GNDK -between_std_cells_only
+#@ 
+#@ insert_metal_filler -routing_space 2.0 -from_metal 2  -to_metal 5
+#@ 
+#@ write_stream -format gds example1SRAM.gds
+#@ 
+#@ set step finish
 #@ report_design -physical > ${report_dir}/${step}_phys.rpt
-#@ report_timing -nosplit -delay max -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing.rpt
+#@ # GUI Debug: Building dc for netlist invalid. -- Time: 852ms
+
+#@ report_timing -nosplit -delay max -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing_setup.rpt
+#@ report_timing -nosplit -delay min -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing_hold.rpt
 #@ report_constraints -nosplit -all -max_delay > ${report_dir}/${step}_constrain.rpt
 #@ report_qor > ${report_dir}/${step}_qor.rpt
 #@ report_qor -summary >> ${report_dir}/${step}_qor.rpt
-#@ 
-#@ save_mw_cel -as placement
-#@ # -- End source scripts/place.tcl
+#@ # -- End source scripts/route.tcl
 
-gui_zoom -window [gui_get_current_window -view] -factor 0.5
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_T4M2 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_RDL -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_M6 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_M5 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_M4 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_M3 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_M2 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_M1 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_LVTP -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_LVTN -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_HVTP -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_HVTN -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RDL -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RV -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_T4M2 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_T4V2 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M6 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_V5 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M5 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_V4 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M4 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_V3 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M3 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_V2 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M2 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_V1 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M1 -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_CT -value false
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_PO -value false
-win_set_filter -visible -class polygon -layer {0-28 65-74 81 91}
-win_set_filter -visible -class shape -filter {} -layer {0-28}
-win_set_filter -visible -class via -filter {} -layer {0-16}
-win_set_filter -visible -class terminal -filter {}  -layer {0 2 4 6 8 10 12 14 16}
-win_set_filter -visible -class placement_blockage -filter {} -layer {0 2 4 6 8 10 12 14 16}
-win_set_filter -class shape -filter {} -layer {0-28}
-win_set_filter -class via -filter {} -layer {0-16}
-win_set_filter -class placement_blockage -filter {} -layer {0 2 4 6 8 10 12 14 16}
-win_set_filter -visible -class placement_blockage -filter {wiring} -layer {0 2 4 6 8 10 12 14 16}
-win_set_filter -class placement_blockage -filter {wiring} -layer {0 2 4 6 8 10 12 14 16}
-gui_zoom -window [gui_get_current_window -view] -full
-source scripts/clock.tcl
-#@ # -- Starting source scripts/clock.tcl
-
-#@ remove_buffer_tree -all
-#@ 
-#@ set M2W [expr [get_layer_attribute -layer M2 defaultWidth]*2.0]
-#@ set M3W [expr [get_layer_attribute -layer M3 defaultWidth]*2.0]
-#@ set M4W [expr [get_layer_attribute -layer M4 defaultWidth]*2.0]
-#@ set M5W [expr [get_layer_attribute -layer M5 defaultWidth]*2.0]
-#@ 
-#@ set M2S [expr (([get_layer_attribute -layer M2 pitch]*4.0)-$M2W-[get_layer_attribute -layer M2 defaultWidth])/2]
-#@ set M3S [expr (([get_layer_attribute -layer M3 pitch]*4.0)-$M3W-[get_layer_attribute -layer M3 defaultWidth])/2]
-#@ set M4S [expr (([get_layer_attribute -layer M4 pitch]*4.0)-$M4W-[get_layer_attribute -layer M4 defaultWidth])/2]
-#@ set M5S [expr (([get_layer_attribute -layer M5 pitch]*4.0)-$M5W-[get_layer_attribute -layer M5 defaultWidth])/2]
-#@ 
-#@ define_routing_rule clk_space_rule 	-spacings "M2 $M2S M3 $M3S M4 $M4S M5 $M5S" 	-widths   "M2 $M2W M3 $M3W M4 $M4W M5 $M5W" 
-#@ 
-#@ set_clock_tree_options -routing_rule clk_space_rule        -max_transition .08        -max_fanout 32        -buffer_sizing true        -buffer_relocation true        -gate_sizing true        -gate_relocation true        -use_default_routing_for_sinks 1        -layer_list {M3 M4 M5}        -ocv_clustering true
-#@ 
-#@ remove_ideal_network -all
-#@ reset_clock_tree_references
-#@ 
-#@ set_clock_tree_references -references {        CLKINVX12AR9  }
-#@ 
-#@ set_clock_tree_references -references { 	CLKINVX12AR9  CLKINVX16AR9  CLKINVX2AR9  CLKINVX3AR9  CLKINVX4AR9  CLKINVX6AR9  CLKINVX8AR9         CLKBUFX12AR9  CLKBUFX16AR9  CLKBUFX2AR9  CLKBUFX3AR9  CLKBUFX4AR9  CLKBUFX6AR9  CLKBUFX8AR9 } -sizing_only
-#@ set_clock_tree_references -references {         CLKINVX12AR9  CLKINVX16AR9  CLKINVX2AR9  CLKINVX3AR9  CLKINVX4AR9  CLKINVX6AR9  CLKINVX8AR9         CLKBUFX12AR9  CLKBUFX16AR9  CLKBUFX2AR9  CLKBUFX3AR9  CLKBUFX4AR9  CLKBUFX6AR9  CLKBUFX8AR9 
-#@ } -delay_in
-#@ 
-#@ report_clock_tree > ${report_dir}/rct_postSetting.rpt
-#@ 
-#@ set root_clock_source [get_ports {clk}]
-#@ 
-#@ compile_clock_tree -clock_trees $root_clock_source
-#@ optimize_clock_tree -clock_trees $root_clock_source -operating_condition max
-#@ 
-#@ 
-#@ 
-#@ propagate_all_clocks
-#@ update_clock_latency
-#@ 
-#@ report_clock_tree > ${report_dir}/rct_postCTS_func.rpt 
-#@ 
-#@ set step clock
-#@ report_design -physical > ${report_dir}/${step}_phys.rpt
-#@ report_timing -nosplit -delay max -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing.rpt
-#@ report_constraints -nosplit -all -max_delay > ${report_dir}/${step}_constrain.rpt
-#@ report_qor > ${report_dir}/${step}_qor.rpt
-#@ report_qor -summary >> ${report_dir}/${step}_qor.rpt
-#@ 
-#@ save_mw_cel -as clock
-#@ # -- End source scripts/clock.tcl
-
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_T4M2 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_RDL -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_M6 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_M5 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_M4 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_M3 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_M2 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_TEXT_M1 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_LVTP -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_LVTN -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_HVTP -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_HVTN -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RDL -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RV -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_T4M2 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_T4V2 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M6 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_V5 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M5 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_V4 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M4 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_V3 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M3 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_V2 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M2 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_V1 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M1 -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_CT -value true
-gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_PO -value true
-win_set_filter -visible -class polygon -layer {65-74 81 91}
-win_set_filter -visible -class shape -filter {} -layer {}
-win_set_filter -visible -class via -filter {} -layer {}
-win_set_filter -visible -class terminal -filter {}  -layer {}
-win_set_filter -visible -class placement_blockage -filter {} -layer {}
-win_set_filter -class shape -filter {} -layer {}
-win_set_filter -class via -filter {} -layer {}
-win_set_filter -class placement_blockage -filter {} -layer {}
-win_set_filter -visible -class placement_blockage -filter {wiring} -layer {}
-win_set_filter -class placement_blockage -filter {wiring} -layer {}
-gui_show_map -window [gui_get_current_window -types Layout -mru] -map {CLOCK_TREES} -show {true}
+gui_set_error_browser_option -show_mode all
+gui_set_error_browser_option -view_mode zoom
+gui_set_error_browser_option -zoom_factor 1.000000
+gui_error_browser -show
+gui_load_error_view -name {placement.CEL}
+gui_error_browser -hide
 ls
-sh rm -rf tlup_new/
 ls reports/
+save_mw_cel -as lab9
 exit

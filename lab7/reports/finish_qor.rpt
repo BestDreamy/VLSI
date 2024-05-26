@@ -3,15 +3,15 @@
 Report : qor
 Design : mmForMLP
 Version: O-2018.06-SP5-3
-Date   : Sun May 26 22:30:39 2024
+Date   : Sun May 26 22:44:33 2024
 ****************************************
 
 
   Timing Path Group 'INPUTS'
   -----------------------------------
   Levels of Logic:               3.00
-  Critical Path Length:          0.58
-  Critical Path Slack:           0.72
+  Critical Path Length:          0.53
+  Critical Path Slack:           0.81
   Critical Path Clk Period:      3.00
   Total Negative Slack:          0.00
   No. of Violating Paths:        0.00
@@ -22,11 +22,11 @@ Date   : Sun May 26 22:30:39 2024
 
   Timing Path Group 'MEM2REG'
   -----------------------------------
-  Levels of Logic:              35.00
-  Critical Path Length:          3.74
-  Critical Path Slack:          -1.06
+  Levels of Logic:              27.00
+  Critical Path Length:          3.72
+  Critical Path Slack:          -0.94
   Critical Path Clk Period:      3.00
-  Total Negative Slack:        -28.73
+  Total Negative Slack:        -24.87
   No. of Violating Paths:       33.00
   Worst Hold Violation:          0.00
   Total Hold Violation:          0.00
@@ -36,11 +36,11 @@ Date   : Sun May 26 22:30:39 2024
   Timing Path Group 'OUTPUTS'
   -----------------------------------
   Levels of Logic:               4.00
-  Critical Path Length:          1.50
-  Critical Path Slack:          -0.60
+  Critical Path Length:          1.46
+  Critical Path Slack:          -0.51
   Critical Path Clk Period:      3.00
-  Total Negative Slack:         -9.37
-  No. of Violating Paths:       17.00
+  Total Negative Slack:         -7.86
+  No. of Violating Paths:       16.00
   Worst Hold Violation:          0.00
   Total Hold Violation:          0.00
   No. of Hold Violations:        0.00
@@ -48,22 +48,22 @@ Date   : Sun May 26 22:30:39 2024
 
   Timing Path Group 'REG2MEM'
   -----------------------------------
-  Levels of Logic:               5.00
-  Critical Path Length:          1.17
-  Critical Path Slack:           0.00
+  Levels of Logic:               7.00
+  Critical Path Length:          1.30
+  Critical Path Slack:           0.06
   Critical Path Clk Period:      3.00
   Total Negative Slack:          0.00
   No. of Violating Paths:        0.00
-  Worst Hold Violation:          0.00
-  Total Hold Violation:          0.00
-  No. of Hold Violations:        0.00
+  Worst Hold Violation:         -0.01
+  Total Hold Violation:         -0.01
+  No. of Hold Violations:        1.00
   -----------------------------------
 
   Timing Path Group 'REG2REG'
   -----------------------------------
-  Levels of Logic:              38.00
-  Critical Path Length:          2.68
-  Critical Path Slack:           0.00
+  Levels of Logic:              31.00
+  Critical Path Length:          2.66
+  Critical Path Slack:           0.12
   Critical Path Clk Period:      3.00
   Total Negative Slack:          0.00
   No. of Violating Paths:        0.00
@@ -77,12 +77,12 @@ Date   : Sun May 26 22:30:39 2024
   -----------------------------------
   Hierarchical Cell Count:          0
   Hierarchical Port Count:          0
-  Leaf Cell Count:               4577
-  Buf/Inv Cell Count:            1471
-  Buf Cell Count:                 173
-  Inv Cell Count:                1298
+  Leaf Cell Count:               4573
+  Buf/Inv Cell Count:            1458
+  Buf Cell Count:                 157
+  Inv Cell Count:                1301
   CT Buf/Inv Cell Count:            0
-  Combinational Cell Count:      4515
+  Combinational Cell Count:      4511
   Sequential Cell Count:           62
   Macro Count:                      4
   -----------------------------------
@@ -90,28 +90,28 @@ Date   : Sun May 26 22:30:39 2024
 
   Area
   -----------------------------------
-  Combinational Area:    16047.719888
-  Noncombinational Area:  1012.751979
-  Buf/Inv Area:           3609.215977
-  Total Buffer Area:           789.98
-  Total Inverter Area:        2819.23
+  Combinational Area:    16076.735891
+  Noncombinational Area:  1012.283979
+  Buf/Inv Area:           3484.259982
+  Total Buffer Area:           696.85
+  Total Inverter Area:        2787.41
   Macro/Black Box Area:  57333.644531
   Net Area:                  0.000000
-  Net XLength        :       99460.99
-  Net YLength        :       99722.40
+  Net XLength        :      101669.05
+  Net YLength        :      102684.68
   -----------------------------------
-  Cell Area:             74394.116398
-  Design Area:           74394.116398
-  Net Length        :       199183.39
+  Cell Area:             74422.664402
+  Design Area:           74422.664402
+  Net Length        :       204353.72
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:          4671
+  Total Number of Nets:          4667
   Nets With Violations:            16
-  Max Trans Violations:             0
+  Max Trans Violations:             1
   Max Cap Violations:               0
-  Max Net Length Violations:       16
+  Max Net Length Violations:       15
   -----------------------------------
 
 
@@ -121,32 +121,32 @@ Date   : Sun May 26 22:30:39 2024
   -----------------------------------------
   Resource Sharing:                    0.00
   Logic Optimization:                  0.00
-  Mapping Optimization:              320.38
+  Mapping Optimization:              358.14
   -----------------------------------------
-  Overall Compile Time:              320.84
-  Overall Compile Wall Clock Time:   321.04
+  Overall Compile Time:              359.05
+  Overall Compile Wall Clock Time:   359.39
 
   --------------------------------------------------------------------
 
-  Design  WNS: 1.06  TNS: 38.10  Number of Violating Paths: 50
+  Design  WNS: 0.94  TNS: 32.73  Number of Violating Paths: 49
 
 
-  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+  Design (Hold)  WNS: 0.01  TNS: 0.01  Number of Violating Paths: 1
 
   --------------------------------------------------------------------
 
 
 1
 
-  Design  WNS: 1.06  TNS: 38.10  Number of Violating Paths: 50
+  Design  WNS: 0.94  TNS: 32.73  Number of Violating Paths: 49
 
   Nets with DRC Violations: 16
-  Total moveable cell area: 17060.5
+  Total moveable cell area: 17089.0
   Total fixed cell area: 57333.6
-  Total physical cell area: 74394.1
+  Total physical cell area: 74422.7
   Core area: (3600 3600 496300 495000)
 
 
-  No hold constraints
 
+  Design (Hold)  WNS: 0.01  TNS: 0.01  Number of Violating Paths: 1
 1

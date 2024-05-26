@@ -1,0 +1,347 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 2
+        -input_pins
+        -nets
+        -max_paths 2
+        -transition_time
+        -capacitance
+Design : mmForMLP
+Version: O-2018.06-SP5-3
+Date   : Sun May 26 22:44:33 2024
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: N40CFF1P32   Library: M31GPSC900HL055PR_N40CFF1P32_cbest_ccs
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/25/125
+
+Information: Percent of Arnoldi-based delays = 23.14%
+
+Information: Percent of CCS-based delays = 22.70%
+
+  Startpoint: load_payload[2]
+              (input port clocked by Int_clk)
+  Endpoint: memForWeight_1/ram1rw_4/ram
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: INPUTS
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                        0.18       0.18 f
+  load_payload[2] (in)                                              0.00      0.00 @     0.18 f
+  load_payload[2] (net)                         2         0.05                0.00       0.18 f
+  U3269/I (CLKBUFX2AR9)                                             0.01      0.01 @     0.19 f
+  U3269/O (CLKBUFX2AR9)                                             0.07      0.05 c     0.24 f
+  n3187 (net)                                   2         0.02                0.00       0.24 f
+  memForWeight_1/ram1rw_4/ram/D[2] (mem55lpw1024d16sp)              0.07      0.00 c     0.24 f
+  data arrival time                                                                      0.24
+
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  clock uncertainty                                                           0.05       0.05
+  memForWeight_1/ram1rw_4/ram/CLK (mem55lpw1024d16sp)                         0.00       0.05 r
+  library hold time                                                           0.05       0.10
+  data required time                                                                     0.10
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.10
+  data arrival time                                                                     -0.24
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.14
+
+
+  Startpoint: load_payload[2]
+              (input port clocked by Int_clk)
+  Endpoint: memForWeight_0/ram1rw_4/ram
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: INPUTS
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                        0.18       0.18 f
+  load_payload[2] (in)                                              0.00      0.00 @     0.18 f
+  load_payload[2] (net)                         2         0.05                0.00       0.18 f
+  U3269/I (CLKBUFX2AR9)                                             0.01      0.01 @     0.19 f
+  U3269/O (CLKBUFX2AR9)                                             0.07      0.05 c     0.24 f
+  n3187 (net)                                   2         0.02                0.00       0.24 f
+  memForWeight_0/ram1rw_4/ram/D[2] (mem55lpw1024d16sp)              0.07      0.00 c     0.24 f
+  data arrival time                                                                      0.24
+
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  clock uncertainty                                                           0.05       0.05
+  memForWeight_0/ram1rw_4/ram/CLK (mem55lpw1024d16sp)                         0.00       0.05 r
+  library hold time                                                           0.05       0.10
+  data required time                                                                     0.10
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.10
+  data arrival time                                                                     -0.24
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.14
+
+
+  Startpoint: memForAorB_1/ram1rw_4/ram
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: partialSum_reg[0]
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: MEM2REG
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  memForAorB_1/ram1rw_4/ram/CLK (mem55lpw256d16sp)                  0.08      0.00       0.00 r
+  memForAorB_1/ram1rw_4/ram/Q[0] (mem55lpw256d16sp)                 0.05      0.40 c     0.40 r
+  memForAorB_1_Q[0] (net)                       1         0.02                0.00       0.40 r
+  U1249/I1 (NAND2X4IAR9)                                            0.05      0.00 @     0.40 r
+  U1249/O (NAND2X4IAR9)                                             0.05      0.03 c     0.43 f
+  n1540 (net)                                   1         0.03                0.00       0.43 f
+  U1198/I (INVX8AR9)                                                0.05      0.00 c     0.44 f
+  U1198/O (INVX8AR9)                                                0.03      0.02 c     0.46 r
+  n4426 (net)                                   2         0.02                0.00       0.46 r
+  U516/I2 (OR2X8AR9)                                                0.03      0.00 c     0.46 r
+  U516/O (OR2X8AR9)                                                 0.05      0.05 c     0.50 r
+  n3812 (net)                                   6         0.05                0.00       0.50 r
+  U1417/I2 (CLKAND2X3AR9)                                           0.05      0.00 c     0.50 r
+  U1417/O (CLKAND2X3AR9)                                            0.03      0.04       0.55 r
+  n1160 (net)                                   2         0.01                0.00       0.55 r
+  U1406/I1 (NAND2X6AR9)                                             0.03      0.00 &     0.55 r
+  U1406/O (NAND2X6AR9)                                              0.02      0.02       0.56 f
+  n2178 (net)                                   2         0.01                0.00       0.56 f
+  U1215/I2 (AND2X05AR9)                                             0.02      0.00 &     0.57 f
+  U1215/O (AND2X05AR9)                                              0.02      0.04       0.60 f
+  n2180 (net)                                   1         0.00                0.00       0.60 f
+  U1637/I1 (NAND2X05AR9)                                            0.02      0.00 &     0.60 f
+  U1637/O (NAND2X05AR9)                                             0.02      0.02       0.62 r
+  n2182 (net)                                   1         0.00                0.00       0.62 r
+  U1349/I1 (NAND2X05AR9)                                            0.02      0.00 &     0.62 r
+  U1349/O (NAND2X05AR9)                                             0.02      0.02       0.64 f
+  n177 (net)                                    1         0.00                0.00       0.64 f
+  partialSum_reg[0]/D (DFFRBQX05AR9)                                0.02      0.00 &     0.64 f
+  data arrival time                                                                      0.64
+
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  clock uncertainty                                                           0.05       0.05
+  partialSum_reg[0]/CK (DFFRBQX05AR9)                                         0.00       0.05 r
+  library hold time                                                           0.01       0.06
+  data required time                                                                     0.06
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.06
+  data arrival time                                                                     -0.64
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.58
+
+
+  Startpoint: memForAorB_0/ram1rw_4/ram
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: partialSum_reg[0]
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: MEM2REG
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  memForAorB_0/ram1rw_4/ram/CLK (mem55lpw256d16sp)                  0.08      0.00       0.00 r
+  memForAorB_0/ram1rw_4/ram/Q[0] (mem55lpw256d16sp)                 0.03      0.39       0.39 r
+  memForAorB_0_Q[0] (net)                       1         0.01                0.00       0.39 r
+  U1161/I (CLKINVX6AR9)                                             0.03      0.00 &     0.39 r
+  U1161/O (CLKINVX6AR9)                                             0.02      0.01       0.41 f
+  n2156 (net)                                   1         0.01                0.00       0.41 f
+  U437/I (CLKINVX12AR9)                                             0.02      0.00 &     0.41 f
+  U437/O (CLKINVX12AR9)                                             0.02      0.01 c     0.42 r
+  n4691 (net)                                   1         0.03                0.00       0.42 r
+  U432/I (CLKINVX16AR9)                                             0.02      0.00 c     0.42 r
+  U432/O (CLKINVX16AR9)                                             0.02      0.01 c     0.44 f
+  n4690 (net)                                   2         0.04                0.00       0.44 f
+  U3572/I1 (NOR2X4OAR9)                                             0.02      0.00 c     0.44 f
+  U3572/O (NOR2X4OAR9)                                              0.03      0.02       0.46 r
+  n4425 (net)                                   2         0.01                0.00       0.46 r
+  U516/I1 (OR2X8AR9)                                                0.03      0.00 &     0.46 r
+  U516/O (OR2X8AR9)                                                 0.05      0.04 c     0.51 r
+  n3812 (net)                                   6         0.05                0.00       0.51 r
+  U1417/I2 (CLKAND2X3AR9)                                           0.05      0.00 c     0.51 r
+  U1417/O (CLKAND2X3AR9)                                            0.03      0.04       0.55 r
+  n1160 (net)                                   2         0.01                0.00       0.55 r
+  U1406/I1 (NAND2X6AR9)                                             0.03      0.00 &     0.55 r
+  U1406/O (NAND2X6AR9)                                              0.02      0.02       0.57 f
+  n2178 (net)                                   2         0.01                0.00       0.57 f
+  U1215/I2 (AND2X05AR9)                                             0.02      0.00 &     0.57 f
+  U1215/O (AND2X05AR9)                                              0.02      0.04       0.61 f
+  n2180 (net)                                   1         0.00                0.00       0.61 f
+  U1637/I1 (NAND2X05AR9)                                            0.02      0.00 &     0.61 f
+  U1637/O (NAND2X05AR9)                                             0.02      0.02       0.63 r
+  n2182 (net)                                   1         0.00                0.00       0.63 r
+  U1349/I1 (NAND2X05AR9)                                            0.02      0.00 &     0.63 r
+  U1349/O (NAND2X05AR9)                                             0.02      0.02       0.65 f
+  n177 (net)                                    1         0.00                0.00       0.65 f
+  partialSum_reg[0]/D (DFFRBQX05AR9)                                0.02      0.00 &     0.65 f
+  data arrival time                                                                      0.65
+
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  clock uncertainty                                                           0.05       0.05
+  partialSum_reg[0]/CK (DFFRBQX05AR9)                                         0.00       0.05 r
+  library hold time                                                           0.01       0.06
+  data required time                                                                     0.06
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.06
+  data arrival time                                                                     -0.65
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.58
+
+
+  Startpoint: fsm_cntGP_value_reg[7]
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: memForWeight_0/ram1rw_4/ram
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: REG2MEM
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  fsm_cntGP_value_reg[7]/CK (DFFRBQX4K1AR9)                         0.08      0.00       0.00 r
+  fsm_cntGP_value_reg[7]/Q (DFFRBQX4K1AR9)                          0.03      0.07       0.07 f
+  temp_fsm_adrForWeight_3[7] (net)              3         0.02                0.00       0.07 f
+  U2445/I (CLKINVX12AR9)                                            0.03      0.00 &     0.07 f
+  U2445/O (CLKINVX12AR9)                                            0.02      0.02 c     0.09 r
+  n2476 (net)                                   3         0.03                0.00       0.09 r
+  U1626/I2 (NOR2X1AR9)                                              0.02      0.00 c     0.09 r
+  U1626/O (NOR2X1AR9)                                               0.02      0.01       0.10 f
+  memForWeight_0_ADR[7] (net)                   1         0.00                0.00       0.10 f
+  memForWeight_0/ram1rw_4/ram/ADR[7] (mem55lpw1024d16sp)            0.02      0.00 &     0.10 f
+  data arrival time                                                                      0.10
+
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  clock uncertainty                                                           0.05       0.05
+  memForWeight_0/ram1rw_4/ram/CLK (mem55lpw1024d16sp)                         0.00       0.05 r
+  library hold time                                                           0.06       0.11
+  data required time                                                                     0.11
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.11
+  data arrival time                                                                     -0.10
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                      -0.01
+
+
+  Startpoint: fsm_cntGP_value_reg[7]
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: memForWeight_1/ram1rw_4/ram
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: REG2MEM
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  fsm_cntGP_value_reg[7]/CK (DFFRBQX4K1AR9)                         0.08      0.00       0.00 r
+  fsm_cntGP_value_reg[7]/Q (DFFRBQX4K1AR9)                          0.03      0.07       0.07 f
+  temp_fsm_adrForWeight_3[7] (net)              3         0.02                0.00       0.07 f
+  U2445/I (CLKINVX12AR9)                                            0.03      0.00 &     0.07 f
+  U2445/O (CLKINVX12AR9)                                            0.02      0.02 c     0.09 r
+  n2476 (net)                                   3         0.03                0.00       0.09 r
+  U1611/I2 (NOR2X1OAR9)                                             0.02      0.00 c     0.09 r
+  U1611/O (NOR2X1OAR9)                                              0.05      0.03       0.12 f
+  memForWeight_1_ADR[7] (net)                   1         0.01                0.00       0.12 f
+  memForWeight_1/ram1rw_4/ram/ADR[7] (mem55lpw1024d16sp)            0.05      0.00 &     0.12 f
+  data arrival time                                                                      0.12
+
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  clock uncertainty                                                           0.05       0.05
+  memForWeight_1/ram1rw_4/ram/CLK (mem55lpw1024d16sp)                         0.00       0.05 r
+  library hold time                                                           0.06       0.11
+  data required time                                                                     0.11
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.11
+  data arrival time                                                                     -0.12
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.01
+
+
+  Startpoint: partialSum_reg[14]
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: partialSum_reg[14]
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: REG2REG
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  partialSum_reg[14]/CK (DFFRBQBX4J1AR9)                            0.08      0.00       0.00 r
+  partialSum_reg[14]/QB (DFFRBQBX4J1AR9)                            0.04      0.11       0.11 r
+  n2501 (net)                                   3         0.02                0.00       0.11 r
+  U1169/B2 (OAI22X4AR9)                                             0.04      0.00 &     0.11 r
+  U1169/O (OAI22X4AR9)                                              0.02      0.02       0.12 f
+  n156 (net)                                    1         0.00                0.00       0.12 f
+  partialSum_reg[14]/D (DFFRBQBX4J1AR9)                             0.02      0.00 &     0.12 f
+  data arrival time                                                                      0.12
+
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  clock uncertainty                                                           0.05       0.05
+  partialSum_reg[14]/CK (DFFRBQBX4J1AR9)                                      0.00       0.05 r
+  library hold time                                                           0.05       0.10
+  data required time                                                                     0.10
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.10
+  data arrival time                                                                     -0.12
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.02
+
+
+  Startpoint: partialSum_reg[14]
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: partialSum_reg[14]
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: REG2REG
+  Path Type: min
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  partialSum_reg[14]/CK (DFFRBQBX4J1AR9)                            0.08      0.00       0.00 r
+  partialSum_reg[14]/QB (DFFRBQBX4J1AR9)                            0.04      0.11       0.11 r
+  n2501 (net)                                   3         0.02                0.00       0.11 r
+  U1169/B2 (OAI22X4AR9)                                             0.04      0.00 &     0.11 r
+  U1169/O (OAI22X4AR9)                                              0.02      0.02       0.12 f
+  n156 (net)                                    1         0.00                0.00       0.12 f
+  partialSum_reg[14]/D (DFFRBQBX4J1AR9)                             0.02      0.00 &     0.13 f
+  data arrival time                                                                      0.13
+
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  clock uncertainty                                                           0.05       0.05
+  partialSum_reg[14]/CK (DFFRBQBX4J1AR9)                                      0.00       0.05 r
+  library hold time                                                           0.05       0.10
+  data required time                                                                     0.10
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     0.10
+  data arrival time                                                                     -0.13
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.02
+
+
+1

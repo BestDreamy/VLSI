@@ -1,0 +1,878 @@
+
+  Loading design 'mmForMLP'
+
+
+
+
+Information: The design has 3320 physical cells. (PSYN-105)
+Information: Library Manufacturing Grid(GridResolution) : 5
+Information: Time Unit from Milkyway design library: 'ns' 
+Information: Design Library and main library timing units are matched - 1.000 ns. 
+Information: Resistance Unit from Milkyway design library: 'ohm' 
+Warning: Mismatch in the main library and the Milkyway library resistance units. In the main library it is 1.000 kohm and in the Milkyway design library it is 0.001 kohm. Check and correct the resistance units in the .tf and .db files. (PSYN-476)
+Information: Capacitance Unit from Milkyway design library: 'pf' 
+Information: Design Library and main library capacitance units are matched - 1.000 pf. 
+Information: Layer M1 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M6 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer T4M2 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer RDL is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Found HALF_NODE_SCALE_FACTOR 0.900000 in TLUPlus files. (TLUP-016)
+Information: Using the HALF_NODE_SCALE_FACTOR in TLUPlus for process scale. (RCEX-086)
+Information: The process parameters are scaled by 0.9 0.9. (RCEX-050)
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is detail route TLU+. (RCEX-015)
+Information: Start mixed mode parasitic extraction. (RCEX-023)
+Information: Start rc extraction...
+Memory usage for extraction task 302 Mbytes -- main task 996 Mbytes.
+Warning: Net 'SNPS_LOGIC1' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'SNPS_LOGIC0' is not fully connected and will be estimated. (RCEX-060)
+Information: Parasitic source is LPE. (RCEX-040)
+Information: Parasitic mode is RealRC. (RCEX-041)
+Information: Using virtual shield extraction. (RCEX-081)
+Information: Extraction mode is MIN_MAX. (RCEX-042)
+Information: Extraction derate is -40/25/125. (RCEX-043)
+Information: Coupling capacitances are lumped to ground. (RCEX-044)
+Information: Start back annotation for parasitic extraction. (RCEX-023)
+Information: End back annotation for parasitic extraction. (RCEX-023)
+Information: Start timing update for parasitic extraction. (RCEX-023)
+Information: End timing update for parasitic extraction. (RCEX-023)
+Information: End parasitic extraction. (RCEX-023)
+Information: Start rc update...
+Information: Found HALF_NODE_SCALE_FACTOR 0.900000 in TLUPlus files. (TLUP-016)
+Information: Using the HALF_NODE_SCALE_FACTOR in TLUPlus for process scale. (RCEX-086)
+Information: The process parameters are scaled by 0.9 0.9. (RCEX-050)
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Library Derived Cap for layer M1 : 0.0002 0.00023 (RCEX-011)
+Information: Library Derived Res for layer M1 : 0.0036 0.0015 (RCEX-011)
+Information: Library Derived Cap for layer M2 : 0.00021 0.00022 (RCEX-011)
+Information: Library Derived Res for layer M2 : 0.0019 0.00079 (RCEX-011)
+Information: Library Derived Cap for layer M3 : 0.00022 0.00025 (RCEX-011)
+Information: Library Derived Res for layer M3 : 0.0026 0.0011 (RCEX-011)
+Information: Library Derived Cap for layer M4 : 0.00022 0.00025 (RCEX-011)
+Information: Library Derived Res for layer M4 : 0.0026 0.0011 (RCEX-011)
+Information: Library Derived Cap for layer M5 : 0.00022 0.00025 (RCEX-011)
+Information: Library Derived Res for layer M5 : 0.0026 0.0011 (RCEX-011)
+Information: Library Derived Cap for layer M6 : 0.00021 0.00025 (RCEX-011)
+Information: Library Derived Res for layer M6 : 0.0026 0.0011 (RCEX-011)
+Information: Library Derived Cap for layer T4M2 : 0.00034 0.00036 (RCEX-011)
+Information: Library Derived Res for layer T4M2 : 0.0001 2.7e-05 (RCEX-011)
+Information: Library Derived Cap for layer RDL : 0.00028 0.00031 (RCEX-011)
+Information: Library Derived Res for layer RDL : 1.8e-05 2.6e-06 (RCEX-011)
+Information: Library Derived Horizontal Cap : 0.00022 0.00025 (RCEX-011)
+Information: Library Derived Horizontal Res : 0.0026 0.0011 (RCEX-011)
+Information: Library Derived Vertical Cap : 0.00021 0.00023 (RCEX-011)
+Information: Library Derived Vertical Res : 0.0022 0.00093 (RCEX-011)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: Library Derived Via Res : 0.007 0.001 (RCEX-011)
+Information: Found HALF_NODE_SCALE_FACTOR 0.900000 in TLUPlus files. (TLUP-016)
+Information: Using the HALF_NODE_SCALE_FACTOR in TLUPlus for process scale. (RCEX-086)
+Information: The process parameters are scaled by 0.9 0.9. (RCEX-050)
+Information: End rc update.
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 2
+        -input_pins
+        -nets
+        -max_paths 2
+        -transition_time
+        -capacitance
+Design : mmForMLP
+Version: O-2018.06-SP5-3
+Date   : Sun May 26 22:44:33 2024
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_ccs
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/25/125
+
+Information: Percent of Arnoldi-based delays = 23.14%
+
+Information: Percent of CCS-based delays = 22.70%
+
+  Startpoint: load_payload[7]
+              (input port clocked by Int_clk)
+  Endpoint: memForAorB_0/ram1rw_4/ram
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: INPUTS
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.55       0.55
+  input external delay                                                        0.90       1.45 f
+  load_payload[7] (in)                                              0.00      0.00 @     1.45 f
+  load_payload[7] (net)                         1         0.01                0.00       1.45 f
+  U3280/I (CLKBUFX2AR9)                                             0.00      0.00 @     1.45 f
+  U3280/O (CLKBUFX2AR9)                                             0.22      0.16 c     1.61 f
+  n3198 (net)                                   2         0.04                0.00       1.61 f
+  U2700/I (INVX05AR9)                                               0.22      0.00 c     1.61 f
+  U2700/O (INVX05AR9)                                               0.19      0.18       1.80 r
+  n2458 (net)                                   1         0.01                0.00       1.80 r
+  U2326/C2 (OAI112X1AR9)                                            0.19      0.00 &     1.80 r
+  U2326/O (OAI112X1AR9)                                             0.19      0.19       1.98 f
+  memForAorB_0_D[7] (net)                       1         0.01                0.00       1.98 f
+  memForAorB_0/ram1rw_4/ram/D[7] (mem55lpw256d16sp)                 0.19      0.00 &     1.98 f
+  data arrival time                                                                      1.98
+
+  clock Int_clk (rise edge)                                                   3.00       3.00
+  clock network delay (ideal)                                                 0.55       3.55
+  clock uncertainty                                                          -0.25       3.30
+  memForAorB_0/ram1rw_4/ram/CLK (mem55lpw256d16sp)                            0.00       3.30 r
+  library setup time                                                         -0.51       2.79
+  data required time                                                                     2.79
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     2.79
+  data arrival time                                                                     -1.98
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.81
+
+
+  Startpoint: load_payload[7]
+              (input port clocked by Int_clk)
+  Endpoint: memForAorB_0/ram1rw_4/ram
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: INPUTS
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.55       0.55
+  input external delay                                                        0.90       1.45 r
+  load_payload[7] (in)                                              0.00      0.00 @     1.45 r
+  load_payload[7] (net)                         1         0.01                0.00       1.45 r
+  U3280/I (CLKBUFX2AR9)                                             0.00      0.00 @     1.45 r
+  U3280/O (CLKBUFX2AR9)                                             0.23      0.16 c     1.61 r
+  n3198 (net)                                   2         0.04                0.00       1.61 r
+  U2700/I (INVX05AR9)                                               0.23      0.00 c     1.62 r
+  U2700/O (INVX05AR9)                                               0.14      0.15       1.77 f
+  n2458 (net)                                   1         0.01                0.00       1.77 f
+  U2326/C2 (OAI112X1AR9)                                            0.14      0.00 &     1.77 f
+  U2326/O (OAI112X1AR9)                                             0.23      0.19       1.96 r
+  memForAorB_0_D[7] (net)                       1         0.01                0.00       1.96 r
+  memForAorB_0/ram1rw_4/ram/D[7] (mem55lpw256d16sp)                 0.23      0.00 &     1.96 r
+  data arrival time                                                                      1.96
+
+  clock Int_clk (rise edge)                                                   3.00       3.00
+  clock network delay (ideal)                                                 0.55       3.55
+  clock uncertainty                                                          -0.25       3.30
+  memForAorB_0/ram1rw_4/ram/CLK (mem55lpw256d16sp)                            0.00       3.30 r
+  library setup time                                                         -0.52       2.78
+  data required time                                                                     2.78
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     2.78
+  data arrival time                                                                     -1.96
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.82
+
+
+  Startpoint: memForWeight_0/ram1rw_4/ram
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: partialSum_reg[25]
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: MEM2REG
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.55       0.55
+  memForWeight_0/ram1rw_4/ram/CLK (mem55lpw1024d16sp)               0.08      0.00       0.55 r
+  memForWeight_0/ram1rw_4/ram/Q[11] (mem55lpw1024d16sp)             0.08      1.67       2.22 f
+  memForWeight_0_Q[11] (net)                    2         0.02                0.00       2.22 f
+  U1011/I1 (NAND2X6AR9)                                             0.08      0.00 &     2.22 f
+  U1011/O (NAND2X6AR9)                                              0.07      0.07       2.29 r
+  n415 (net)                                    4         0.02                0.00       2.29 r
+  U4327/I1 (CLKNAND2X8AR9)                                          0.07      0.00 &     2.29 r
+  U4327/O (CLKNAND2X8AR9)                                           0.04      0.04       2.33 f
+  n4961 (net)                                   1         0.01                0.00       2.33 f
+  U1175/I (CLKINVX8AR9)                                             0.04      0.00 &     2.33 f
+  U1175/O (CLKINVX8AR9)                                             0.07      0.05 c     2.38 r
+  n4734 (net)                                   2         0.04                0.00       2.38 r
+  U76/I (INVX8AR9)                                                  0.07      0.01 c     2.39 r
+  U76/O (INVX8AR9)                                                  0.04      0.04 c     2.44 f
+  n4668 (net)                                   3         0.02                0.00       2.44 f
+  U1773/I2 (CLKXNOR2X1AR9)                                          0.04      0.00 c     2.44 f
+  U1773/O (CLKXNOR2X1AR9)                                           0.07      0.15       2.59 r
+  n889 (net)                                    2         0.00                0.00       2.59 r
+  U664/I1 (NAND2X1AR9)                                              0.07      0.00 &     2.59 r
+  U664/O (NAND2X1AR9)                                               0.11      0.10       2.69 f
+  n888 (net)                                    1         0.01                0.00       2.69 f
+  U1859/I1 (NAND2X4OAR9)                                            0.11      0.00 &     2.69 f
+  U1859/O (NAND2X4OAR9)                                             0.11      0.09 c     2.78 r
+  n1869 (net)                                   5         0.03                0.00       2.78 r
+  U944/I (CLKINVX2AR9)                                              0.11      0.00 c     2.78 r
+  U944/O (CLKINVX2AR9)                                              0.05      0.06       2.84 f
+  n1125 (net)                                   2         0.01                0.00       2.84 f
+  U900/I1 (NAND3X2AR9)                                              0.05      0.00 &     2.84 f
+  U900/O (NAND3X2AR9)                                               0.08      0.06       2.90 r
+  n1157 (net)                                   2         0.01                0.00       2.90 r
+  U96/I3 (NAND3X1AR9)                                               0.08      0.00 &     2.90 r
+  U96/O (NAND3X1AR9)                                                0.09      0.09       2.99 f
+  n5239 (net)                                   1         0.00                0.00       2.99 f
+  U67/I1 (CLKOR2X2AR9)                                              0.09      0.00 &     2.99 f
+  U67/O (CLKOR2X2AR9)                                               0.05      0.11       3.10 f
+  n748 (net)                                    2         0.01                0.00       3.10 f
+  U415/I2 (CLKNAND2X2AR9)                                           0.05      0.00 &     3.10 f
+  U415/O (CLKNAND2X2AR9)                                            0.08      0.07       3.17 r
+  n910 (net)                                    1         0.01                0.00       3.17 r
+  U796/I2 (NAND2X4AR9)                                              0.08      0.00 &     3.17 r
+  U796/O (NAND2X4AR9)                                               0.05      0.06       3.23 f
+  n1890 (net)                                   2         0.01                0.00       3.23 f
+  U795/I2 (CLKXNOR2X1AR9)                                           0.05      0.00 &     3.23 f
+  U795/O (CLKXNOR2X1AR9)                                            0.07      0.15       3.39 f
+  n1047 (net)                                   2         0.00                0.00       3.39 f
+  U2014/I (CLKINVX1AR9)                                             0.07      0.00 &     3.39 f
+  U2014/O (CLKINVX1AR9)                                             0.05      0.05       3.44 r
+  n4383 (net)                                   1         0.00                0.00       3.44 r
+  U4084/I1 (NAND2X2AR9)                                             0.05      0.00 &     3.44 r
+  U4084/O (NAND2X2AR9)                                              0.04      0.05       3.49 f
+  n4385 (net)                                   1         0.00                0.00       3.49 f
+  U849/I2 (NAND2X3AR9)                                              0.04      0.00 &     3.49 f
+  U849/O (NAND2X3AR9)                                               0.06      0.05       3.54 r
+  n1914 (net)                                   2         0.01                0.00       3.54 r
+  U2024/I1 (NAND2X2AR9)                                             0.06      0.00 &     3.54 r
+  U2024/O (NAND2X2AR9)                                              0.09      0.08       3.62 f
+  n1926 (net)                                   2         0.01                0.00       3.62 f
+  U661/I2 (NOR2X4OAR9)                                              0.09      0.00 &     3.62 f
+  U661/O (NOR2X4OAR9)                                               0.07      0.07       3.69 r
+  n667 (net)                                    2         0.01                0.00       3.69 r
+  U3780/I1 (CLKOR2X3AR9)                                            0.07      0.00 &     3.69 r
+  U3780/O (CLKOR2X3AR9)                                             0.08      0.13       3.82 r
+  n4015 (net)                                   3         0.02                0.00       3.82 r
+  U1935/B1 (AOI12X2AR9)                                             0.08      0.00 &     3.82 r
+  U1935/O (AOI12X2AR9)                                              0.05      0.06       3.88 f
+  n2066 (net)                                   1         0.00                0.00       3.88 f
+  U2551/A1 (OAI12X1IAR9)                                            0.05      0.00 &     3.88 f
+  U2551/O (OAI12X1IAR9)                                             0.14      0.09       3.97 r
+  n2068 (net)                                   2         0.01                0.00       3.97 r
+  U1924/I (INVX05AR9)                                               0.14      0.00 &     3.97 r
+  U1924/O (INVX05AR9)                                               0.09      0.09       4.06 f
+  n2561 (net)                                   1         0.00                0.00       4.06 f
+  U1928/I2 (NAND2X2OAR9)                                            0.09      0.00 &     4.06 f
+  U1928/O (NAND2X2OAR9)                                             0.06      0.07       4.13 r
+  n2797 (net)                                   1         0.00                0.00       4.13 r
+  U2675/I1 (NAND2X2AR9)                                             0.06      0.00 &     4.13 r
+  U2675/O (NAND2X2AR9)                                              0.06      0.05       4.18 f
+  n4804 (net)                                   1         0.00                0.00       4.18 f
+  U1655/I1 (NAND2X4AR9)                                             0.06      0.00 &     4.18 f
+  U1655/O (NAND2X4AR9)                                              0.05      0.04       4.23 r
+  n2073 (net)                                   1         0.01                0.00       4.23 r
+  U2553/B1 (OAI12X4IAR9)                                            0.05      0.00 &     4.23 r
+  U2553/O (OAI12X4IAR9)                                             0.06      0.04       4.27 f
+  n167 (net)                                    1         0.01                0.00       4.27 f
+  partialSum_reg[25]/D (DFFRBQX8J1AR9)                              0.06      0.00 &     4.27 f
+  data arrival time                                                                      4.27
+
+  clock Int_clk (rise edge)                                                   3.00       3.00
+  clock network delay (ideal)                                                 0.55       3.55
+  clock uncertainty                                                          -0.25       3.30
+  partialSum_reg[25]/CK (DFFRBQX8J1AR9)                                       0.00       3.30 r
+  library setup time                                                          0.03       3.33
+  data required time                                                                     3.33
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     3.33
+  data arrival time                                                                     -4.27
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                      -0.94
+
+
+  Startpoint: memForWeight_0/ram1rw_4/ram
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: partialSum_reg[25]
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: MEM2REG
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.55       0.55
+  memForWeight_0/ram1rw_4/ram/CLK (mem55lpw1024d16sp)               0.08      0.00       0.55 r
+  memForWeight_0/ram1rw_4/ram/Q[11] (mem55lpw1024d16sp)             0.08      1.67       2.22 f
+  memForWeight_0_Q[11] (net)                    2         0.02                0.00       2.22 f
+  U1011/I1 (NAND2X6AR9)                                             0.08      0.00 &     2.22 f
+  U1011/O (NAND2X6AR9)                                              0.07      0.07       2.29 r
+  n415 (net)                                    4         0.02                0.00       2.29 r
+  U4327/I1 (CLKNAND2X8AR9)                                          0.07      0.00 &     2.29 r
+  U4327/O (CLKNAND2X8AR9)                                           0.04      0.04       2.33 f
+  n4961 (net)                                   1         0.01                0.00       2.33 f
+  U1175/I (CLKINVX8AR9)                                             0.04      0.00 &     2.33 f
+  U1175/O (CLKINVX8AR9)                                             0.07      0.05 c     2.38 r
+  n4734 (net)                                   2         0.04                0.00       2.38 r
+  U76/I (INVX8AR9)                                                  0.07      0.01 c     2.39 r
+  U76/O (INVX8AR9)                                                  0.04      0.04 c     2.44 f
+  n4668 (net)                                   3         0.02                0.00       2.44 f
+  U1773/I2 (CLKXNOR2X1AR9)                                          0.04      0.00 c     2.44 f
+  U1773/O (CLKXNOR2X1AR9)                                           0.07      0.15       2.59 r
+  n889 (net)                                    2         0.00                0.00       2.59 r
+  U664/I1 (NAND2X1AR9)                                              0.07      0.00 &     2.59 r
+  U664/O (NAND2X1AR9)                                               0.11      0.10       2.69 f
+  n888 (net)                                    1         0.01                0.00       2.69 f
+  U1859/I1 (NAND2X4OAR9)                                            0.11      0.00 &     2.69 f
+  U1859/O (NAND2X4OAR9)                                             0.11      0.09 c     2.78 r
+  n1869 (net)                                   5         0.03                0.00       2.78 r
+  U944/I (CLKINVX2AR9)                                              0.11      0.00 c     2.78 r
+  U944/O (CLKINVX2AR9)                                              0.05      0.06       2.84 f
+  n1125 (net)                                   2         0.01                0.00       2.84 f
+  U900/I1 (NAND3X2AR9)                                              0.05      0.00 &     2.84 f
+  U900/O (NAND3X2AR9)                                               0.08      0.06       2.90 r
+  n1157 (net)                                   2         0.01                0.00       2.90 r
+  U96/I3 (NAND3X1AR9)                                               0.08      0.00 &     2.90 r
+  U96/O (NAND3X1AR9)                                                0.09      0.09       2.99 f
+  n5239 (net)                                   1         0.00                0.00       2.99 f
+  U67/I1 (CLKOR2X2AR9)                                              0.09      0.00 &     2.99 f
+  U67/O (CLKOR2X2AR9)                                               0.05      0.11       3.10 f
+  n748 (net)                                    2         0.01                0.00       3.10 f
+  U415/I2 (CLKNAND2X2AR9)                                           0.05      0.00 &     3.10 f
+  U415/O (CLKNAND2X2AR9)                                            0.08      0.07       3.17 r
+  n910 (net)                                    1         0.01                0.00       3.17 r
+  U796/I2 (NAND2X4AR9)                                              0.08      0.00 &     3.17 r
+  U796/O (NAND2X4AR9)                                               0.05      0.06       3.23 f
+  n1890 (net)                                   2         0.01                0.00       3.23 f
+  U795/I2 (CLKXNOR2X1AR9)                                           0.05      0.00 &     3.23 f
+  U795/O (CLKXNOR2X1AR9)                                            0.07      0.15       3.39 f
+  n1047 (net)                                   2         0.00                0.00       3.39 f
+  U2014/I (CLKINVX1AR9)                                             0.07      0.00 &     3.39 f
+  U2014/O (CLKINVX1AR9)                                             0.05      0.05       3.44 r
+  n4383 (net)                                   1         0.00                0.00       3.44 r
+  U4084/I1 (NAND2X2AR9)                                             0.05      0.00 &     3.44 r
+  U4084/O (NAND2X2AR9)                                              0.04      0.05       3.49 f
+  n4385 (net)                                   1         0.00                0.00       3.49 f
+  U849/I2 (NAND2X3AR9)                                              0.04      0.00 &     3.49 f
+  U849/O (NAND2X3AR9)                                               0.06      0.05       3.54 r
+  n1914 (net)                                   2         0.01                0.00       3.54 r
+  U2024/I1 (NAND2X2AR9)                                             0.06      0.00 &     3.54 r
+  U2024/O (NAND2X2AR9)                                              0.09      0.08       3.62 f
+  n1926 (net)                                   2         0.01                0.00       3.62 f
+  U661/I2 (NOR2X4OAR9)                                              0.09      0.00 &     3.62 f
+  U661/O (NOR2X4OAR9)                                               0.07      0.07       3.69 r
+  n667 (net)                                    2         0.01                0.00       3.69 r
+  U3780/I1 (CLKOR2X3AR9)                                            0.07      0.00 &     3.69 r
+  U3780/O (CLKOR2X3AR9)                                             0.08      0.13       3.82 r
+  n4015 (net)                                   3         0.02                0.00       3.82 r
+  U1935/B1 (AOI12X2AR9)                                             0.08      0.00 &     3.82 r
+  U1935/O (AOI12X2AR9)                                              0.05      0.06       3.88 f
+  n2066 (net)                                   1         0.00                0.00       3.88 f
+  U2551/A1 (OAI12X1IAR9)                                            0.05      0.00 &     3.88 f
+  U2551/O (OAI12X1IAR9)                                             0.14      0.09       3.97 r
+  n2068 (net)                                   2         0.01                0.00       3.97 r
+  U1924/I (INVX05AR9)                                               0.14      0.00 &     3.97 r
+  U1924/O (INVX05AR9)                                               0.09      0.09       4.06 f
+  n2561 (net)                                   1         0.00                0.00       4.06 f
+  U1928/I2 (NAND2X2OAR9)                                            0.09      0.00 &     4.06 f
+  U1928/O (NAND2X2OAR9)                                             0.06      0.07       4.13 r
+  n2797 (net)                                   1         0.00                0.00       4.13 r
+  U2675/I1 (NAND2X2AR9)                                             0.06      0.00 &     4.13 r
+  U2675/O (NAND2X2AR9)                                              0.06      0.05       4.18 f
+  n4804 (net)                                   1         0.00                0.00       4.18 f
+  U1655/I1 (NAND2X4AR9)                                             0.06      0.00 &     4.18 f
+  U1655/O (NAND2X4AR9)                                              0.05      0.04       4.23 r
+  n2073 (net)                                   1         0.01                0.00       4.23 r
+  U2553/B1 (OAI12X4IAR9)                                            0.05      0.00 &     4.23 r
+  U2553/O (OAI12X4IAR9)                                             0.06      0.04       4.27 f
+  n167 (net)                                    1         0.01                0.00       4.27 f
+  partialSum_reg[25]/D (DFFRBQX8J1AR9)                              0.06      0.00 &     4.27 f
+  data arrival time                                                                      4.27
+
+  clock Int_clk (rise edge)                                                   3.00       3.00
+  clock network delay (ideal)                                                 0.55       3.55
+  clock uncertainty                                                          -0.25       3.30
+  partialSum_reg[25]/CK (DFFRBQX8J1AR9)                                       0.00       3.30 r
+  library setup time                                                          0.03       3.33
+  data required time                                                                     3.33
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     3.33
+  data arrival time                                                                     -4.27
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                      -0.94
+
+
+  Startpoint: memForAorB_0/ram1rw_4/ram
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: result_payload[12]
+            (output port clocked by Int_clk)
+  Path Group: OUTPUTS
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.55       0.55
+  memForAorB_0/ram1rw_4/ram/CLK (mem55lpw256d16sp)                  0.08      0.00       0.55 r
+  memForAorB_0/ram1rw_4/ram/Q[12] (mem55lpw256d16sp)                0.07      1.25       1.80 f
+  memForAorB_0_Q[12] (net)                      2         0.01                0.00       1.80 f
+  U4440/I (CLKINVX12AR9)                                            0.07      0.00 &     1.80 f
+  U4440/O (CLKINVX12AR9)                                            0.07      0.06 c     1.86 r
+  n5056 (net)                                   1         0.05                0.00       1.86 r
+  U4510/I (INVX12AR9)                                               0.09      0.03 c     1.89 r
+  U4510/O (INVX12AR9)                                               0.04      0.04 c     1.93 f
+  n5126 (net)                                   1         0.02                0.00       1.93 f
+  U779/I1 (NAND2X8AR9)                                              0.04      0.00 c     1.93 f
+  U779/O (NAND2X8AR9)                                               0.05      0.04       1.97 r
+  n4592 (net)                                   1         0.01                0.00       1.97 r
+  U2846/I (INVX12AR9)                                               0.05      0.00 &     1.97 r
+  U2846/O (INVX12AR9)                                               0.04      0.04 c     2.01 f
+  result_payload[12] (net)                      1         0.04                0.00       2.01 f
+  result_payload[12] (out)                                          0.04      0.01 c     2.01 f
+  data arrival time                                                                      2.01
+
+  clock Int_clk (rise edge)                                                   3.00       3.00
+  clock network delay (ideal)                                                 0.55       3.55
+  clock uncertainty                                                          -0.25       3.30
+  output external delay                                                      -1.80       1.50
+  data required time                                                                     1.50
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     1.50
+  data arrival time                                                                     -2.01
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                      -0.51
+
+
+  Startpoint: memForAorB_0/ram1rw_4/ram
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: result_payload[11]
+            (output port clocked by Int_clk)
+  Path Group: OUTPUTS
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.55       0.55
+  memForAorB_0/ram1rw_4/ram/CLK (mem55lpw256d16sp)                  0.08      0.00       0.55 r
+  memForAorB_0/ram1rw_4/ram/Q[11] (mem55lpw256d16sp)                0.08      1.26       1.81 f
+  memForAorB_0_Q[11] (net)                      1         0.02                0.00       1.81 f
+  U37/I (CLKINVX12AR9)                                              0.08      0.00 &     1.81 f
+  U37/O (CLKINVX12AR9)                                              0.06      0.06 c     1.87 r
+  n2722 (net)                                   2         0.04                0.00       1.87 r
+  U2903/I (INVX12AR9)                                               0.07      0.01 c     1.88 r
+  U2903/O (INVX12AR9)                                               0.03      0.04 c     1.92 f
+  n3531 (net)                                   1         0.02                0.00       1.92 f
+  U2906/I1 (NAND2X8AR9)                                             0.04      0.01 c     1.92 f
+  U2906/O (NAND2X8AR9)                                              0.05      0.04       1.96 r
+  n3530 (net)                                   1         0.01                0.00       1.96 r
+  U2902/I (INVX12AR9)                                               0.05      0.00 &     1.96 r
+  U2902/O (INVX12AR9)                                               0.04      0.04 c     2.00 f
+  result_payload[11] (net)                      1         0.04                0.00       2.00 f
+  result_payload[11] (out)                                          0.05      0.01 c     2.01 f
+  data arrival time                                                                      2.01
+
+  clock Int_clk (rise edge)                                                   3.00       3.00
+  clock network delay (ideal)                                                 0.55       3.55
+  clock uncertainty                                                          -0.25       3.30
+  output external delay                                                      -1.80       1.50
+  data required time                                                                     1.50
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     1.50
+  data arrival time                                                                     -2.01
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                      -0.51
+
+
+  Startpoint: fsm_cntGP_value_reg[6]
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: memForAorB_0/ram1rw_4/ram
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: REG2MEM
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.55       0.55
+  fsm_cntGP_value_reg[6]/CK (DFFSBQX4K1AR9)                         0.08      0.00       0.55 r
+  fsm_cntGP_value_reg[6]/Q (DFFSBQX4K1AR9)                          0.11      0.23 c     0.78 r
+  n2531 (net)                                   3         0.03                0.00       0.78 r
+  U35/I (CLKBUFX6AR9)                                               0.11      0.01 c     0.79 r
+  U35/O (CLKBUFX6AR9)                                               0.10      0.13 c     0.93 r
+  n3275 (net)                                   5         0.04                0.00       0.93 r
+  U2275/I4 (NAND4X1AR9)                                             0.10      0.00 c     0.93 r
+  U2275/O (NAND4X1AR9)                                              0.15      0.14       1.07 f
+  n1501 (net)                                   1         0.00                0.00       1.07 f
+  U251/I1 (NOR2X1AR9)                                               0.15      0.00 &     1.07 f
+  U251/O (NOR2X1AR9)                                                0.30      0.23       1.29 r
+  n2488 (net)                                   5         0.01                0.00       1.29 r
+  U253/I1 (NOR2X05AR9)                                              0.30      0.00 &     1.29 r
+  U253/O (NOR2X05AR9)                                               0.09      0.08       1.38 f
+  n3278 (net)                                   1         0.00                0.00       1.38 f
+  U3325/I (CLKBUFX2AR9)                                             0.09      0.00 &     1.38 f
+  U3325/O (CLKBUFX2AR9)                                             0.14      0.15 c     1.53 f
+  n3255 (net)                                   1         0.02                0.00       1.53 f
+  U2313/I1 (NOR2X1AR9)                                              0.14      0.01 c     1.54 f
+  U2313/O (NOR2X1AR9)                                               0.24      0.19       1.73 r
+  n2414 (net)                                   5         0.01                0.00       1.73 r
+  U2606/I1 (NAND2X1AR9)                                             0.24      0.00 &     1.73 r
+  U2606/O (NAND2X1AR9)                                              0.12      0.12       1.85 f
+  memForAorB_0_ME (net)                         2         0.00                0.00       1.85 f
+  memForAorB_0/ram1rw_4/ram/ME (mem55lpw256d16sp)                   0.12      0.00 &     1.85 f
+  data arrival time                                                                      1.85
+
+  clock Int_clk (rise edge)                                                   3.00       3.00
+  clock network delay (ideal)                                                 0.55       3.55
+  clock uncertainty                                                          -0.25       3.30
+  memForAorB_0/ram1rw_4/ram/CLK (mem55lpw256d16sp)                            0.00       3.30 r
+  library setup time                                                         -1.39       1.91
+  data required time                                                                     1.91
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     1.91
+  data arrival time                                                                     -1.85
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.06
+
+
+  Startpoint: partialSum_reg[16]
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: memForAorB_1/ram1rw_4/ram
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: REG2MEM
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.55       0.55
+  partialSum_reg[16]/CK (DFFRBQBX4J1AR9)                            0.08      0.00       0.55 r
+  partialSum_reg[16]/QB (DFFRBQBX4J1AR9)                            0.10      0.29 c     0.84 f
+  n2520 (net)                                   6         0.03                0.00       0.84 f
+  U1751/I (CLKINVX2AR9)                                             0.10      0.00 c     0.84 f
+  U1751/O (CLKINVX2AR9)                                             0.07      0.07       0.92 r
+  n2381 (net)                                   4         0.01                0.00       0.92 r
+  U2769/I1 (CLKNAND2X3AR9)                                          0.07      0.00 &     0.92 r
+  U2769/O (CLKNAND2X3AR9)                                           0.07      0.07       0.99 f
+  n2719 (net)                                   2         0.01                0.00       0.99 f
+  U2768/I (CLKINVX2AR9)                                             0.07      0.00 &     0.99 f
+  U2768/O (CLKINVX2AR9)                                             0.04      0.04       1.03 r
+  n2704 (net)                                   1         0.00                0.00       1.03 r
+  U2767/I3 (NAND3X2AR9)                                             0.04      0.00 &     1.03 r
+  U2767/O (NAND3X2AR9)                                              0.12      0.10       1.13 f
+  n2196 (net)                                   1         0.01                0.00       1.13 f
+  U997/I1 (CLKNOR2X4AR9)                                            0.12      0.00 &     1.13 f
+  U997/O (CLKNOR2X4AR9)                                             0.08      0.08       1.20 r
+  n2208 (net)                                   5         0.01                0.00       1.20 r
+  U32/I2 (CLKNAND2X4AR9)                                            0.08      0.00 &     1.21 r
+  U32/O (CLKNAND2X4AR9)                                             0.05      0.05       1.25 f
+  n2210 (net)                                   1         0.00                0.00       1.25 f
+  U246/I (INVX4AR9)                                                 0.05      0.00 &     1.25 f
+  U246/O (INVX4AR9)                                                 0.03      0.03       1.29 r
+  n117 (net)                                    1         0.00                0.00       1.29 r
+  U1397/I2 (HAX2AR9)                                                0.03      0.00 &     1.29 r
+  U1397/CO (HAX2AR9)                                                0.05      0.09       1.38 r
+  n2206 (net)                                   2         0.00                0.00       1.38 r
+  U1013/I2 (AND2X1AR9)                                              0.05      0.00 &     1.38 r
+  U1013/O (AND2X1AR9)                                               0.07      0.10       1.48 r
+  n3412 (net)                                   1         0.00                0.00       1.48 r
+  U2614/I2 (HAX2AR9)                                                0.07      0.00 &     1.48 r
+  U2614/CO (HAX2AR9)                                                0.05      0.11       1.59 r
+  n2215 (net)                                   1         0.00                0.00       1.59 r
+  U1597/I2 (HAX2AR9)                                                0.05      0.00 &     1.59 r
+  U1597/CO (HAX2AR9)                                                0.05      0.10       1.69 r
+  n2217 (net)                                   1         0.00                0.00       1.69 r
+  U2620/I2 (HAX2AR9)                                                0.05      0.00 &     1.69 r
+  U2620/CO (HAX2AR9)                                                0.05      0.10       1.79 r
+  n2220 (net)                                   1         0.00                0.00       1.79 r
+  U2621/I2 (HAX2AR9)                                                0.05      0.00 &     1.79 r
+  U2621/S (HAX2AR9)                                                 0.07      0.15       1.94 r
+  n2243 (net)                                   2         0.00                0.00       1.94 r
+  U1565/I1 (NAND3B1X2AR9)                                           0.07      0.00 &     1.94 r
+  U1565/O (NAND3B1X2AR9)                                            0.06      0.06       2.01 f
+  n2222 (net)                                   1         0.00                0.00       2.01 f
+  U2622/I1 (OR2B1X2AR9)                                             0.06      0.00 &     2.01 f
+  U2622/O (OR2B1X2AR9)                                              0.04      0.09       2.10 f
+  n2223 (net)                                   1         0.00                0.00       2.10 f
+  U2623/I (CLKINVX1AR9)                                             0.04      0.00 &     2.10 f
+  U2623/O (CLKINVX1AR9)                                             0.08      0.07       2.17 r
+  n2227 (net)                                   1         0.01                0.00       2.17 r
+  U353/I1 (NOR2X4OAR9)                                              0.08      0.00 &     2.17 r
+  U353/O (NOR2X4OAR9)                                               0.06      0.06       2.22 f
+  n2415 (net)                                   3         0.01                0.00       2.22 f
+  U33/I1 (NOR2X4OAR9)                                               0.06      0.00 &     2.22 f
+  U33/O (NOR2X4OAR9)                                                0.10      0.08       2.30 r
+  n2716 (net)                                   6         0.02                0.00       2.30 r
+  U254/I1 (AND2B1X2AR9)                                             0.10      0.00 &     2.31 r
+  U254/O (AND2B1X2AR9)                                              0.15      0.16       2.47 r
+  n122 (net)                                    1         0.01                0.00       2.47 r
+  U255/I (CLKINVX1AR9)                                              0.15      0.00 &     2.47 r
+  U255/O (CLKINVX1AR9)                                              0.17      0.16       2.62 f
+  n2261 (net)                                   1         0.02                0.00       2.62 f
+  U1497/I2 (NAND2X05AR9)                                            0.17      0.00 &     2.63 f
+  U1497/O (NAND2X05AR9)                                             0.11      0.11       2.74 r
+  memForAorB_1_D[6] (net)                       1         0.00                0.00       2.74 r
+  memForAorB_1/ram1rw_4/ram/D[6] (mem55lpw256d16sp)                 0.11      0.00 &     2.74 r
+  data arrival time                                                                      2.74
+
+  clock Int_clk (rise edge)                                                   3.00       3.00
+  clock network delay (ideal)                                                 0.55       3.55
+  clock uncertainty                                                          -0.25       3.30
+  memForAorB_1/ram1rw_4/ram/CLK (mem55lpw256d16sp)                            0.00       3.30 r
+  library setup time                                                         -0.49       2.81
+  data required time                                                                     2.81
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     2.81
+  data arrival time                                                                     -2.74
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.07
+
+
+  Startpoint: fsm_cntLayers_value_reg[2]
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: partialSum_reg[25]
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: REG2REG
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.55       0.55
+  fsm_cntLayers_value_reg[2]/CK (DFFRBQX4K1AR9)                     0.08      0.00       0.55 r
+  fsm_cntLayers_value_reg[2]/Q (DFFRBQX4K1AR9)                      0.04      0.20       0.75 r
+  temp_fsm_adrForWeight_1[10] (net)             1         0.01                0.00       0.75 r
+  U3311/I (CLKINVX3AR9)                                             0.04      0.00 &     0.75 r
+  U3311/O (CLKINVX3AR9)                                             0.16      0.11       0.86 f
+  n3231 (net)                                   6         0.05                0.00       0.86 f
+  U1125/I (CLKINVX4AR9)                                             0.16      0.00 &     0.86 f
+  U1125/O (CLKINVX4AR9)                                             0.22      0.16 c     1.03 r
+  n3234 (net)                                   5         0.07                0.00       1.03 r
+  U1203/I (CLKINVX3AR9)                                             0.22      0.00 c     1.03 r
+  U1203/O (CLKINVX3AR9)                                             0.07      0.07       1.10 f
+  n4300 (net)                                   1         0.01                0.00       1.10 f
+  U4028/I (CLKINVX6AR9)                                             0.07      0.00 &     1.10 f
+  U4028/O (CLKINVX6AR9)                                             0.04      0.04       1.14 r
+  n4299 (net)                                   1         0.01                0.00       1.14 r
+  U3895/I2 (NAND2X6AR9)                                             0.04      0.00 &     1.14 r
+  U3895/O (NAND2X6AR9)                                              0.07      0.06       1.20 f
+  n4131 (net)                                   3         0.02                0.00       1.20 f
+  U4327/I2 (CLKNAND2X8AR9)                                          0.07      0.00 &     1.21 f
+  U4327/O (CLKNAND2X8AR9)                                           0.05      0.06       1.26 r
+  n4961 (net)                                   1         0.01                0.00       1.26 r
+  U1175/I (CLKINVX8AR9)                                             0.05      0.00 &     1.26 r
+  U1175/O (CLKINVX8AR9)                                             0.05      0.05 c     1.31 f
+  n4734 (net)                                   2         0.04                0.00       1.31 f
+  U76/I (INVX8AR9)                                                  0.06      0.01 c     1.32 f
+  U76/O (INVX8AR9)                                                  0.06      0.05 c     1.37 r
+  n4668 (net)                                   3         0.02                0.00       1.37 r
+  U1773/I2 (CLKXNOR2X1AR9)                                          0.06      0.00 c     1.37 r
+  U1773/O (CLKXNOR2X1AR9)                                           0.07      0.16       1.53 r
+  n889 (net)                                    2         0.00                0.00       1.53 r
+  U664/I1 (NAND2X1AR9)                                              0.07      0.00 &     1.53 r
+  U664/O (NAND2X1AR9)                                               0.11      0.10       1.63 f
+  n888 (net)                                    1         0.01                0.00       1.63 f
+  U1859/I1 (NAND2X4OAR9)                                            0.11      0.00 &     1.63 f
+  U1859/O (NAND2X4OAR9)                                             0.11      0.09 c     1.72 r
+  n1869 (net)                                   5         0.03                0.00       1.72 r
+  U944/I (CLKINVX2AR9)                                              0.11      0.00 c     1.72 r
+  U944/O (CLKINVX2AR9)                                              0.05      0.06       1.78 f
+  n1125 (net)                                   2         0.01                0.00       1.78 f
+  U900/I1 (NAND3X2AR9)                                              0.05      0.00 &     1.78 f
+  U900/O (NAND3X2AR9)                                               0.08      0.06       1.84 r
+  n1157 (net)                                   2         0.01                0.00       1.84 r
+  U96/I3 (NAND3X1AR9)                                               0.08      0.00 &     1.84 r
+  U96/O (NAND3X1AR9)                                                0.09      0.09       1.93 f
+  n5239 (net)                                   1         0.00                0.00       1.93 f
+  U67/I1 (CLKOR2X2AR9)                                              0.09      0.00 &     1.93 f
+  U67/O (CLKOR2X2AR9)                                               0.05      0.11       2.04 f
+  n748 (net)                                    2         0.01                0.00       2.04 f
+  U415/I2 (CLKNAND2X2AR9)                                           0.05      0.00 &     2.04 f
+  U415/O (CLKNAND2X2AR9)                                            0.08      0.07       2.11 r
+  n910 (net)                                    1         0.01                0.00       2.11 r
+  U796/I2 (NAND2X4AR9)                                              0.08      0.00 &     2.11 r
+  U796/O (NAND2X4AR9)                                               0.05      0.06       2.17 f
+  n1890 (net)                                   2         0.01                0.00       2.17 f
+  U795/I2 (CLKXNOR2X1AR9)                                           0.05      0.00 &     2.17 f
+  U795/O (CLKXNOR2X1AR9)                                            0.07      0.15       2.33 f
+  n1047 (net)                                   2         0.00                0.00       2.33 f
+  U2014/I (CLKINVX1AR9)                                             0.07      0.00 &     2.33 f
+  U2014/O (CLKINVX1AR9)                                             0.05      0.05       2.38 r
+  n4383 (net)                                   1         0.00                0.00       2.38 r
+  U4084/I1 (NAND2X2AR9)                                             0.05      0.00 &     2.38 r
+  U4084/O (NAND2X2AR9)                                              0.04      0.05       2.43 f
+  n4385 (net)                                   1         0.00                0.00       2.43 f
+  U849/I2 (NAND2X3AR9)                                              0.04      0.00 &     2.43 f
+  U849/O (NAND2X3AR9)                                               0.06      0.05       2.48 r
+  n1914 (net)                                   2         0.01                0.00       2.48 r
+  U2024/I1 (NAND2X2AR9)                                             0.06      0.00 &     2.48 r
+  U2024/O (NAND2X2AR9)                                              0.09      0.08       2.56 f
+  n1926 (net)                                   2         0.01                0.00       2.56 f
+  U661/I2 (NOR2X4OAR9)                                              0.09      0.00 &     2.56 f
+  U661/O (NOR2X4OAR9)                                               0.07      0.07       2.63 r
+  n667 (net)                                    2         0.01                0.00       2.63 r
+  U3780/I1 (CLKOR2X3AR9)                                            0.07      0.00 &     2.63 r
+  U3780/O (CLKOR2X3AR9)                                             0.08      0.13       2.76 r
+  n4015 (net)                                   3         0.02                0.00       2.76 r
+  U1935/B1 (AOI12X2AR9)                                             0.08      0.00 &     2.76 r
+  U1935/O (AOI12X2AR9)                                              0.05      0.06       2.82 f
+  n2066 (net)                                   1         0.00                0.00       2.82 f
+  U2551/A1 (OAI12X1IAR9)                                            0.05      0.00 &     2.82 f
+  U2551/O (OAI12X1IAR9)                                             0.14      0.09       2.91 r
+  n2068 (net)                                   2         0.01                0.00       2.91 r
+  U1924/I (INVX05AR9)                                               0.14      0.00 &     2.91 r
+  U1924/O (INVX05AR9)                                               0.09      0.09       3.00 f
+  n2561 (net)                                   1         0.00                0.00       3.00 f
+  U1928/I2 (NAND2X2OAR9)                                            0.09      0.00 &     3.00 f
+  U1928/O (NAND2X2OAR9)                                             0.06      0.07       3.07 r
+  n2797 (net)                                   1         0.00                0.00       3.07 r
+  U2675/I1 (NAND2X2AR9)                                             0.06      0.00 &     3.07 r
+  U2675/O (NAND2X2AR9)                                              0.06      0.05       3.12 f
+  n4804 (net)                                   1         0.00                0.00       3.12 f
+  U1655/I1 (NAND2X4AR9)                                             0.06      0.00 &     3.12 f
+  U1655/O (NAND2X4AR9)                                              0.05      0.04       3.16 r
+  n2073 (net)                                   1         0.01                0.00       3.16 r
+  U2553/B1 (OAI12X4IAR9)                                            0.05      0.00 &     3.17 r
+  U2553/O (OAI12X4IAR9)                                             0.06      0.04       3.21 f
+  n167 (net)                                    1         0.01                0.00       3.21 f
+  partialSum_reg[25]/D (DFFRBQX8J1AR9)                              0.06      0.00 &     3.21 f
+  data arrival time                                                                      3.21
+
+  clock Int_clk (rise edge)                                                   3.00       3.00
+  clock network delay (ideal)                                                 0.55       3.55
+  clock uncertainty                                                          -0.25       3.30
+  partialSum_reg[25]/CK (DFFRBQX8J1AR9)                                       0.00       3.30 r
+  library setup time                                                          0.03       3.33
+  data required time                                                                     3.33
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     3.33
+  data arrival time                                                                     -3.21
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.12
+
+
+  Startpoint: fsm_cntLayers_value_reg[2]
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: partialSum_reg[25]
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: REG2REG
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.55       0.55
+  fsm_cntLayers_value_reg[2]/CK (DFFRBQX4K1AR9)                     0.08      0.00       0.55 r
+  fsm_cntLayers_value_reg[2]/Q (DFFRBQX4K1AR9)                      0.04      0.20       0.75 r
+  temp_fsm_adrForWeight_1[10] (net)             1         0.01                0.00       0.75 r
+  U3311/I (CLKINVX3AR9)                                             0.04      0.00 &     0.75 r
+  U3311/O (CLKINVX3AR9)                                             0.16      0.11       0.86 f
+  n3231 (net)                                   6         0.05                0.00       0.86 f
+  U1125/I (CLKINVX4AR9)                                             0.16      0.00 &     0.86 f
+  U1125/O (CLKINVX4AR9)                                             0.22      0.16 c     1.03 r
+  n3234 (net)                                   5         0.07                0.00       1.03 r
+  U1203/I (CLKINVX3AR9)                                             0.22      0.00 c     1.03 r
+  U1203/O (CLKINVX3AR9)                                             0.07      0.07       1.10 f
+  n4300 (net)                                   1         0.01                0.00       1.10 f
+  U4028/I (CLKINVX6AR9)                                             0.07      0.00 &     1.10 f
+  U4028/O (CLKINVX6AR9)                                             0.04      0.04       1.14 r
+  n4299 (net)                                   1         0.01                0.00       1.14 r
+  U3895/I2 (NAND2X6AR9)                                             0.04      0.00 &     1.14 r
+  U3895/O (NAND2X6AR9)                                              0.07      0.06       1.20 f
+  n4131 (net)                                   3         0.02                0.00       1.20 f
+  U4327/I2 (CLKNAND2X8AR9)                                          0.07      0.00 &     1.21 f
+  U4327/O (CLKNAND2X8AR9)                                           0.05      0.06       1.26 r
+  n4961 (net)                                   1         0.01                0.00       1.26 r
+  U1175/I (CLKINVX8AR9)                                             0.05      0.00 &     1.26 r
+  U1175/O (CLKINVX8AR9)                                             0.05      0.05 c     1.31 f
+  n4734 (net)                                   2         0.04                0.00       1.31 f
+  U76/I (INVX8AR9)                                                  0.06      0.01 c     1.32 f
+  U76/O (INVX8AR9)                                                  0.06      0.05 c     1.37 r
+  n4668 (net)                                   3         0.02                0.00       1.37 r
+  U1773/I2 (CLKXNOR2X1AR9)                                          0.06      0.00 c     1.37 r
+  U1773/O (CLKXNOR2X1AR9)                                           0.07      0.16       1.53 r
+  n889 (net)                                    2         0.00                0.00       1.53 r
+  U664/I1 (NAND2X1AR9)                                              0.07      0.00 &     1.53 r
+  U664/O (NAND2X1AR9)                                               0.11      0.10       1.63 f
+  n888 (net)                                    1         0.01                0.00       1.63 f
+  U1859/I1 (NAND2X4OAR9)                                            0.11      0.00 &     1.63 f
+  U1859/O (NAND2X4OAR9)                                             0.11      0.09 c     1.72 r
+  n1869 (net)                                   5         0.03                0.00       1.72 r
+  U944/I (CLKINVX2AR9)                                              0.11      0.00 c     1.72 r
+  U944/O (CLKINVX2AR9)                                              0.05      0.06       1.78 f
+  n1125 (net)                                   2         0.01                0.00       1.78 f
+  U900/I1 (NAND3X2AR9)                                              0.05      0.00 &     1.78 f
+  U900/O (NAND3X2AR9)                                               0.08      0.06       1.84 r
+  n1157 (net)                                   2         0.01                0.00       1.84 r
+  U96/I3 (NAND3X1AR9)                                               0.08      0.00 &     1.84 r
+  U96/O (NAND3X1AR9)                                                0.09      0.09       1.93 f
+  n5239 (net)                                   1         0.00                0.00       1.93 f
+  U67/I1 (CLKOR2X2AR9)                                              0.09      0.00 &     1.93 f
+  U67/O (CLKOR2X2AR9)                                               0.05      0.11       2.04 f
+  n748 (net)                                    2         0.01                0.00       2.04 f
+  U415/I2 (CLKNAND2X2AR9)                                           0.05      0.00 &     2.04 f
+  U415/O (CLKNAND2X2AR9)                                            0.08      0.07       2.11 r
+  n910 (net)                                    1         0.01                0.00       2.11 r
+  U796/I2 (NAND2X4AR9)                                              0.08      0.00 &     2.11 r
+  U796/O (NAND2X4AR9)                                               0.05      0.06       2.17 f
+  n1890 (net)                                   2         0.01                0.00       2.17 f
+  U795/I2 (CLKXNOR2X1AR9)                                           0.05      0.00 &     2.17 f
+  U795/O (CLKXNOR2X1AR9)                                            0.07      0.15       2.33 f
+  n1047 (net)                                   2         0.00                0.00       2.33 f
+  U2014/I (CLKINVX1AR9)                                             0.07      0.00 &     2.33 f
+  U2014/O (CLKINVX1AR9)                                             0.05      0.05       2.38 r
+  n4383 (net)                                   1         0.00                0.00       2.38 r
+  U4084/I1 (NAND2X2AR9)                                             0.05      0.00 &     2.38 r
+  U4084/O (NAND2X2AR9)                                              0.04      0.05       2.43 f
+  n4385 (net)                                   1         0.00                0.00       2.43 f
+  U849/I2 (NAND2X3AR9)                                              0.04      0.00 &     2.43 f
+  U849/O (NAND2X3AR9)                                               0.06      0.05       2.48 r
+  n1914 (net)                                   2         0.01                0.00       2.48 r
+  U2024/I1 (NAND2X2AR9)                                             0.06      0.00 &     2.48 r
+  U2024/O (NAND2X2AR9)                                              0.09      0.08       2.56 f
+  n1926 (net)                                   2         0.01                0.00       2.56 f
+  U661/I2 (NOR2X4OAR9)                                              0.09      0.00 &     2.56 f
+  U661/O (NOR2X4OAR9)                                               0.07      0.07       2.63 r
+  n667 (net)                                    2         0.01                0.00       2.63 r
+  U3780/I1 (CLKOR2X3AR9)                                            0.07      0.00 &     2.63 r
+  U3780/O (CLKOR2X3AR9)                                             0.08      0.13       2.76 r
+  n4015 (net)                                   3         0.02                0.00       2.76 r
+  U1935/B1 (AOI12X2AR9)                                             0.08      0.00 &     2.76 r
+  U1935/O (AOI12X2AR9)                                              0.05      0.06       2.82 f
+  n2066 (net)                                   1         0.00                0.00       2.82 f
+  U2551/A1 (OAI12X1IAR9)                                            0.05      0.00 &     2.82 f
+  U2551/O (OAI12X1IAR9)                                             0.14      0.09       2.91 r
+  n2068 (net)                                   2         0.01                0.00       2.91 r
+  U1924/I (INVX05AR9)                                               0.14      0.00 &     2.91 r
+  U1924/O (INVX05AR9)                                               0.09      0.09       3.00 f
+  n2561 (net)                                   1         0.00                0.00       3.00 f
+  U1928/I2 (NAND2X2OAR9)                                            0.09      0.00 &     3.00 f
+  U1928/O (NAND2X2OAR9)                                             0.06      0.07       3.07 r
+  n2797 (net)                                   1         0.00                0.00       3.07 r
+  U2675/I1 (NAND2X2AR9)                                             0.06      0.00 &     3.07 r
+  U2675/O (NAND2X2AR9)                                              0.06      0.05       3.12 f
+  n4804 (net)                                   1         0.00                0.00       3.12 f
+  U1655/I1 (NAND2X4AR9)                                             0.06      0.00 &     3.12 f
+  U1655/O (NAND2X4AR9)                                              0.05      0.04       3.16 r
+  n2073 (net)                                   1         0.01                0.00       3.16 r
+  U2553/B1 (OAI12X4IAR9)                                            0.05      0.00 &     3.17 r
+  U2553/O (OAI12X4IAR9)                                             0.06      0.04       3.21 f
+  n167 (net)                                    1         0.01                0.00       3.21 f
+  partialSum_reg[25]/D (DFFRBQX8J1AR9)                              0.06      0.00 &     3.21 f
+  data arrival time                                                                      3.21
+
+  clock Int_clk (rise edge)                                                   3.00       3.00
+  clock network delay (ideal)                                                 0.55       3.55
+  clock uncertainty                                                          -0.25       3.30
+  partialSum_reg[25]/CK (DFFRBQX8J1AR9)                                       0.00       3.30 r
+  library setup time                                                          0.03       3.33
+  data required time                                                                     3.33
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     3.33
+  data arrival time                                                                     -3.21
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.12
+
+
+1

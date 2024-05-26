@@ -1,0 +1,79 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -max_delay
+Design : mmForMLP
+Version: O-2018.06-SP5-3
+Date   : Sun May 26 22:44:33 2024
+****************************************
+
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/25/125
+
+   max_delay/setup ('MEM2REG' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   partialSum_reg[25]/D         3.33           4.27 f        -0.94  (VIOLATED)
+   partialSum_reg[28]/D         3.29           4.22 r        -0.93  (VIOLATED)
+   partialSum_reg[27]/D         3.34           4.27 r        -0.93  (VIOLATED)
+   partialSum_reg[29]/D         3.28           4.21 r        -0.93  (VIOLATED)
+   partialSum_reg[35]/D         3.29           4.21 r        -0.92  (VIOLATED)
+   partialSum_reg[32]/D         3.35           4.27 r        -0.92  (VIOLATED)
+   partialSum_reg[15]/D         3.29           4.21 r        -0.92  (VIOLATED)
+   partialSum_reg[20]/D         3.29           4.21 r        -0.92  (VIOLATED)
+   partialSum_reg[14]/D         3.26           4.18 r        -0.92  (VIOLATED)
+   partialSum_reg[31]/D         3.33           4.24 f        -0.91  (VIOLATED)
+   partialSum_reg[30]/D         3.34           4.25 r        -0.91  (VIOLATED)
+   partialSum_reg[16]/D         3.28           4.19 r        -0.91  (VIOLATED)
+   partialSum_reg[24]/D         3.29           4.20 r        -0.91  (VIOLATED)
+   partialSum_reg[23]/D         3.28           4.19 r        -0.91  (VIOLATED)
+   partialSum_reg[34]/D         3.33           4.24 f        -0.91  (VIOLATED)
+   partialSum_reg[22]/D         3.29           4.19 r        -0.91  (VIOLATED)
+   partialSum_reg[26]/D         3.29           4.19 r        -0.90  (VIOLATED)
+   partialSum_reg[17]/D         3.33           4.22 f        -0.89  (VIOLATED)
+   partialSum_reg[18]/D         3.34           4.23 r        -0.89  (VIOLATED)
+   partialSum_reg[21]/D         3.35           4.22 r        -0.87  (VIOLATED)
+   partialSum_reg[33]/D         3.34           4.21 f        -0.87  (VIOLATED)
+   partialSum_reg[19]/D         3.34           4.14 r        -0.80  (VIOLATED)
+   partialSum_reg[13]/D         3.26           4.02 r        -0.75  (VIOLATED)
+   partialSum_reg[11]/D         3.33           4.02 f        -0.69  (VIOLATED)
+   partialSum_reg[12]/D         3.34           4.01 f        -0.67  (VIOLATED)
+   partialSum_reg[9]/D          3.24           3.91 r        -0.67  (VIOLATED)
+   partialSum_reg[10]/D         3.32           3.93 r        -0.60  (VIOLATED)
+   partialSum_reg[8]/D          3.32           3.84 r        -0.52  (VIOLATED)
+   partialSum_reg[7]/D          3.33           3.78 f        -0.45  (VIOLATED)
+   partialSum_reg[6]/D          3.32           3.56 r        -0.24  (VIOLATED)
+   partialSum_reg[5]/D          3.33           3.53 f        -0.20  (VIOLATED)
+   partialSum_reg[4]/D          3.34           3.43 r        -0.09  (VIOLATED)
+   partialSum_reg[3]/D          3.32           3.39 r        -0.07  (VIOLATED)
+
+
+   max_delay/setup ('OUTPUTS' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   result_payload[12]           1.50           2.01 f        -0.51  (VIOLATED)
+   result_payload[11]           1.50           2.01 f        -0.51  (VIOLATED)
+   result_payload[13]           1.50           2.00 f        -0.50  (VIOLATED)
+   result_payload[5]            1.50           2.00 f        -0.50  (VIOLATED)
+   result_payload[0]            1.50           2.00 r        -0.50  (VIOLATED)
+   result_payload[8]            1.50           1.99 r        -0.49  (VIOLATED)
+   result_payload[3]            1.50           1.99 f        -0.49  (VIOLATED)
+   result_payload[10]           1.50           1.99 f        -0.49  (VIOLATED)
+   result_payload[9]            1.50           1.99 f        -0.49  (VIOLATED)
+   result_payload[15]           1.50           1.99 f        -0.49  (VIOLATED)
+   result_payload[7]            1.50           1.99 f        -0.49  (VIOLATED)
+   result_payload[1]            1.50           1.98 f        -0.48  (VIOLATED)
+   result_payload[2]            1.50           1.98 r        -0.48  (VIOLATED)
+   result_payload[6]            1.50           1.98 r        -0.48  (VIOLATED)
+   result_payload[4]            1.50           1.98 f        -0.48  (VIOLATED)
+   result_payload[14]           1.50           1.98 f        -0.48  (VIOLATED)
+
+
+1

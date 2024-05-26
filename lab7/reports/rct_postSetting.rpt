@@ -3,7 +3,7 @@
 Report : clock tree
 Design : mmForMLP
 Version: O-2018.06-SP5-3
-Date   : Sun May 19 22:32:15 2024
+Date   : Sun May 26 22:31:06 2024
 ****************************************
 
 
@@ -32,15 +32,15 @@ Clock global Skew                 0.000
 Longest path delay                0.000
 Shortest path delay               0.000
 
-The longest path delay end pin: memForWeight_0/ram1rw_4/ram/CLK
-The shortest path delay end pin: memForWeight_0/ram1rw_4/ram/CLK
+The longest path delay end pin: fsmCtrlSig_weightValid_reg/CK
+The shortest path delay end pin: fsmCtrlSig_weightValid_reg/CK
 
 The longest Path:
 Pin                                         Cap       Fanout    Trans     Incr      Arri
 ----------------------------------------------------------------------------------------------------
 clk                                         0.000            1  0.000     0.000     0.000     r
-clk                                         0.106           62  0.000     0.000     0.000     r
-memForWeight_0/ram1rw_4/ram/CLK             0.106            0  0.000     0.000     0.000     r
+clk                                         0.104           62  0.000     0.000     0.000     r
+fsmCtrlSig_weightValid_reg/CK               0.104            0  0.000     0.000     0.000     r
 [clock delay]                                                                       0.000
 ----------------------------------------------------------------------------------------------------
 
@@ -48,8 +48,8 @@ The Shortest Path:
 Pin                                         Cap       Fanout    Trans     Incr      Arri
 ----------------------------------------------------------------------------------------------------
 clk                                         0.000            1  0.000     0.000     0.000     r
-clk                                         0.106           62  0.000     0.000     0.000     r
-memForWeight_0/ram1rw_4/ram/CLK             0.106            0  0.000     0.000     0.000     r
+clk                                         0.104           62  0.000     0.000     0.000     r
+fsmCtrlSig_weightValid_reg/CK               0.104            0  0.000     0.000     0.000     r
 [clock delay]                                                                       0.000
 ----------------------------------------------------------------------------------------------------
 

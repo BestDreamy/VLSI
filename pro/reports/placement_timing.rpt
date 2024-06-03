@@ -13,14 +13,14 @@ Report : timing
         -capacitance
 Design : mmForMLP
 Version: O-2018.06-SP5-3
-Date   : Mon Jun  3 21:22:48 2024
+Date   : Mon Jun  3 23:36:16 2024
 ****************************************
 
  * Some/all delay information is back-annotated.
 
 Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_ccs
 
-  Startpoint: load_payload[11]
+  Startpoint: load_payload[15]
               (input port clocked by Int_clk)
   Endpoint: memForAorB_0/ram1rw_4/ram
             (rising edge-triggered flip-flop clocked by Int_clk)
@@ -31,35 +31,35 @@ Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_
   ----------------------------------------------------------------------------------------------
   clock Int_clk (rise edge)                                                   0.00       0.00
   clock network delay (ideal)                                                 0.55       0.55
-  input external delay                                                        3.00       3.55 r
-  load_payload[11] (in)                                             0.00      0.00       3.55 r
-  load_payload[11] (net)                        1         0.03                0.00       3.55 r
-  U115/I (CLKBUFX2AR9)                                              0.01      0.01 *     3.56 r
-  U115/O (CLKBUFX2AR9)                                              0.20      0.16       3.71 r
-  n1224 (net)                                   3         0.03                0.00       3.71 r
-  U1179/I (INVX05AR9)                                               0.20      0.01 *     3.72 r
-  U1179/O (INVX05AR9)                                               0.08      0.08       3.80 f
-  n1007 (net)                                   1         0.00                0.00       3.80 f
-  U1180/B2 (OAI22X05AR9)                                            0.08      0.00 *     3.80 f
-  U1180/O (OAI22X05AR9)                                             0.26      0.18       3.98 r
-  memForAorB_0_D[11] (net)                      1         0.00                0.00       3.98 r
-  memForAorB_0/ram1rw_4/ram/D[11] (mem55lpw256d16sp)                0.26      0.00 *     3.98 r
-  data arrival time                                                                      3.98
+  input external delay                                                        1.45       2.00 r
+  load_payload[15] (in)                                             0.00      0.00       2.00 r
+  load_payload[15] (net)                        1         0.01                0.00       2.00 r
+  U2139/I (CLKBUFX3AR9)                                             0.00      0.00 *     2.00 r
+  U2139/O (CLKBUFX3AR9)                                             0.25      0.19       2.19 r
+  n2062 (net)                                   3         0.06                0.00       2.19 r
+  U1346/I (INVX05AR9)                                               0.25      0.01 *     2.20 r
+  U1346/O (INVX05AR9)                                               0.10      0.10       2.30 f
+  n1169 (net)                                   1         0.00                0.00       2.30 f
+  U825/B1 (OAI22X3AR9)                                              0.10      0.00 *     2.30 f
+  U825/O (OAI22X3AR9)                                               0.25      0.17       2.47 r
+  memForAorB_0_D[15] (net)                      1         0.02                0.00       2.47 r
+  memForAorB_0/ram1rw_4/ram/D[15] (mem55lpw256d16sp)                0.25      0.00 *     2.48 r
+  data arrival time                                                                      2.48
 
-  clock Int_clk (rise edge)                                                  10.00      10.00
-  clock network delay (ideal)                                                 0.55      10.55
-  clock uncertainty                                                          -0.30      10.25
-  memForAorB_0/ram1rw_4/ram/CLK (mem55lpw256d16sp)                            0.00      10.25 r
-  library setup time                                                         -0.52       9.73
-  data required time                                                                     9.73
+  clock Int_clk (rise edge)                                                   4.82       4.82
+  clock network delay (ideal)                                                 0.55       5.37
+  clock uncertainty                                                          -0.30       5.07
+  memForAorB_0/ram1rw_4/ram/CLK (mem55lpw256d16sp)                            0.00       5.07 r
+  library setup time                                                         -0.52       4.55
+  data required time                                                                     4.55
   ----------------------------------------------------------------------------------------------
-  data required time                                                                     9.73
-  data arrival time                                                                     -3.98
+  data required time                                                                     4.55
+  data arrival time                                                                     -2.48
   ----------------------------------------------------------------------------------------------
-  slack (MET)                                                                            5.75
+  slack (MET)                                                                            2.07
 
 
-  Startpoint: load_payload[11]
+  Startpoint: load_payload[15]
               (input port clocked by Int_clk)
   Endpoint: memForAorB_0/ram1rw_4/ram
             (rising edge-triggered flip-flop clocked by Int_clk)
@@ -70,37 +70,37 @@ Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_
   ----------------------------------------------------------------------------------------------
   clock Int_clk (rise edge)                                                   0.00       0.00
   clock network delay (ideal)                                                 0.55       0.55
-  input external delay                                                        3.00       3.55 r
-  load_payload[11] (in)                                             0.00      0.00       3.55 r
-  load_payload[11] (net)                        1         0.03                0.00       3.55 r
-  U115/I (CLKBUFX2AR9)                                              0.01      0.01 *     3.56 r
-  U115/O (CLKBUFX2AR9)                                              0.20      0.16       3.71 r
-  n1224 (net)                                   3         0.03                0.00       3.71 r
-  U1179/I (INVX05AR9)                                               0.20      0.01 *     3.72 r
-  U1179/O (INVX05AR9)                                               0.08      0.08       3.80 f
-  n1007 (net)                                   1         0.00                0.00       3.80 f
-  U1180/B2 (OAI22X05AR9)                                            0.08      0.00 *     3.80 f
-  U1180/O (OAI22X05AR9)                                             0.26      0.18       3.98 r
-  memForAorB_0_D[11] (net)                      1         0.00                0.00       3.98 r
-  memForAorB_0/ram1rw_4/ram/D[11] (mem55lpw256d16sp)                0.26      0.00 *     3.98 r
-  data arrival time                                                                      3.98
+  input external delay                                                        1.45       2.00 r
+  load_payload[15] (in)                                             0.00      0.00       2.00 r
+  load_payload[15] (net)                        1         0.01                0.00       2.00 r
+  U2139/I (CLKBUFX3AR9)                                             0.00      0.00 *     2.00 r
+  U2139/O (CLKBUFX3AR9)                                             0.25      0.19       2.19 r
+  n2062 (net)                                   3         0.06                0.00       2.19 r
+  U1346/I (INVX05AR9)                                               0.25      0.01 *     2.20 r
+  U1346/O (INVX05AR9)                                               0.10      0.10       2.30 f
+  n1169 (net)                                   1         0.00                0.00       2.30 f
+  U825/B1 (OAI22X3AR9)                                              0.10      0.00 *     2.30 f
+  U825/O (OAI22X3AR9)                                               0.25      0.17       2.47 r
+  memForAorB_0_D[15] (net)                      1         0.02                0.00       2.47 r
+  memForAorB_0/ram1rw_4/ram/D[15] (mem55lpw256d16sp)                0.25      0.00 *     2.48 r
+  data arrival time                                                                      2.48
 
-  clock Int_clk (rise edge)                                                  10.00      10.00
-  clock network delay (ideal)                                                 0.55      10.55
-  clock uncertainty                                                          -0.30      10.25
-  memForAorB_0/ram1rw_4/ram/CLK (mem55lpw256d16sp)                            0.00      10.25 r
-  library setup time                                                         -0.52       9.73
-  data required time                                                                     9.73
+  clock Int_clk (rise edge)                                                   4.82       4.82
+  clock network delay (ideal)                                                 0.55       5.37
+  clock uncertainty                                                          -0.30       5.07
+  memForAorB_0/ram1rw_4/ram/CLK (mem55lpw256d16sp)                            0.00       5.07 r
+  library setup time                                                         -0.52       4.55
+  data required time                                                                     4.55
   ----------------------------------------------------------------------------------------------
-  data required time                                                                     9.73
-  data arrival time                                                                     -3.98
+  data required time                                                                     4.55
+  data arrival time                                                                     -2.48
   ----------------------------------------------------------------------------------------------
-  slack (MET)                                                                            5.75
+  slack (MET)                                                                            2.07
 
 
-  Startpoint: memForWeight_0/ram1rw_4/ram
+  Startpoint: memForWeight_1/ram1rw_4/ram
               (rising edge-triggered flip-flop clocked by Int_clk)
-  Endpoint: partialSum_reg[35]
+  Endpoint: partialSum_reg[27]
             (rising edge-triggered flip-flop clocked by Int_clk)
   Path Group: MEM2REG
   Path Type: max
@@ -109,208 +109,130 @@ Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_
   ----------------------------------------------------------------------------------------------
   clock Int_clk (rise edge)                                                   0.00       0.00
   clock network delay (ideal)                                                 0.55       0.55
-  memForWeight_0/ram1rw_4/ram/CLK (mem55lpw1024d16sp)               0.08      0.00       0.55 r
-  memForWeight_0/ram1rw_4/ram/Q[0] (mem55lpw1024d16sp)              0.16      1.72       2.27 f
-  memForWeight_0_Q[0] (net)                     3         0.03                0.00       2.27 f
-  U468/I0 (MUX2X1AR9)                                               0.16      0.01 *     2.28 f
-  U468/O (MUX2X1AR9)                                                0.08      0.19       2.47 f
-  n180 (net)                                    2         0.00                0.00       2.47 f
-  U692/B2 (NAND2B1X1AR9)                                            0.08      0.00 *     2.47 f
-  U692/O (NAND2B1X1AR9)                                             0.15      0.14       2.61 f
-  n185 (net)                                    1         0.01                0.00       2.61 f
-  U691/I1 (NAND2X2IAR9)                                             0.15      0.00 *     2.61 f
-  U691/O (NAND2X2IAR9)                                              0.12      0.09       2.70 r
-  n186 (net)                                    1         0.01                0.00       2.70 r
-  U690/I2 (HAX05AR9)                                                0.12      0.00 *     2.70 r
-  U690/S (HAX05AR9)                                                 0.11      0.23       2.94 f
-  n772 (net)                                    1         0.00                0.00       2.94 f
-  U765/CI (FAX1AR9)                                                 0.11      0.00 *     2.94 f
-  U765/CO (FAX1AR9)                                                 0.09      0.23       3.17 f
-  n776 (net)                                    1         0.00                0.00       3.17 f
-  U987/CI (FAX1AR9)                                                 0.09      0.00 *     3.17 f
-  U987/CO (FAX1AR9)                                                 0.09      0.23       3.40 f
-  n780 (net)                                    1         0.01                0.00       3.40 f
-  U989/CI (FAX1AR9)                                                 0.09      0.00 *     3.40 f
-  U989/CO (FAX1AR9)                                                 0.10      0.25       3.65 f
-  n785 (net)                                    3         0.01                0.00       3.65 f
-  U366/B1 (OAI12X1IAR9)                                             0.10      0.00 *     3.65 f
-  U366/O (OAI12X1IAR9)                                              0.09      0.09       3.74 r
-  n203 (net)                                    1         0.00                0.00       3.74 r
-  U363/I1 (CLKNAND2X2AR9)                                           0.09      0.00 *     3.74 r
-  U363/O (CLKNAND2X2AR9)                                            0.05      0.06       3.79 f
-  n789 (net)                                    1         0.00                0.00       3.79 f
-  U844/CI (FAX3AR9)                                                 0.05      0.00 *     3.79 f
-  U844/CO (FAX3AR9)                                                 0.18      0.34       4.13 f
-  n793 (net)                                    3         0.04                0.00       4.13 f
-  U359/B1 (OAI12X2IAR9)                                             0.18      0.01 *     4.15 f
-  U359/O (OAI12X2IAR9)                                              0.10      0.09       4.24 r
-  n227 (net)                                    1         0.00                0.00       4.24 r
-  U357/I1 (NAND2X2OAR9)                                             0.10      0.00 *     4.24 r
-  U357/O (NAND2X2OAR9)                                              0.06      0.06       4.31 f
-  n798 (net)                                    1         0.01                0.00       4.31 f
-  U771/CI (FAX1AR9)                                                 0.06      0.00 *     4.31 f
-  U771/CO (FAX1AR9)                                                 0.10      0.23       4.54 f
-  n802 (net)                                    3         0.01                0.00       4.54 f
-  U355/B1 (OAI12X2IAR9)                                             0.10      0.00 *     4.54 f
-  U355/O (OAI12X2IAR9)                                              0.10      0.09       4.63 r
-  n259 (net)                                    1         0.01                0.00       4.63 r
-  U353/I1 (NAND2X2OAR9)                                             0.10      0.00 *     4.63 r
-  U353/O (NAND2X2OAR9)                                              0.05      0.06       4.69 f
-  n807 (net)                                    3         0.01                0.00       4.69 f
-  U16/I2 (NAND2X2AR9)                                               0.05      0.00 *     4.69 f
-  U16/O (NAND2X2AR9)                                                0.07      0.05       4.73 r
-  n10 (net)                                     1         0.00                0.00       4.73 r
-  U11/I2 (CLKNAND2X3AR9)                                            0.07      0.00 *     4.73 r
-  U11/O (CLKNAND2X3AR9)                                             0.05      0.05       4.78 f
-  n7 (net)                                      1         0.00                0.00       4.78 f
-  U13/I (CLKINVX4AR9)                                               0.05      0.00 *     4.78 f
-  U13/O (CLKINVX4AR9)                                               0.04      0.04       4.82 r
-  n8 (net)                                      1         0.01                0.00       4.82 r
-  U12/I1 (CLKNAND2X8AR9)                                            0.04      0.00 *     4.82 r
-  U12/O (CLKNAND2X8AR9)                                             0.07      0.05       4.88 f
-  n811 (net)                                    3         0.03                0.00       4.88 f
-  U396/I1 (NAND2X1IAR9)                                             0.07      0.00 *     4.88 f
-  U396/O (NAND2X1IAR9)                                              0.12      0.05       4.94 r
-  n298 (net)                                    1         0.00                0.00       4.94 r
-  U350/I2 (NAND2X2OAR9)                                             0.12      0.00 *     4.94 r
-  U350/O (NAND2X2OAR9)                                              0.04      0.05       4.98 f
-  n816 (net)                                    1         0.00                0.00       4.98 f
-  U775/CI (FAX1AR9)                                                 0.04      0.00 *     4.98 f
-  U775/CO (FAX1AR9)                                                 0.10      0.23       5.21 f
-  n820 (net)                                    3         0.01                0.00       5.21 f
-  U779/B1 (OAI12X2AR9)                                              0.10      0.00 *     5.21 f
-  U779/O (OAI12X2AR9)                                               0.09      0.08       5.29 r
-  n346 (net)                                    1         0.00                0.00       5.29 r
-  U348/I2 (CLKNAND2X2AR9)                                           0.09      0.00 *     5.29 r
-  U348/O (CLKNAND2X2AR9)                                            0.09      0.08       5.37 f
-  n825 (net)                                    1         0.01                0.00       5.37 f
-  U778/CI (FAX2AR9)                                                 0.09      0.00 *     5.37 f
-  U778/CO (FAX2AR9)                                                 0.09      0.25       5.62 f
-  n829 (net)                                    3         0.01                0.00       5.62 f
-  U347/B1 (OAI12X2IAR9)                                             0.09      0.00 *     5.62 f
-  U347/O (OAI12X2IAR9)                                              0.10      0.08       5.70 r
-  n403 (net)                                    1         0.01                0.00       5.70 r
-  U345/I1 (NAND2X4OAR9)                                             0.10      0.00 *     5.70 r
-  U345/O (NAND2X4OAR9)                                              0.06      0.06       5.77 f
-  n834 (net)                                    1         0.01                0.00       5.77 f
-  U1017/CI (FAX1AR9)                                                0.06      0.00 *     5.77 f
-  U1017/CO (FAX1AR9)                                                0.09      0.21       5.98 f
-  n838 (net)                                    1         0.00                0.00       5.98 f
-  U1020/CI (FAX2AR9)                                                0.09      0.00 *     5.98 f
-  U1020/CO (FAX2AR9)                                                0.09      0.25       6.23 f
-  n840 (net)                                    3         0.01                0.00       6.23 f
-  U782/B1 (OAI12X2IAR9)                                             0.09      0.00 *     6.23 f
-  U782/O (OAI12X2IAR9)                                              0.09      0.07       6.30 r
-  n504 (net)                                    1         0.00                0.00       6.30 r
-  U391/I1 (NAND2X2OAR9)                                             0.09      0.00 *     6.30 r
-  U391/O (NAND2X2OAR9)                                              0.05      0.06       6.36 f
-  n846 (net)                                    1         0.01                0.00       6.36 f
-  U331/CI (FAX1AR9)                                                 0.05      0.00 *     6.36 f
-  U331/CO (FAX1AR9)                                                 0.11      0.24       6.59 f
-  n850 (net)                                    3         0.01                0.00       6.59 f
-  U390/B1 (OAI12X1IAR9)                                             0.11      0.00 *     6.59 f
-  U390/O (OAI12X1IAR9)                                              0.11      0.10       6.69 r
-  n564 (net)                                    1         0.00                0.00       6.69 r
-  U342/I1 (CLKNAND2X3AR9)                                           0.11      0.00 *     6.69 r
-  U342/O (CLKNAND2X3AR9)                                            0.06      0.06       6.75 f
-  n856 (net)                                    3         0.01                0.00       6.75 f
-  U2/I2 (NAND2X2AR9)                                                0.06      0.00 *     6.75 f
-  U2/O (NAND2X2AR9)                                                 0.06      0.05       6.80 r
-  n1 (net)                                      1         0.00                0.00       6.80 r
-  U5/I3 (NAND3X3AR9)                                                0.06      0.00 *     6.80 r
-  U5/O (NAND3X3AR9)                                                 0.19      0.15       6.95 f
-  n860 (net)                                    3         0.02                0.00       6.95 f
-  U341/B1 (OAI12X2IAR9)                                             0.19      0.00 *     6.95 f
-  U341/O (OAI12X2IAR9)                                              0.10      0.10       7.06 r
-  n615 (net)                                    1         0.00                0.00       7.06 r
-  U387/I2 (CLKNAND2X4AR9)                                           0.10      0.00 *     7.06 r
-  U387/O (CLKNAND2X4AR9)                                            0.12      0.11       7.17 f
-  n865 (net)                                    1         0.03                0.00       7.17 f
-  U386/CI (FAX2AR9)                                                 0.12      0.01 *     7.17 f
-  U386/CO (FAX2AR9)                                                 0.08      0.24       7.42 f
-  n869 (net)                                    1         0.00                0.00       7.42 f
-  U1035/CI (FAX2AR9)                                                0.08      0.00 *     7.42 f
-  U1035/CO (FAX2AR9)                                                0.07      0.23       7.64 f
-  n873 (net)                                    1         0.00                0.00       7.64 f
-  U1036/CI (FAX2AR9)                                                0.07      0.00 *     7.64 f
-  U1036/CO (FAX2AR9)                                                0.09      0.24       7.89 f
-  n877 (net)                                    3         0.01                0.00       7.89 f
-  U340/B1 (OAI12X2IAR9)                                             0.09      0.00 *     7.89 f
-  U340/O (OAI12X2IAR9)                                              0.08      0.08       7.96 r
-  n694 (net)                                    1         0.00                0.00       7.96 r
-  U339/I1 (CLKNAND2X4AR9)                                           0.08      0.00 *     7.96 r
-  U339/O (CLKNAND2X4AR9)                                            0.13      0.11       8.07 f
-  n882 (net)                                    1         0.03                0.00       8.07 f
-  U1040/CI (FAX1AR9)                                                0.13      0.01 *     8.08 f
-  U1040/CO (FAX1AR9)                                                0.10      0.26       8.33 f
-  n886 (net)                                    3         0.01                0.00       8.33 f
-  U337/I1 (NAND2X1AR9)                                              0.10      0.00 *     8.33 f
-  U337/O (NAND2X1AR9)                                               0.11      0.09       8.42 r
-  n720 (net)                                    1         0.00                0.00       8.42 r
-  U336/I2 (CLKNAND2X3AR9)                                           0.11      0.00 *     8.42 r
-  U336/O (CLKNAND2X3AR9)                                            0.06      0.07       8.49 f
-  n891 (net)                                    1         0.01                0.00       8.49 f
-  U332/CI (FAX2AR9)                                                 0.06      0.00 *     8.49 f
-  U332/CO (FAX2AR9)                                                 0.09      0.24       8.73 f
-  n895 (net)                                    3         0.01                0.00       8.73 f
-  U335/B1 (OAI12X2IAR9)                                             0.09      0.00 *     8.73 f
-  U335/O (OAI12X2IAR9)                                              0.09      0.07       8.81 r
-  n740 (net)                                    1         0.00                0.00       8.81 r
-  U383/I1 (CLKNAND2X3AR9)                                           0.09      0.00 *     8.81 r
-  U383/O (CLKNAND2X3AR9)                                            0.05      0.05       8.86 f
-  n900 (net)                                    1         0.00                0.00       8.86 f
-  U382/CI (FAX1AR9)                                                 0.05      0.00 *     8.86 f
-  U382/CO (FAX1AR9)                                                 0.10      0.23       9.09 f
-  n904 (net)                                    3         0.01                0.00       9.09 f
-  U24/I2 (NAND2X2AR9)                                               0.10      0.00 *     9.09 f
-  U24/O (NAND2X2AR9)                                                0.05      0.06       9.15 r
-  n15 (net)                                     1         0.00                0.00       9.15 r
-  U18/I2 (CLKNAND2X3AR9)                                            0.05      0.00 *     9.15 r
-  U18/O (CLKNAND2X3AR9)                                             0.05      0.04       9.19 f
-  n12 (net)                                     1         0.00                0.00       9.19 f
-  U20/I (CLKINVX3AR9)                                               0.05      0.00 *     9.19 f
-  U20/O (CLKINVX3AR9)                                               0.04      0.04       9.24 r
-  n13 (net)                                     1         0.01                0.00       9.24 r
-  U19/I1 (CLKNAND2X6AR9)                                            0.04      0.00 *     9.24 r
-  U19/O (CLKNAND2X6AR9)                                             0.09      0.07       9.30 f
-  n906 (net)                                    3         0.03                0.00       9.30 f
-  U380/B1 (OAI12X2AR9)                                              0.09      0.01 *     9.31 f
-  U380/O (OAI12X2AR9)                                               0.07      0.07       9.37 r
-  n749 (net)                                    1         0.00                0.00       9.37 r
-  U334/I1 (CLKNAND2X1AR9)                                           0.07      0.00 *     9.37 r
-  U334/O (CLKNAND2X1AR9)                                            0.07      0.07       9.45 f
-  n908 (net)                                    1         0.00                0.00       9.45 f
-  U1044/CI (FAX1AR9)                                                0.07      0.00 *     9.45 f
-  U1044/CO (FAX1AR9)                                                0.08      0.21       9.66 f
-  n1077 (net)                                   1         0.00                0.00       9.66 f
-  U1233/CI (FAX1AR9)                                                0.08      0.00 *     9.66 f
-  U1233/CO (FAX1AR9)                                                0.07      0.20       9.86 f
-  n751 (net)                                    1         0.00                0.00       9.86 f
-  U333/I1 (XOR2X1AR9)                                               0.07      0.00 *     9.86 f
-  U333/O (XOR2X1AR9)                                                0.07      0.24      10.10 f
-  n752 (net)                                    1         0.00                0.00      10.10 f
-  U818/B2B (OAI22B2X1AR9)                                           0.07      0.00 *    10.10 f
-  U818/O (OAI22B2X1AR9)                                             0.09      0.11      10.22 f
-  n178 (net)                                    1         0.00                0.00      10.22 f
-  partialSum_reg[35]/D (DFFRBQX05AR9)                               0.09      0.00 *    10.22 f
-  data arrival time                                                                     10.22
+  memForWeight_1/ram1rw_4/ram/CLK (mem55lpw1024d16sp)               0.08      0.00       0.55 r
+  memForWeight_1/ram1rw_4/ram/Q[1] (mem55lpw1024d16sp)              0.08      1.66       2.21 f
+  memForWeight_1_Q[1] (net)                     1         0.01                0.00       2.21 f
+  U1930/I1 (NAND2X4AR9)                                             0.08      0.00 *     2.22 f
+  U1930/O (NAND2X4AR9)                                              0.09      0.06       2.27 r
+  n1870 (net)                                   1         0.01                0.00       2.27 r
+  U1931/I2 (CLKNAND2X8AR9)                                          0.09      0.00 *     2.27 r
+  U1931/O (CLKNAND2X8AR9)                                           0.13      0.11       2.39 f
+  n421 (net)                                    8         0.06                0.00       2.39 f
+  U472/I2 (CLKXNOR2X1AR9)                                           0.13      0.01 *     2.39 f
+  U472/O (CLKXNOR2X1AR9)                                            0.10      0.20       2.59 f
+  n517 (net)                                    2         0.01                0.00       2.59 f
+  U1052/A1 (OAI22X2AR9)                                             0.10      0.00 *     2.59 f
+  U1052/O (OAI22X2AR9)                                              0.31      0.19       2.78 r
+  n532 (net)                                    5         0.02                0.00       2.78 r
+  U1850/I2 (NAND2X05AR9)                                            0.31      0.00 *     2.79 r
+  U1850/O (NAND2X05AR9)                                             0.08      0.10       2.89 f
+  n1785 (net)                                   1         0.00                0.00       2.89 f
+  U231/I1 (CLKAND2X1AR9)                                            0.08      0.00 *     2.89 f
+  U231/O (CLKAND2X1AR9)                                             0.06      0.11       2.99 f
+  n2216 (net)                                   1         0.00                0.00       2.99 f
+  U206/I1 (NAND2X2AR9)                                              0.06      0.00 *     2.99 f
+  U206/O (NAND2X2AR9)                                               0.07      0.05       3.05 r
+  n572 (net)                                    3         0.01                0.00       3.05 r
+  U194/I2 (XOR2X1AR9)                                               0.07      0.00 *     3.05 r
+  U194/O (XOR2X1AR9)                                                0.09      0.23       3.28 f
+  n111 (net)                                    2         0.00                0.00       3.28 f
+  U203/I (CLKINVX2AR9)                                              0.09      0.00 *     3.28 f
+  U203/O (CLKINVX2AR9)                                              0.05      0.05       3.33 r
+  n116 (net)                                    1         0.00                0.00       3.33 r
+  U200/I2 (CLKNAND2X4AR9)                                           0.05      0.00 *     3.33 r
+  U200/O (CLKNAND2X4AR9)                                            0.04      0.04       3.38 f
+  n118 (net)                                    1         0.00                0.00       3.38 f
+  U201/I2 (NAND2X3AR9)                                              0.04      0.00 *     3.38 f
+  U201/O (NAND2X3AR9)                                               0.05      0.05       3.43 r
+  n1495 (net)                                   3         0.01                0.00       3.43 r
+  U1527/I (INVX2AR9)                                                0.05      0.00 *     3.43 r
+  U1527/O (INVX2AR9)                                                0.04      0.04       3.47 f
+  n1496 (net)                                   4         0.01                0.00       3.47 f
+  U1830/I2 (NAND2X1AR9)                                             0.04      0.00 *     3.47 f
+  U1830/O (NAND2X1AR9)                                              0.10      0.07       3.54 r
+  n1758 (net)                                   1         0.01                0.00       3.54 r
+  U1833/I3 (NAND3X4AR9)                                             0.10      0.00 *     3.54 r
+  U1833/O (NAND3X4AR9)                                              0.11      0.11       3.65 f
+  n624 (net)                                    5         0.01                0.00       3.65 f
+  U279/I (CLKINVX2AR9)                                              0.11      0.00 *     3.65 f
+  U279/O (CLKINVX2AR9)                                              0.05      0.05       3.71 r
+  n1776 (net)                                   2         0.00                0.00       3.71 r
+  U552/I2 (AND2X1AR9)                                               0.05      0.00 *     3.71 r
+  U552/O (AND2X1AR9)                                                0.05      0.09       3.80 r
+  n2232 (net)                                   1         0.00                0.00       3.80 r
+  U277/I1 (NAND2X05AR9)                                             0.05      0.00 *     3.80 r
+  U277/O (NAND2X05AR9)                                              0.06      0.05       3.85 f
+  n1779 (net)                                   1         0.00                0.00       3.85 f
+  U629/I2 (AND3X1AR9)                                               0.06      0.00 *     3.85 f
+  U629/O (AND3X1AR9)                                                0.04      0.09       3.94 f
+  n2237 (net)                                   1         0.00                0.00       3.94 f
+  U559/I1 (CLKNAND2X3AR9)                                           0.04      0.00 *     3.94 f
+  U559/O (CLKNAND2X3AR9)                                            0.08      0.06       4.00 r
+  n632 (net)                                    3         0.01                0.00       4.00 r
+  U1110/I1 (NAND2X1IAR9)                                            0.08      0.00 *     4.00 r
+  U1110/O (NAND2X1IAR9)                                             0.08      0.07       4.07 f
+  n1067 (net)                                   1         0.00                0.00       4.07 f
+  U381/B2 (OA12X1AR9)                                               0.08      0.00 *     4.07 f
+  U381/O (OA12X1AR9)                                                0.04      0.11       4.18 f
+  n2326 (net)                                   1         0.00                0.00       4.18 f
+  U2075/I2 (AND2X2AR9)                                              0.04      0.00 *     4.18 f
+  U2075/O (AND2X2AR9)                                               0.04      0.09       4.27 f
+  n637 (net)                                    1         0.01                0.00       4.27 f
+  U1113/A1 (OAI12X4IAR9)                                            0.04      0.00 *     4.27 f
+  U1113/O (OAI12X4IAR9)                                             0.10      0.07       4.33 r
+  n1028 (net)                                   1         0.01                0.00       4.33 r
+  U1450/I (INVX12AR9)                                               0.10      0.00 *     4.34 r
+  U1450/O (INVX12AR9)                                               0.06      0.07       4.41 f
+  n2077 (net)                                   5         0.07                0.00       4.41 f
+  U1430/I (CLKINVX6AR9)                                             0.07      0.03 *     4.44 f
+  U1430/O (CLKINVX6AR9)                                             0.03      0.04       4.47 r
+  n2076 (net)                                   1         0.01                0.00       4.47 r
+  U561/B1 (AOI12X4IAR9)                                             0.03      0.00 *     4.47 r
+  U561/O (AOI12X4IAR9)                                              0.05      0.04       4.51 f
+  n1033 (net)                                   2         0.01                0.00       4.51 f
+  U1151/B1 (OAI12X4IAR9)                                            0.05      0.00 *     4.51 f
+  U1151/O (OAI12X4IAR9)                                             0.06      0.06       4.57 r
+  n1060 (net)                                   2         0.01                0.00       4.57 r
+  U1155/B1 (AOI12X4IAR9)                                            0.06      0.00 *     4.57 r
+  U1155/O (AOI12X4IAR9)                                             0.08      0.06       4.62 f
+  n1148 (net)                                   3         0.01                0.00       4.62 f
+  U212/B1 (OAI12X4IAR9)                                             0.08      0.00 *     4.62 f
+  U212/O (OAI12X4IAR9)                                              0.11      0.06       4.69 r
+  n126 (net)                                    1         0.00                0.00       4.69 r
+  U1185/B1 (AOI12X4IAR9)                                            0.11      0.00 *     4.69 r
+  U1185/O (AOI12X4IAR9)                                             0.05      0.06       4.74 f
+  n851 (net)                                    2         0.00                0.00       4.74 f
+  U879/I (CLKINVX2AR9)                                              0.05      0.00 *     4.74 f
+  U879/O (CLKINVX2AR9)                                              0.03      0.04       4.78 r
+  n1347 (net)                                   1         0.00                0.00       4.78 r
+  U874/I2 (NAND2X1OAR9)                                             0.03      0.00 *     4.78 r
+  U874/O (NAND2X1OAR9)                                              0.05      0.05       4.82 f
+  n1349 (net)                                   1         0.00                0.00       4.82 f
+  U875/I2 (NAND2X2AR9)                                              0.05      0.00 *     4.82 f
+  U875/O (NAND2X2AR9)                                               0.03      0.04       4.86 r
+  n852 (net)                                    1         0.00                0.00       4.86 r
+  U1187/B1B (OAI22B2X05AR9)                                         0.03      0.00 *     4.86 r
+  U1187/O (OAI22B2X05AR9)                                           0.12      0.11       4.97 r
+  n169 (net)                                    1         0.00                0.00       4.97 r
+  partialSum_reg[27]/D (DFFRBQX2AR9)                                0.12      0.00 *     4.97 r
+  data arrival time                                                                      4.97
 
-  clock Int_clk (rise edge)                                                  10.00      10.00
-  clock network delay (ideal)                                                 0.55      10.55
-  clock uncertainty                                                          -0.30      10.25
-  partialSum_reg[35]/CK (DFFRBQX05AR9)                                        0.00      10.25 r
-  library setup time                                                         -0.03      10.22
-  data required time                                                                    10.22
+  clock Int_clk (rise edge)                                                   4.82       4.82
+  clock network delay (ideal)                                                 0.55       5.37
+  clock uncertainty                                                          -0.30       5.07
+  partialSum_reg[27]/CK (DFFRBQX2AR9)                                         0.00       5.07 r
+  library setup time                                                         -0.10       4.97
+  data required time                                                                     4.97
   ----------------------------------------------------------------------------------------------
-  data required time                                                                    10.22
-  data arrival time                                                                    -10.22
+  data required time                                                                     4.97
+  data arrival time                                                                     -4.97
   ----------------------------------------------------------------------------------------------
   slack (MET)                                                                            0.00
 
 
-  Startpoint: memForWeight_0/ram1rw_4/ram
+  Startpoint: memForWeight_1/ram1rw_4/ram
               (rising edge-triggered flip-flop clocked by Int_clk)
-  Endpoint: partialSum_reg[35]
+  Endpoint: partialSum_reg[27]
             (rising edge-triggered flip-flop clocked by Int_clk)
   Path Group: MEM2REG
   Path Type: max
@@ -319,208 +241,176 @@ Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_
   ----------------------------------------------------------------------------------------------
   clock Int_clk (rise edge)                                                   0.00       0.00
   clock network delay (ideal)                                                 0.55       0.55
-  memForWeight_0/ram1rw_4/ram/CLK (mem55lpw1024d16sp)               0.08      0.00       0.55 r
-  memForWeight_0/ram1rw_4/ram/Q[0] (mem55lpw1024d16sp)              0.16      1.72       2.27 f
-  memForWeight_0_Q[0] (net)                     3         0.03                0.00       2.27 f
-  U468/I0 (MUX2X1AR9)                                               0.16      0.01 *     2.28 f
-  U468/O (MUX2X1AR9)                                                0.08      0.19       2.47 f
-  n180 (net)                                    2         0.00                0.00       2.47 f
-  U692/B2 (NAND2B1X1AR9)                                            0.08      0.00 *     2.47 f
-  U692/O (NAND2B1X1AR9)                                             0.15      0.14       2.61 f
-  n185 (net)                                    1         0.01                0.00       2.61 f
-  U691/I1 (NAND2X2IAR9)                                             0.15      0.00 *     2.61 f
-  U691/O (NAND2X2IAR9)                                              0.12      0.09       2.70 r
-  n186 (net)                                    1         0.01                0.00       2.70 r
-  U690/I2 (HAX05AR9)                                                0.12      0.00 *     2.70 r
-  U690/S (HAX05AR9)                                                 0.11      0.23       2.94 f
-  n772 (net)                                    1         0.00                0.00       2.94 f
-  U765/CI (FAX1AR9)                                                 0.11      0.00 *     2.94 f
-  U765/CO (FAX1AR9)                                                 0.09      0.23       3.17 f
-  n776 (net)                                    1         0.00                0.00       3.17 f
-  U987/CI (FAX1AR9)                                                 0.09      0.00 *     3.17 f
-  U987/CO (FAX1AR9)                                                 0.09      0.23       3.40 f
-  n780 (net)                                    1         0.01                0.00       3.40 f
-  U989/CI (FAX1AR9)                                                 0.09      0.00 *     3.40 f
-  U989/CO (FAX1AR9)                                                 0.10      0.25       3.65 f
-  n785 (net)                                    3         0.01                0.00       3.65 f
-  U366/B1 (OAI12X1IAR9)                                             0.10      0.00 *     3.65 f
-  U366/O (OAI12X1IAR9)                                              0.09      0.09       3.74 r
-  n203 (net)                                    1         0.00                0.00       3.74 r
-  U363/I1 (CLKNAND2X2AR9)                                           0.09      0.00 *     3.74 r
-  U363/O (CLKNAND2X2AR9)                                            0.05      0.06       3.79 f
-  n789 (net)                                    1         0.00                0.00       3.79 f
-  U844/CI (FAX3AR9)                                                 0.05      0.00 *     3.79 f
-  U844/CO (FAX3AR9)                                                 0.18      0.34       4.13 f
-  n793 (net)                                    3         0.04                0.00       4.13 f
-  U359/B1 (OAI12X2IAR9)                                             0.18      0.01 *     4.15 f
-  U359/O (OAI12X2IAR9)                                              0.10      0.09       4.24 r
-  n227 (net)                                    1         0.00                0.00       4.24 r
-  U357/I1 (NAND2X2OAR9)                                             0.10      0.00 *     4.24 r
-  U357/O (NAND2X2OAR9)                                              0.06      0.06       4.31 f
-  n798 (net)                                    1         0.01                0.00       4.31 f
-  U771/CI (FAX1AR9)                                                 0.06      0.00 *     4.31 f
-  U771/CO (FAX1AR9)                                                 0.10      0.23       4.54 f
-  n802 (net)                                    3         0.01                0.00       4.54 f
-  U355/B1 (OAI12X2IAR9)                                             0.10      0.00 *     4.54 f
-  U355/O (OAI12X2IAR9)                                              0.10      0.09       4.63 r
-  n259 (net)                                    1         0.01                0.00       4.63 r
-  U353/I1 (NAND2X2OAR9)                                             0.10      0.00 *     4.63 r
-  U353/O (NAND2X2OAR9)                                              0.05      0.06       4.69 f
-  n807 (net)                                    3         0.01                0.00       4.69 f
-  U16/I2 (NAND2X2AR9)                                               0.05      0.00 *     4.69 f
-  U16/O (NAND2X2AR9)                                                0.07      0.05       4.73 r
-  n10 (net)                                     1         0.00                0.00       4.73 r
-  U11/I2 (CLKNAND2X3AR9)                                            0.07      0.00 *     4.73 r
-  U11/O (CLKNAND2X3AR9)                                             0.05      0.05       4.78 f
-  n7 (net)                                      1         0.00                0.00       4.78 f
-  U13/I (CLKINVX4AR9)                                               0.05      0.00 *     4.78 f
-  U13/O (CLKINVX4AR9)                                               0.04      0.04       4.82 r
-  n8 (net)                                      1         0.01                0.00       4.82 r
-  U12/I1 (CLKNAND2X8AR9)                                            0.04      0.00 *     4.82 r
-  U12/O (CLKNAND2X8AR9)                                             0.07      0.05       4.88 f
-  n811 (net)                                    3         0.03                0.00       4.88 f
-  U396/I1 (NAND2X1IAR9)                                             0.07      0.00 *     4.88 f
-  U396/O (NAND2X1IAR9)                                              0.12      0.05       4.94 r
-  n298 (net)                                    1         0.00                0.00       4.94 r
-  U350/I2 (NAND2X2OAR9)                                             0.12      0.00 *     4.94 r
-  U350/O (NAND2X2OAR9)                                              0.04      0.05       4.98 f
-  n816 (net)                                    1         0.00                0.00       4.98 f
-  U775/CI (FAX1AR9)                                                 0.04      0.00 *     4.98 f
-  U775/CO (FAX1AR9)                                                 0.10      0.23       5.21 f
-  n820 (net)                                    3         0.01                0.00       5.21 f
-  U779/B1 (OAI12X2AR9)                                              0.10      0.00 *     5.21 f
-  U779/O (OAI12X2AR9)                                               0.09      0.08       5.29 r
-  n346 (net)                                    1         0.00                0.00       5.29 r
-  U348/I2 (CLKNAND2X2AR9)                                           0.09      0.00 *     5.29 r
-  U348/O (CLKNAND2X2AR9)                                            0.09      0.08       5.37 f
-  n825 (net)                                    1         0.01                0.00       5.37 f
-  U778/CI (FAX2AR9)                                                 0.09      0.00 *     5.37 f
-  U778/CO (FAX2AR9)                                                 0.09      0.25       5.62 f
-  n829 (net)                                    3         0.01                0.00       5.62 f
-  U347/B1 (OAI12X2IAR9)                                             0.09      0.00 *     5.62 f
-  U347/O (OAI12X2IAR9)                                              0.10      0.08       5.70 r
-  n403 (net)                                    1         0.01                0.00       5.70 r
-  U345/I1 (NAND2X4OAR9)                                             0.10      0.00 *     5.70 r
-  U345/O (NAND2X4OAR9)                                              0.06      0.06       5.77 f
-  n834 (net)                                    1         0.01                0.00       5.77 f
-  U1017/CI (FAX1AR9)                                                0.06      0.00 *     5.77 f
-  U1017/CO (FAX1AR9)                                                0.09      0.21       5.98 f
-  n838 (net)                                    1         0.00                0.00       5.98 f
-  U1020/CI (FAX2AR9)                                                0.09      0.00 *     5.98 f
-  U1020/CO (FAX2AR9)                                                0.09      0.25       6.23 f
-  n840 (net)                                    3         0.01                0.00       6.23 f
-  U782/B1 (OAI12X2IAR9)                                             0.09      0.00 *     6.23 f
-  U782/O (OAI12X2IAR9)                                              0.09      0.07       6.30 r
-  n504 (net)                                    1         0.00                0.00       6.30 r
-  U391/I1 (NAND2X2OAR9)                                             0.09      0.00 *     6.30 r
-  U391/O (NAND2X2OAR9)                                              0.05      0.06       6.36 f
-  n846 (net)                                    1         0.01                0.00       6.36 f
-  U331/CI (FAX1AR9)                                                 0.05      0.00 *     6.36 f
-  U331/CO (FAX1AR9)                                                 0.11      0.24       6.59 f
-  n850 (net)                                    3         0.01                0.00       6.59 f
-  U390/B1 (OAI12X1IAR9)                                             0.11      0.00 *     6.59 f
-  U390/O (OAI12X1IAR9)                                              0.11      0.10       6.69 r
-  n564 (net)                                    1         0.00                0.00       6.69 r
-  U342/I1 (CLKNAND2X3AR9)                                           0.11      0.00 *     6.69 r
-  U342/O (CLKNAND2X3AR9)                                            0.06      0.06       6.75 f
-  n856 (net)                                    3         0.01                0.00       6.75 f
-  U2/I2 (NAND2X2AR9)                                                0.06      0.00 *     6.75 f
-  U2/O (NAND2X2AR9)                                                 0.06      0.05       6.80 r
-  n1 (net)                                      1         0.00                0.00       6.80 r
-  U5/I3 (NAND3X3AR9)                                                0.06      0.00 *     6.80 r
-  U5/O (NAND3X3AR9)                                                 0.19      0.15       6.95 f
-  n860 (net)                                    3         0.02                0.00       6.95 f
-  U341/B1 (OAI12X2IAR9)                                             0.19      0.00 *     6.95 f
-  U341/O (OAI12X2IAR9)                                              0.10      0.10       7.06 r
-  n615 (net)                                    1         0.00                0.00       7.06 r
-  U387/I2 (CLKNAND2X4AR9)                                           0.10      0.00 *     7.06 r
-  U387/O (CLKNAND2X4AR9)                                            0.12      0.11       7.17 f
-  n865 (net)                                    1         0.03                0.00       7.17 f
-  U386/CI (FAX2AR9)                                                 0.12      0.01 *     7.17 f
-  U386/CO (FAX2AR9)                                                 0.08      0.24       7.42 f
-  n869 (net)                                    1         0.00                0.00       7.42 f
-  U1035/CI (FAX2AR9)                                                0.08      0.00 *     7.42 f
-  U1035/CO (FAX2AR9)                                                0.07      0.23       7.64 f
-  n873 (net)                                    1         0.00                0.00       7.64 f
-  U1036/CI (FAX2AR9)                                                0.07      0.00 *     7.64 f
-  U1036/CO (FAX2AR9)                                                0.09      0.24       7.89 f
-  n877 (net)                                    3         0.01                0.00       7.89 f
-  U340/B1 (OAI12X2IAR9)                                             0.09      0.00 *     7.89 f
-  U340/O (OAI12X2IAR9)                                              0.08      0.08       7.96 r
-  n694 (net)                                    1         0.00                0.00       7.96 r
-  U339/I1 (CLKNAND2X4AR9)                                           0.08      0.00 *     7.96 r
-  U339/O (CLKNAND2X4AR9)                                            0.13      0.11       8.07 f
-  n882 (net)                                    1         0.03                0.00       8.07 f
-  U1040/CI (FAX1AR9)                                                0.13      0.01 *     8.08 f
-  U1040/CO (FAX1AR9)                                                0.10      0.26       8.33 f
-  n886 (net)                                    3         0.01                0.00       8.33 f
-  U337/I1 (NAND2X1AR9)                                              0.10      0.00 *     8.33 f
-  U337/O (NAND2X1AR9)                                               0.11      0.09       8.42 r
-  n720 (net)                                    1         0.00                0.00       8.42 r
-  U336/I2 (CLKNAND2X3AR9)                                           0.11      0.00 *     8.42 r
-  U336/O (CLKNAND2X3AR9)                                            0.06      0.07       8.49 f
-  n891 (net)                                    1         0.01                0.00       8.49 f
-  U332/CI (FAX2AR9)                                                 0.06      0.00 *     8.49 f
-  U332/CO (FAX2AR9)                                                 0.09      0.24       8.73 f
-  n895 (net)                                    3         0.01                0.00       8.73 f
-  U335/B1 (OAI12X2IAR9)                                             0.09      0.00 *     8.73 f
-  U335/O (OAI12X2IAR9)                                              0.09      0.07       8.81 r
-  n740 (net)                                    1         0.00                0.00       8.81 r
-  U383/I1 (CLKNAND2X3AR9)                                           0.09      0.00 *     8.81 r
-  U383/O (CLKNAND2X3AR9)                                            0.05      0.05       8.86 f
-  n900 (net)                                    1         0.00                0.00       8.86 f
-  U382/CI (FAX1AR9)                                                 0.05      0.00 *     8.86 f
-  U382/CO (FAX1AR9)                                                 0.10      0.23       9.09 f
-  n904 (net)                                    3         0.01                0.00       9.09 f
-  U24/I2 (NAND2X2AR9)                                               0.10      0.00 *     9.09 f
-  U24/O (NAND2X2AR9)                                                0.05      0.06       9.15 r
-  n15 (net)                                     1         0.00                0.00       9.15 r
-  U18/I2 (CLKNAND2X3AR9)                                            0.05      0.00 *     9.15 r
-  U18/O (CLKNAND2X3AR9)                                             0.05      0.04       9.19 f
-  n12 (net)                                     1         0.00                0.00       9.19 f
-  U20/I (CLKINVX3AR9)                                               0.05      0.00 *     9.19 f
-  U20/O (CLKINVX3AR9)                                               0.04      0.04       9.24 r
-  n13 (net)                                     1         0.01                0.00       9.24 r
-  U19/I1 (CLKNAND2X6AR9)                                            0.04      0.00 *     9.24 r
-  U19/O (CLKNAND2X6AR9)                                             0.09      0.07       9.30 f
-  n906 (net)                                    3         0.03                0.00       9.30 f
-  U380/B1 (OAI12X2AR9)                                              0.09      0.01 *     9.31 f
-  U380/O (OAI12X2AR9)                                               0.07      0.07       9.37 r
-  n749 (net)                                    1         0.00                0.00       9.37 r
-  U334/I1 (CLKNAND2X1AR9)                                           0.07      0.00 *     9.37 r
-  U334/O (CLKNAND2X1AR9)                                            0.07      0.07       9.45 f
-  n908 (net)                                    1         0.00                0.00       9.45 f
-  U1044/CI (FAX1AR9)                                                0.07      0.00 *     9.45 f
-  U1044/CO (FAX1AR9)                                                0.08      0.21       9.66 f
-  n1077 (net)                                   1         0.00                0.00       9.66 f
-  U1233/CI (FAX1AR9)                                                0.08      0.00 *     9.66 f
-  U1233/CO (FAX1AR9)                                                0.07      0.20       9.86 f
-  n751 (net)                                    1         0.00                0.00       9.86 f
-  U333/I1 (XOR2X1AR9)                                               0.07      0.00 *     9.86 f
-  U333/O (XOR2X1AR9)                                                0.07      0.24      10.10 f
-  n752 (net)                                    1         0.00                0.00      10.10 f
-  U818/B2B (OAI22B2X1AR9)                                           0.07      0.00 *    10.10 f
-  U818/O (OAI22B2X1AR9)                                             0.09      0.11      10.22 f
-  n178 (net)                                    1         0.00                0.00      10.22 f
-  partialSum_reg[35]/D (DFFRBQX05AR9)                               0.09      0.00 *    10.22 f
-  data arrival time                                                                     10.22
+  memForWeight_1/ram1rw_4/ram/CLK (mem55lpw1024d16sp)               0.08      0.00       0.55 r
+  memForWeight_1/ram1rw_4/ram/Q[1] (mem55lpw1024d16sp)              0.08      1.66       2.21 f
+  memForWeight_1_Q[1] (net)                     1         0.01                0.00       2.21 f
+  U1930/I1 (NAND2X4AR9)                                             0.08      0.00 *     2.22 f
+  U1930/O (NAND2X4AR9)                                              0.09      0.06       2.27 r
+  n1870 (net)                                   1         0.01                0.00       2.27 r
+  U1931/I2 (CLKNAND2X8AR9)                                          0.09      0.00 *     2.27 r
+  U1931/O (CLKNAND2X8AR9)                                           0.13      0.11       2.39 f
+  n421 (net)                                    8         0.06                0.00       2.39 f
+  U472/I2 (CLKXNOR2X1AR9)                                           0.13      0.01 *     2.39 f
+  U472/O (CLKXNOR2X1AR9)                                            0.10      0.20       2.59 f
+  n517 (net)                                    2         0.01                0.00       2.59 f
+  U1052/A1 (OAI22X2AR9)                                             0.10      0.00 *     2.59 f
+  U1052/O (OAI22X2AR9)                                              0.31      0.19       2.78 r
+  n532 (net)                                    5         0.02                0.00       2.78 r
+  U1850/I2 (NAND2X05AR9)                                            0.31      0.00 *     2.79 r
+  U1850/O (NAND2X05AR9)                                             0.08      0.10       2.89 f
+  n1785 (net)                                   1         0.00                0.00       2.89 f
+  U231/I1 (CLKAND2X1AR9)                                            0.08      0.00 *     2.89 f
+  U231/O (CLKAND2X1AR9)                                             0.06      0.11       2.99 f
+  n2216 (net)                                   1         0.00                0.00       2.99 f
+  U206/I1 (NAND2X2AR9)                                              0.06      0.00 *     2.99 f
+  U206/O (NAND2X2AR9)                                               0.07      0.05       3.05 r
+  n572 (net)                                    3         0.01                0.00       3.05 r
+  U194/I2 (XOR2X1AR9)                                               0.07      0.00 *     3.05 r
+  U194/O (XOR2X1AR9)                                                0.09      0.23       3.28 f
+  n111 (net)                                    2         0.00                0.00       3.28 f
+  U203/I (CLKINVX2AR9)                                              0.09      0.00 *     3.28 f
+  U203/O (CLKINVX2AR9)                                              0.05      0.05       3.33 r
+  n116 (net)                                    1         0.00                0.00       3.33 r
+  U200/I2 (CLKNAND2X4AR9)                                           0.05      0.00 *     3.33 r
+  U200/O (CLKNAND2X4AR9)                                            0.04      0.04       3.38 f
+  n118 (net)                                    1         0.00                0.00       3.38 f
+  U201/I2 (NAND2X3AR9)                                              0.04      0.00 *     3.38 f
+  U201/O (NAND2X3AR9)                                               0.05      0.05       3.43 r
+  n1495 (net)                                   3         0.01                0.00       3.43 r
+  U1527/I (INVX2AR9)                                                0.05      0.00 *     3.43 r
+  U1527/O (INVX2AR9)                                                0.04      0.04       3.47 f
+  n1496 (net)                                   4         0.01                0.00       3.47 f
+  U1830/I2 (NAND2X1AR9)                                             0.04      0.00 *     3.47 f
+  U1830/O (NAND2X1AR9)                                              0.10      0.07       3.54 r
+  n1758 (net)                                   1         0.01                0.00       3.54 r
+  U1833/I3 (NAND3X4AR9)                                             0.10      0.00 *     3.54 r
+  U1833/O (NAND3X4AR9)                                              0.11      0.11       3.65 f
+  n624 (net)                                    5         0.01                0.00       3.65 f
+  U279/I (CLKINVX2AR9)                                              0.11      0.00 *     3.65 f
+  U279/O (CLKINVX2AR9)                                              0.05      0.05       3.71 r
+  n1776 (net)                                   2         0.00                0.00       3.71 r
+  U552/I2 (AND2X1AR9)                                               0.05      0.00 *     3.71 r
+  U552/O (AND2X1AR9)                                                0.05      0.09       3.80 r
+  n2232 (net)                                   1         0.00                0.00       3.80 r
+  U277/I1 (NAND2X05AR9)                                             0.05      0.00 *     3.80 r
+  U277/O (NAND2X05AR9)                                              0.06      0.05       3.85 f
+  n1779 (net)                                   1         0.00                0.00       3.85 f
+  U629/I2 (AND3X1AR9)                                               0.06      0.00 *     3.85 f
+  U629/O (AND3X1AR9)                                                0.04      0.09       3.94 f
+  n2237 (net)                                   1         0.00                0.00       3.94 f
+  U559/I1 (CLKNAND2X3AR9)                                           0.04      0.00 *     3.94 f
+  U559/O (CLKNAND2X3AR9)                                            0.08      0.06       4.00 r
+  n632 (net)                                    3         0.01                0.00       4.00 r
+  U1110/I1 (NAND2X1IAR9)                                            0.08      0.00 *     4.00 r
+  U1110/O (NAND2X1IAR9)                                             0.08      0.07       4.07 f
+  n1067 (net)                                   1         0.00                0.00       4.07 f
+  U381/B2 (OA12X1AR9)                                               0.08      0.00 *     4.07 f
+  U381/O (OA12X1AR9)                                                0.04      0.11       4.18 f
+  n2326 (net)                                   1         0.00                0.00       4.18 f
+  U2075/I2 (AND2X2AR9)                                              0.04      0.00 *     4.18 f
+  U2075/O (AND2X2AR9)                                               0.04      0.09       4.27 f
+  n637 (net)                                    1         0.01                0.00       4.27 f
+  U1113/A1 (OAI12X4IAR9)                                            0.04      0.00 *     4.27 f
+  U1113/O (OAI12X4IAR9)                                             0.10      0.07       4.33 r
+  n1028 (net)                                   1         0.01                0.00       4.33 r
+  U1450/I (INVX12AR9)                                               0.10      0.00 *     4.34 r
+  U1450/O (INVX12AR9)                                               0.06      0.07       4.41 f
+  n2077 (net)                                   5         0.07                0.00       4.41 f
+  U1430/I (CLKINVX6AR9)                                             0.07      0.03 *     4.44 f
+  U1430/O (CLKINVX6AR9)                                             0.03      0.04       4.47 r
+  n2076 (net)                                   1         0.01                0.00       4.47 r
+  U561/B1 (AOI12X4IAR9)                                             0.03      0.00 *     4.47 r
+  U561/O (AOI12X4IAR9)                                              0.05      0.04       4.51 f
+  n1033 (net)                                   2         0.01                0.00       4.51 f
+  U1151/B1 (OAI12X4IAR9)                                            0.05      0.00 *     4.51 f
+  U1151/O (OAI12X4IAR9)                                             0.06      0.06       4.57 r
+  n1060 (net)                                   2         0.01                0.00       4.57 r
+  U1155/B1 (AOI12X4IAR9)                                            0.06      0.00 *     4.57 r
+  U1155/O (AOI12X4IAR9)                                             0.08      0.06       4.62 f
+  n1148 (net)                                   3         0.01                0.00       4.62 f
+  U212/B1 (OAI12X4IAR9)                                             0.08      0.00 *     4.62 f
+  U212/O (OAI12X4IAR9)                                              0.11      0.06       4.69 r
+  n126 (net)                                    1         0.00                0.00       4.69 r
+  U1185/B1 (AOI12X4IAR9)                                            0.11      0.00 *     4.69 r
+  U1185/O (AOI12X4IAR9)                                             0.05      0.06       4.74 f
+  n851 (net)                                    2         0.00                0.00       4.74 f
+  U879/I (CLKINVX2AR9)                                              0.05      0.00 *     4.74 f
+  U879/O (CLKINVX2AR9)                                              0.03      0.04       4.78 r
+  n1347 (net)                                   1         0.00                0.00       4.78 r
+  U874/I2 (NAND2X1OAR9)                                             0.03      0.00 *     4.78 r
+  U874/O (NAND2X1OAR9)                                              0.05      0.05       4.82 f
+  n1349 (net)                                   1         0.00                0.00       4.82 f
+  U875/I2 (NAND2X2AR9)                                              0.05      0.00 *     4.82 f
+  U875/O (NAND2X2AR9)                                               0.03      0.04       4.86 r
+  n852 (net)                                    1         0.00                0.00       4.86 r
+  U1187/B1B (OAI22B2X05AR9)                                         0.03      0.00 *     4.86 r
+  U1187/O (OAI22B2X05AR9)                                           0.12      0.11       4.97 r
+  n169 (net)                                    1         0.00                0.00       4.97 r
+  partialSum_reg[27]/D (DFFRBQX2AR9)                                0.12      0.00 *     4.97 r
+  data arrival time                                                                      4.97
 
-  clock Int_clk (rise edge)                                                  10.00      10.00
-  clock network delay (ideal)                                                 0.55      10.55
-  clock uncertainty                                                          -0.30      10.25
-  partialSum_reg[35]/CK (DFFRBQX05AR9)                                        0.00      10.25 r
-  library setup time                                                         -0.03      10.22
-  data required time                                                                    10.22
+  clock Int_clk (rise edge)                                                   4.82       4.82
+  clock network delay (ideal)                                                 0.55       5.37
+  clock uncertainty                                                          -0.30       5.07
+  partialSum_reg[27]/CK (DFFRBQX2AR9)                                         0.00       5.07 r
+  library setup time                                                         -0.10       4.97
+  data required time                                                                     4.97
   ----------------------------------------------------------------------------------------------
-  data required time                                                                    10.22
-  data arrival time                                                                    -10.22
+  data required time                                                                     4.97
+  data arrival time                                                                     -4.97
   ----------------------------------------------------------------------------------------------
   slack (MET)                                                                            0.00
 
 
-  Startpoint: memForAorB_0/ram1rw_4/ram
+  Startpoint: fsm_cntGP_value_reg[0]
               (rising edge-triggered flip-flop clocked by Int_clk)
-  Endpoint: result_payload[1]
+  Endpoint: load_ready (output port clocked by Int_clk)
+  Path Group: OUTPUTS
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock Int_clk (rise edge)                                                   0.00       0.00
+  clock network delay (ideal)                                                 0.55       0.55
+  fsm_cntGP_value_reg[0]/CK (DFFRBQX05AR9)                          0.08      0.00       0.55 r
+  fsm_cntGP_value_reg[0]/Q (DFFRBQX05AR9)                           0.16      0.29       0.84 r
+  fsm_adrForInput[0] (net)                      3         0.01                0.00       0.84 r
+  U752/I4 (NAND4X1AR9)                                              0.16      0.00 *     0.84 r
+  U752/O (NAND4X1AR9)                                               0.15      0.16       1.00 f
+  n902 (net)                                    1         0.00                0.00       1.00 f
+  U751/I3 (NOR3X1AR9)                                               0.15      0.00 *     1.00 f
+  U751/O (NOR3X1AR9)                                                0.27      0.22       1.22 r
+  n903 (net)                                    2         0.00                0.00       1.22 r
+  U2228/I3 (NAND3X1AR9)                                             0.27      0.00 *     1.22 r
+  U2228/O (NAND3X1AR9)                                              0.24      0.22       1.43 f
+  n2209 (net)                                   3         0.01                0.00       1.43 f
+  U723/I1 (NOR2X1AR9)                                               0.24      0.00 *     1.43 f
+  U723/O (NOR2X1AR9)                                                0.24      0.21       1.65 r
+  n1101 (net)                                   2         0.01                0.00       1.65 r
+  U434/I1 (NAND2X05AR9)                                             0.24      0.00 *     1.65 r
+  U434/O (NAND2X05AR9)                                              0.24      0.22       1.87 f
+  n908 (net)                                    2         0.01                0.00       1.87 f
+  U1212/I1 (CLKAND2X3AR9)                                           0.24      0.00 *     1.87 f
+  U1212/O (CLKAND2X3AR9)                                            0.22      0.29       2.15 f
+  load_ready (net)                              2         0.06                0.00       2.15 f
+  load_ready (out)                                                  0.22      0.02 *     2.17 f
+  data arrival time                                                                      2.17
+
+  clock Int_clk (rise edge)                                                   4.82       4.82
+  clock network delay (ideal)                                                 0.55       5.37
+  clock uncertainty                                                          -0.30       5.07
+  output external delay                                                      -2.89       2.18
+  data required time                                                                     2.18
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     2.18
+  data arrival time                                                                     -2.17
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            0.01
+
+
+  Startpoint: fsm_stateReg_reg[0]
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: result_payload[15]
             (output port clocked by Int_clk)
   Path Group: OUTPUTS
   Path Type: max
@@ -529,75 +419,40 @@ Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_
   ----------------------------------------------------------------------------------------------
   clock Int_clk (rise edge)                                                   0.00       0.00
   clock network delay (ideal)                                                 0.55       0.55
-  memForAorB_0/ram1rw_4/ram/CLK (mem55lpw256d16sp)                  0.08      0.00       0.55 r
-  memForAorB_0/ram1rw_4/ram/Q[1] (mem55lpw256d16sp)                 0.13      1.29       1.84 f
-  memForAorB_0_Q[1] (net)                       2         0.03                0.00       1.84 f
-  U33/I (INVX05AR9)                                                 0.13      0.00 *     1.84 f
-  U33/O (INVX05AR9)                                                 0.06      0.06       1.90 r
-  n24 (net)                                     1         0.00                0.00       1.90 r
-  U119/I (BUFX1AR9)                                                 0.06      0.00 *     1.90 r
-  U119/O (BUFX1AR9)                                                 0.23      0.19       2.09 r
-  n1228 (net)                                   1         0.02                0.00       2.09 r
-  U32/I (INVX05AR9)                                                 0.23      0.00 *     2.09 r
-  U32/O (INVX05AR9)                                                 0.10      0.11       2.21 f
-  n23 (net)                                     1         0.00                0.00       2.21 f
-  U953/I2 (CLKAND2X2AR9)                                            0.10      0.00 *     2.21 f
-  U953/O (CLKAND2X2AR9)                                             0.19      0.21       2.42 f
-  result_payload[1] (net)                       1         0.03                0.00       2.42 f
-  result_payload[1] (out)                                           0.19      0.00 *     2.43 f
-  data arrival time                                                                      2.43
+  fsm_stateReg_reg[0]/CK (DFFRBQX1AR9)                              0.08      0.00       0.55 r
+  fsm_stateReg_reg[0]/Q (DFFRBQX1AR9)                               0.15      0.30       0.85 f
+  fsm_stateReg[0] (net)                         6         0.02                0.00       0.85 f
+  U342/I3 (NOR3X2AR9)                                               0.15      0.00 *     0.85 f
+  U342/O (NOR3X2AR9)                                                0.14      0.14       0.99 r
+  n911 (net)                                    2         0.00                0.00       0.99 r
+  U1199/I2 (CLKNAND2X2AR9)                                          0.14      0.00 *     0.99 r
+  U1199/O (CLKNAND2X2AR9)                                           0.16      0.12       1.11 f
+  n913 (net)                                    4         0.01                0.00       1.11 f
+  U327/B2 (AND2B1X3AR9)                                             0.16      0.00 *     1.11 f
+  U327/O (AND2B1X3AR9)                                              0.21      0.27       1.38 r
+  n2210 (net)                                   2         0.05                0.00       1.38 r
+  U2135/I (BUFX2AR9)                                                0.21      0.01 *     1.40 r
+  U2135/O (BUFX2AR9)                                                0.27      0.24       1.63 r
+  n2174 (net)                                   9         0.04                0.00       1.63 r
+  U2134/I (CLKBUFX2AR9)                                             0.27      0.00 *     1.64 r
+  U2134/O (CLKBUFX2AR9)                                             0.27      0.27       1.90 r
+  n2059 (net)                                   8         0.04                0.00       1.90 r
+  U376/I1 (CLKAND2X2AR9)                                            0.27      0.01 *     1.92 r
+  U376/O (CLKAND2X2AR9)                                             0.22      0.25       2.17 r
+  result_payload[15] (net)                      1         0.04                0.00       2.17 r
+  result_payload[15] (out)                                          0.22      0.00 *     2.17 r
+  data arrival time                                                                      2.17
 
-  clock Int_clk (rise edge)                                                  10.00      10.00
-  clock network delay (ideal)                                                 0.55      10.55
-  clock uncertainty                                                          -0.30      10.25
-  output external delay                                                      -6.00       4.25
-  data required time                                                                     4.25
+  clock Int_clk (rise edge)                                                   4.82       4.82
+  clock network delay (ideal)                                                 0.55       5.37
+  clock uncertainty                                                          -0.30       5.07
+  output external delay                                                      -2.89       2.18
+  data required time                                                                     2.18
   ----------------------------------------------------------------------------------------------
-  data required time                                                                     4.25
-  data arrival time                                                                     -2.43
+  data required time                                                                     2.18
+  data arrival time                                                                     -2.17
   ----------------------------------------------------------------------------------------------
-  slack (MET)                                                                            1.82
-
-
-  Startpoint: memForAorB_0/ram1rw_4/ram
-              (rising edge-triggered flip-flop clocked by Int_clk)
-  Endpoint: result_payload[1]
-            (output port clocked by Int_clk)
-  Path Group: OUTPUTS
-  Path Type: max
-
-  Point                                       Fanout       Cap     Trans      Incr       Path
-  ----------------------------------------------------------------------------------------------
-  clock Int_clk (rise edge)                                                   0.00       0.00
-  clock network delay (ideal)                                                 0.55       0.55
-  memForAorB_0/ram1rw_4/ram/CLK (mem55lpw256d16sp)                  0.08      0.00       0.55 r
-  memForAorB_0/ram1rw_4/ram/Q[1] (mem55lpw256d16sp)                 0.13      1.25       1.80 r
-  memForAorB_0_Q[1] (net)                       2         0.03                0.00       1.80 r
-  U33/I (INVX05AR9)                                                 0.13      0.00 *     1.80 r
-  U33/O (INVX05AR9)                                                 0.05      0.05       1.86 f
-  n24 (net)                                     1         0.00                0.00       1.86 f
-  U119/I (BUFX1AR9)                                                 0.05      0.00 *     1.86 f
-  U119/O (BUFX1AR9)                                                 0.16      0.16       2.02 f
-  n1228 (net)                                   1         0.02                0.00       2.02 f
-  U32/I (INVX05AR9)                                                 0.16      0.00 *     2.02 f
-  U32/O (INVX05AR9)                                                 0.12      0.12       2.14 r
-  n23 (net)                                     1         0.00                0.00       2.14 r
-  U953/I2 (CLKAND2X2AR9)                                            0.12      0.00 *     2.14 r
-  U953/O (CLKAND2X2AR9)                                             0.22      0.21       2.35 r
-  result_payload[1] (net)                       1         0.03                0.00       2.35 r
-  result_payload[1] (out)                                           0.22      0.00 *     2.36 r
-  data arrival time                                                                      2.36
-
-  clock Int_clk (rise edge)                                                  10.00      10.00
-  clock network delay (ideal)                                                 0.55      10.55
-  clock uncertainty                                                          -0.30      10.25
-  output external delay                                                      -6.00       4.25
-  data required time                                                                     4.25
-  ----------------------------------------------------------------------------------------------
-  data required time                                                                     4.25
-  data arrival time                                                                     -2.36
-  ----------------------------------------------------------------------------------------------
-  slack (MET)                                                                            1.89
+  slack (MET)                                                                            0.01
 
 
   Startpoint: partialSum_reg[8]
@@ -611,131 +466,116 @@ Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_
   ----------------------------------------------------------------------------------------------
   clock Int_clk (rise edge)                                                   0.00       0.00
   clock network delay (ideal)                                                 0.55       0.55
-  partialSum_reg[8]/CK (DFFRBQX1AR9)                                0.08      0.00       0.55 r
-  partialSum_reg[8]/Q (DFFRBQX1AR9)                                 0.27      0.37       0.92 r
-  temp_temp_when_SInt_l130_1[0] (net)           4         0.02                0.00       0.92 r
-  U1100/I1 (CLKNAND2X2AR9)                                          0.27      0.00 *     0.92 r
-  U1100/O (CLKNAND2X2AR9)                                           0.23      0.21       1.13 f
-  n974 (net)                                    5         0.03                0.00       1.13 f
-  U1101/I2 (NOR2X05AR9)                                             0.23      0.00 *     1.14 f
-  U1101/O (NOR2X05AR9)                                              0.28      0.28       1.42 r
-  n978 (net)                                    2         0.00                0.00       1.42 r
-  U1102/I2 (NAND2X05AR9)                                            0.28      0.00 *     1.42 r
-  U1102/O (NAND2X05AR9)                                             0.22      0.20       1.62 f
-  n980 (net)                                    5         0.01                0.00       1.62 f
-  U1103/I2 (NOR2X1AR9)                                              0.22      0.00 *     1.62 f
-  U1103/O (NOR2X1AR9)                                               0.19      0.18       1.80 r
-  n984 (net)                                    2         0.01                0.00       1.80 r
-  U1104/I2 (NAND2X05AR9)                                            0.19      0.00 *     1.80 r
-  U1104/O (NAND2X05AR9)                                             0.27      0.21       2.01 f
-  n986 (net)                                    5         0.01                0.00       2.01 f
-  U1105/I2 (CLKNOR2X1AR9)                                           0.27      0.00 *     2.01 f
-  U1105/O (CLKNOR2X1AR9)                                            0.24      0.22       2.23 r
-  n990 (net)                                    2         0.02                0.00       2.23 r
-  U1106/I2 (NAND2X1OAR9)                                            0.24      0.00 *     2.24 r
-  U1106/O (NAND2X1OAR9)                                             0.20      0.16       2.40 f
-  n992 (net)                                    5         0.02                0.00       2.40 f
-  U1107/I2 (NOR2X2OAR9)                                             0.20      0.00 *     2.40 f
-  U1107/O (NOR2X2OAR9)                                              0.26      0.21       2.61 r
-  n996 (net)                                    3         0.03                0.00       2.61 r
-  U1108/I2 (NAND2X2AR9)                                             0.26      0.00 *     2.61 r
-  U1108/O (NAND2X2AR9)                                              0.28      0.24       2.86 f
-  n998 (net)                                    7         0.03                0.00       2.86 f
-  U1109/I2 (NOR2X05AR9)                                             0.28      0.00 *     2.86 f
-  U1109/O (NOR2X05AR9)                                              0.28      0.29       3.16 r
-  n1002 (net)                                   2         0.00                0.00       3.16 r
-  U362/I2 (NAND2X05AR9)                                             0.28      0.00 *     3.16 r
-  U362/O (NAND2X05AR9)                                              0.26      0.24       3.39 f
-  n1004 (net)                                   5         0.01                0.00       3.39 f
-  U361/I2 (NOR2X4AR9)                                               0.26      0.00 *     3.39 f
-  U361/O (NOR2X4AR9)                                                0.25      0.23       3.62 r
-  n1008 (net)                                   2         0.03                0.00       3.62 r
-  U358/I2 (NAND2X2AR9)                                              0.25      0.01 *     3.63 r
-  U358/O (NAND2X2AR9)                                               0.28      0.24       3.87 f
-  n1010 (net)                                   5         0.03                0.00       3.87 f
-  U356/I2 (NOR2X1AR9)                                               0.28      0.01 *     3.87 f
-  U356/O (NOR2X1AR9)                                                0.14      0.16       4.03 r
-  n1015 (net)                                   2         0.00                0.00       4.03 r
-  U354/I2 (NAND2X05AR9)                                             0.14      0.00 *     4.03 r
-  U354/O (NAND2X05AR9)                                              0.26      0.20       4.23 f
-  n1016 (net)                                   3         0.01                0.00       4.23 f
-  U1110/I (INVX05AR9)                                               0.26      0.00 *     4.23 f
-  U1110/O (INVX05AR9)                                               0.17      0.17       4.41 r
-  n944 (net)                                    2         0.01                0.00       4.41 r
-  U352/I2 (NAND2X05AR9)                                             0.17      0.00 *     4.41 r
-  U352/O (NAND2X05AR9)                                              0.16      0.13       4.53 f
-  n943 (net)                                    4         0.00                0.00       4.53 f
-  U1111/I (INVX05AR9)                                               0.16      0.00 *     4.53 f
-  U1111/O (INVX05AR9)                                               0.10      0.10       4.64 r
-  n942 (net)                                    3         0.00                0.00       4.64 r
-  U1112/I2 (NAND2X05AR9)                                            0.10      0.00 *     4.64 r
-  U1112/O (NAND2X05AR9)                                             0.10      0.08       4.72 f
-  n936 (net)                                    1         0.00                0.00       4.72 f
-  U349/I2 (NOR2X1AR9)                                               0.10      0.00 *     4.72 f
-  U349/O (NOR2X1AR9)                                                0.17      0.13       4.85 r
-  n939 (net)                                    3         0.00                0.00       4.85 r
-  U1113/I2 (NAND2X05AR9)                                            0.17      0.00 *     4.85 r
-  U1113/O (NAND2X05AR9)                                             0.11      0.09       4.94 f
-  n937 (net)                                    1         0.00                0.00       4.94 f
-  U394/I2 (NOR2X1AR9)                                               0.11      0.00 *     4.94 f
-  U394/O (NOR2X1AR9)                                                0.22      0.17       5.11 r
-  n952 (net)                                    5         0.01                0.00       5.11 r
-  U1124/I2 (AND2X05AR9)                                             0.22      0.00 *     5.11 r
-  U1124/O (AND2X05AR9)                                              0.05      0.15       5.26 r
-  n953 (net)                                    1         0.00                0.00       5.26 r
-  U1125/I2 (NAND2X05AR9)                                            0.05      0.00 *     5.26 r
-  U1125/O (NAND2X05AR9)                                             0.12      0.08       5.34 f
-  n954 (net)                                    2         0.00                0.00       5.34 f
-  U344/I2 (NOR2X1AR9)                                               0.12      0.00 *     5.34 f
-  U344/O (NOR2X1AR9)                                                0.19      0.15       5.49 r
-  n957 (net)                                    3         0.01                0.00       5.49 r
-  U1130/I2 (NAND2X05AR9)                                            0.19      0.00 *     5.49 r
-  U1130/O (NAND2X05AR9)                                             0.09      0.09       5.58 f
-  n958 (net)                                    1         0.00                0.00       5.58 f
-  U1131/I2 (NOR2X05AR9)                                             0.09      0.00 *     5.58 f
-  U1131/O (NOR2X05AR9)                                              0.22      0.20       5.77 r
-  n960 (net)                                    1         0.00                0.00       5.77 r
-  U1132/I1 (NOR2X1AR9)                                              0.22      0.00 *     5.77 r
-  U1132/O (NOR2X1AR9)                                               0.09      0.10       5.87 f
-  n970 (net)                                    2         0.00                0.00       5.87 f
-  U343/A1 (AOI13X05AR9)                                             0.09      0.00 *     5.87 f
-  U343/O (AOI13X05AR9)                                              0.17      0.14       6.01 r
-  n1014 (net)                                   1         0.00                0.00       6.01 r
-  U46/I (CLKBUFX3AR9)                                               0.17      0.00 *     6.01 r
-  U46/O (CLKBUFX3AR9)                                               0.28      0.27       6.27 r
-  n38 (net)                                     2         0.07                0.00       6.27 r
-  U104/I (BUFX1AR9)                                                 0.28      0.02 *     6.29 r
-  U104/O (BUFX1AR9)                                                 0.11      0.17       6.46 r
-  n86 (net)                                     3         0.01                0.00       6.46 r
-  U114/I (CLKBUFX2AR9)                                              0.11      0.00 *     6.46 r
-  U114/O (CLKBUFX2AR9)                                              0.24      0.21       6.67 r
-  n1223 (net)                                   2         0.04                0.00       6.67 r
-  U113/I (CLKBUFX2AR9)                                              0.24      0.01 *     6.67 r
-  U113/O (CLKBUFX2AR9)                                              0.28      0.27       6.94 r
-  n1222 (net)                                   6         0.04                0.00       6.94 r
-  U1174/A1 (AOI122X05AR9)                                           0.28      0.01 *     6.95 r
-  U1174/O (AOI122X05AR9)                                            0.16      0.12       7.07 f
-  n1045 (net)                                   1         0.00                0.00       7.07 f
-  U219/I (CLKBUFX2AR9)                                              0.16      0.00 *     7.08 f
-  U219/O (CLKBUFX2AR9)                                              0.24      0.24       7.31 f
-  n1137 (net)                                   2         0.04                0.00       7.31 f
-  U1213/I1 (NOR2X1AR9)                                              0.24      0.01 *     7.33 f
-  U1213/O (NOR2X1AR9)                                               0.28      0.24       7.57 r
-  memForAorB_1_D[10] (net)                      1         0.01                0.00       7.57 r
-  memForAorB_1/ram1rw_4/ram/D[10] (mem55lpw256d16sp)                0.28      0.00 *     7.57 r
-  data arrival time                                                                      7.57
+  partialSum_reg[8]/CK (DFFRBQX4K1AR9)                              0.08      0.00       0.55 r
+  partialSum_reg[8]/Q (DFFRBQX4K1AR9)                               0.10      0.24       0.79 r
+  temp_temp_when_SInt_l130_1[0] (net)           5         0.03                0.00       0.79 r
+  U488/I2 (HAX2AR9)                                                 0.10      0.01 *     0.79 r
+  U488/CO (HAX2AR9)                                                 0.05      0.11       0.91 r
+  n1187 (net)                                   1         0.00                0.00       0.91 r
+  U852/I2 (HAX2AR9)                                                 0.05      0.00 *     0.91 r
+  U852/CO (HAX2AR9)                                                 0.07      0.11       1.02 r
+  n1190 (net)                                   1         0.01                0.00       1.02 r
+  U1371/I2 (HAX2AR9)                                                0.07      0.00 *     1.02 r
+  U1371/CO (HAX2AR9)                                                0.05      0.11       1.13 r
+  n1193 (net)                                   1         0.00                0.00       1.13 r
+  U719/I2 (HAX2AR9)                                                 0.05      0.00 *     1.13 r
+  U719/CO (HAX2AR9)                                                 0.05      0.10       1.23 r
+  n1196 (net)                                   1         0.00                0.00       1.23 r
+  U1376/I2 (HAX2AR9)                                                0.05      0.00 *     1.23 r
+  U1376/CO (HAX2AR9)                                                0.05      0.10       1.33 r
+  n1199 (net)                                   1         0.00                0.00       1.33 r
+  U718/I2 (HAX2AR9)                                                 0.05      0.00 *     1.33 r
+  U718/CO (HAX2AR9)                                                 0.07      0.11       1.44 r
+  n1202 (net)                                   1         0.01                0.00       1.44 r
+  U1381/I2 (HAX2AR9)                                                0.07      0.00 *     1.44 r
+  U1381/CO (HAX2AR9)                                                0.05      0.11       1.54 r
+  n1205 (net)                                   1         0.00                0.00       1.54 r
+  U717/I2 (HAX3AR9)                                                 0.05      0.00 *     1.54 r
+  U717/CO (HAX3AR9)                                                 0.09      0.14       1.68 r
+  n1208 (net)                                   1         0.02                0.00       1.68 r
+  U1386/I2 (HAX2AR9)                                                0.09      0.00 *     1.69 r
+  U1386/CO (HAX2AR9)                                                0.05      0.11       1.80 r
+  n1211 (net)                                   1         0.00                0.00       1.80 r
+  U716/I2 (HAX2AR9)                                                 0.05      0.00 *     1.80 r
+  U716/CO (HAX2AR9)                                                 0.06      0.10       1.90 r
+  n1214 (net)                                   1         0.00                0.00       1.90 r
+  U1391/I2 (HAX2AR9)                                                0.06      0.00 *     1.90 r
+  U1391/CO (HAX2AR9)                                                0.05      0.10       2.00 r
+  n1217 (net)                                   1         0.00                0.00       2.00 r
+  U356/I2 (HAX2AR9)                                                 0.05      0.00 *     2.00 r
+  U356/CO (HAX2AR9)                                                 0.05      0.10       2.10 r
+  n873 (net)                                    1         0.00                0.00       2.10 r
+  U354/I2 (HAX2AR9)                                                 0.05      0.00 *     2.10 r
+  U354/CO (HAX2AR9)                                                 0.09      0.13       2.22 r
+  n892 (net)                                    1         0.01                0.00       2.22 r
+  U353/I2 (HAX2AR9)                                                 0.09      0.00 *     2.22 r
+  U353/CO (HAX2AR9)                                                 0.05      0.11       2.33 r
+  n894 (net)                                    1         0.00                0.00       2.33 r
+  U341/I2 (HAX3AR9)                                                 0.05      0.00 *     2.33 r
+  U341/CO (HAX3AR9)                                                 0.11      0.15       2.48 r
+  n859 (net)                                    1         0.02                0.00       2.48 r
+  U352/I2 (HAX2AR9)                                                 0.11      0.00 *     2.49 r
+  U352/CO (HAX2AR9)                                                 0.05      0.11       2.60 r
+  n860 (net)                                    1         0.00                0.00       2.60 r
+  U351/I2 (HAX2AR9)                                                 0.05      0.00 *     2.60 r
+  U351/CO (HAX2AR9)                                                 0.05      0.10       2.70 r
+  n858 (net)                                    1         0.00                0.00       2.70 r
+  U350/I2 (HAX2AR9)                                                 0.05      0.00 *     2.70 r
+  U350/CO (HAX2AR9)                                                 0.05      0.10       2.80 r
+  n861 (net)                                    1         0.00                0.00       2.80 r
+  U390/I2 (HAX2AR9)                                                 0.05      0.00 *     2.80 r
+  U390/CO (HAX2AR9)                                                 0.05      0.10       2.89 r
+  n857 (net)                                    1         0.00                0.00       2.89 r
+  U388/I2 (HAX2AR9)                                                 0.05      0.00 *     2.89 r
+  U388/CO (HAX2AR9)                                                 0.05      0.10       2.99 r
+  n856 (net)                                    1         0.00                0.00       2.99 r
+  U386/I2 (HAX3AR9)                                                 0.05      0.00 *     2.99 r
+  U386/CO (HAX3AR9)                                                 0.04      0.10       3.10 r
+  n862 (net)                                    1         0.00                0.00       3.10 r
+  U385/I2 (HAX2AR9)                                                 0.04      0.00 *     3.10 r
+  U385/CO (HAX2AR9)                                                 0.05      0.10       3.19 r
+  n855 (net)                                    1         0.00                0.00       3.19 r
+  U483/I2 (HAX1AR9)                                                 0.05      0.00 *     3.19 r
+  U483/CO (HAX1AR9)                                                 0.07      0.10       3.29 r
+  n854 (net)                                    1         0.00                0.00       3.29 r
+  U482/I2 (HAX1AR9)                                                 0.07      0.00 *     3.30 r
+  U482/CO (HAX1AR9)                                                 0.05      0.10       3.39 r
+  n865 (net)                                    1         0.00                0.00       3.39 r
+  U340/I2 (HAX05AR9)                                                0.05      0.00 *     3.39 r
+  U340/CO (HAX05AR9)                                                0.07      0.13       3.52 r
+  n867 (net)                                    1         0.00                0.00       3.52 r
+  U492/I2 (HAX05AR9)                                                0.07      0.00 *     3.52 r
+  U492/CO (HAX05AR9)                                                0.08      0.14       3.66 r
+  n869 (net)                                    2         0.00                0.00       3.66 r
+  U1191/B2 (AND2B1X3AR9)                                            0.08      0.00 *     3.66 r
+  U1191/O (AND2B1X3AR9)                                             0.10      0.17       3.83 f
+  n1168 (net)                                   4         0.03                0.00       3.83 f
+  U907/A1 (AO13X1AR9)                                               0.10      0.00 *     3.83 f
+  U907/O (AO13X1AR9)                                                0.05      0.15       3.98 f
+  n2244 (net)                                   1         0.00                0.00       3.98 f
+  U232/I (CLKINVX3AR9)                                              0.05      0.00 *     3.98 f
+  U232/O (CLKINVX3AR9)                                              0.29      0.19       4.17 r
+  n2073 (net)                                  15         0.07                0.00       4.17 r
+  U1387/I1 (NOR2X1OAR9)                                             0.29      0.03 *     4.20 r
+  U1387/O (NOR2X1OAR9)                                              0.16      0.17       4.37 f
+  n1236 (net)                                   2         0.01                0.00       4.37 f
+  U801/I1 (NOR2X1AR9)                                               0.16      0.00 *     4.37 f
+  U801/O (NOR2X1AR9)                                                0.22      0.18       4.55 r
+  memForAorB_1_D[8] (net)                       1         0.01                0.00       4.55 r
+  memForAorB_1/ram1rw_4/ram/D[8] (mem55lpw256d16sp)                 0.22      0.00 *     4.55 r
+  data arrival time                                                                      4.55
 
-  clock Int_clk (rise edge)                                                  10.00      10.00
-  clock network delay (ideal)                                                 0.55      10.55
-  clock uncertainty                                                          -0.30      10.25
-  memForAorB_1/ram1rw_4/ram/CLK (mem55lpw256d16sp)                            0.00      10.25 r
-  library setup time                                                         -0.53       9.72
-  data required time                                                                     9.72
+  clock Int_clk (rise edge)                                                   4.82       4.82
+  clock network delay (ideal)                                                 0.55       5.37
+  clock uncertainty                                                          -0.30       5.07
+  memForAorB_1/ram1rw_4/ram/CLK (mem55lpw256d16sp)                            0.00       5.07 r
+  library setup time                                                         -0.52       4.55
+  data required time                                                                     4.55
   ----------------------------------------------------------------------------------------------
-  data required time                                                                     9.72
-  data arrival time                                                                     -7.57
+  data required time                                                                     4.55
+  data arrival time                                                                     -4.55
   ----------------------------------------------------------------------------------------------
-  slack (MET)                                                                            2.16
+  slack (MET)                                                                            0.00
 
 
   Startpoint: partialSum_reg[8]
@@ -749,136 +589,121 @@ Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_
   ----------------------------------------------------------------------------------------------
   clock Int_clk (rise edge)                                                   0.00       0.00
   clock network delay (ideal)                                                 0.55       0.55
-  partialSum_reg[8]/CK (DFFRBQX1AR9)                                0.08      0.00       0.55 r
-  partialSum_reg[8]/Q (DFFRBQX1AR9)                                 0.27      0.37       0.92 r
-  temp_temp_when_SInt_l130_1[0] (net)           4         0.02                0.00       0.92 r
-  U1100/I1 (CLKNAND2X2AR9)                                          0.27      0.00 *     0.92 r
-  U1100/O (CLKNAND2X2AR9)                                           0.23      0.21       1.13 f
-  n974 (net)                                    5         0.03                0.00       1.13 f
-  U1101/I2 (NOR2X05AR9)                                             0.23      0.00 *     1.14 f
-  U1101/O (NOR2X05AR9)                                              0.28      0.28       1.42 r
-  n978 (net)                                    2         0.00                0.00       1.42 r
-  U1102/I2 (NAND2X05AR9)                                            0.28      0.00 *     1.42 r
-  U1102/O (NAND2X05AR9)                                             0.22      0.20       1.62 f
-  n980 (net)                                    5         0.01                0.00       1.62 f
-  U1103/I2 (NOR2X1AR9)                                              0.22      0.00 *     1.62 f
-  U1103/O (NOR2X1AR9)                                               0.19      0.18       1.80 r
-  n984 (net)                                    2         0.01                0.00       1.80 r
-  U1104/I2 (NAND2X05AR9)                                            0.19      0.00 *     1.80 r
-  U1104/O (NAND2X05AR9)                                             0.27      0.21       2.01 f
-  n986 (net)                                    5         0.01                0.00       2.01 f
-  U1105/I2 (CLKNOR2X1AR9)                                           0.27      0.00 *     2.01 f
-  U1105/O (CLKNOR2X1AR9)                                            0.24      0.22       2.23 r
-  n990 (net)                                    2         0.02                0.00       2.23 r
-  U1106/I2 (NAND2X1OAR9)                                            0.24      0.00 *     2.24 r
-  U1106/O (NAND2X1OAR9)                                             0.20      0.16       2.40 f
-  n992 (net)                                    5         0.02                0.00       2.40 f
-  U1107/I2 (NOR2X2OAR9)                                             0.20      0.00 *     2.40 f
-  U1107/O (NOR2X2OAR9)                                              0.26      0.21       2.61 r
-  n996 (net)                                    3         0.03                0.00       2.61 r
-  U1108/I2 (NAND2X2AR9)                                             0.26      0.00 *     2.61 r
-  U1108/O (NAND2X2AR9)                                              0.28      0.24       2.86 f
-  n998 (net)                                    7         0.03                0.00       2.86 f
-  U1109/I2 (NOR2X05AR9)                                             0.28      0.00 *     2.86 f
-  U1109/O (NOR2X05AR9)                                              0.28      0.29       3.16 r
-  n1002 (net)                                   2         0.00                0.00       3.16 r
-  U362/I2 (NAND2X05AR9)                                             0.28      0.00 *     3.16 r
-  U362/O (NAND2X05AR9)                                              0.26      0.24       3.39 f
-  n1004 (net)                                   5         0.01                0.00       3.39 f
-  U361/I2 (NOR2X4AR9)                                               0.26      0.00 *     3.39 f
-  U361/O (NOR2X4AR9)                                                0.25      0.23       3.62 r
-  n1008 (net)                                   2         0.03                0.00       3.62 r
-  U358/I2 (NAND2X2AR9)                                              0.25      0.01 *     3.63 r
-  U358/O (NAND2X2AR9)                                               0.28      0.24       3.87 f
-  n1010 (net)                                   5         0.03                0.00       3.87 f
-  U356/I2 (NOR2X1AR9)                                               0.28      0.01 *     3.87 f
-  U356/O (NOR2X1AR9)                                                0.14      0.16       4.03 r
-  n1015 (net)                                   2         0.00                0.00       4.03 r
-  U354/I2 (NAND2X05AR9)                                             0.14      0.00 *     4.03 r
-  U354/O (NAND2X05AR9)                                              0.26      0.20       4.23 f
-  n1016 (net)                                   3         0.01                0.00       4.23 f
-  U1110/I (INVX05AR9)                                               0.26      0.00 *     4.23 f
-  U1110/O (INVX05AR9)                                               0.17      0.17       4.41 r
-  n944 (net)                                    2         0.01                0.00       4.41 r
-  U352/I2 (NAND2X05AR9)                                             0.17      0.00 *     4.41 r
-  U352/O (NAND2X05AR9)                                              0.16      0.13       4.53 f
-  n943 (net)                                    4         0.00                0.00       4.53 f
-  U1111/I (INVX05AR9)                                               0.16      0.00 *     4.53 f
-  U1111/O (INVX05AR9)                                               0.10      0.10       4.64 r
-  n942 (net)                                    3         0.00                0.00       4.64 r
-  U1112/I2 (NAND2X05AR9)                                            0.10      0.00 *     4.64 r
-  U1112/O (NAND2X05AR9)                                             0.10      0.08       4.72 f
-  n936 (net)                                    1         0.00                0.00       4.72 f
-  U349/I2 (NOR2X1AR9)                                               0.10      0.00 *     4.72 f
-  U349/O (NOR2X1AR9)                                                0.17      0.13       4.85 r
-  n939 (net)                                    3         0.00                0.00       4.85 r
-  U1113/I2 (NAND2X05AR9)                                            0.17      0.00 *     4.85 r
-  U1113/O (NAND2X05AR9)                                             0.11      0.09       4.94 f
-  n937 (net)                                    1         0.00                0.00       4.94 f
-  U394/I2 (NOR2X1AR9)                                               0.11      0.00 *     4.94 f
-  U394/O (NOR2X1AR9)                                                0.22      0.17       5.11 r
-  n952 (net)                                    5         0.01                0.00       5.11 r
-  U1124/I2 (AND2X05AR9)                                             0.22      0.00 *     5.11 r
-  U1124/O (AND2X05AR9)                                              0.05      0.15       5.26 r
-  n953 (net)                                    1         0.00                0.00       5.26 r
-  U1125/I2 (NAND2X05AR9)                                            0.05      0.00 *     5.26 r
-  U1125/O (NAND2X05AR9)                                             0.12      0.08       5.34 f
-  n954 (net)                                    2         0.00                0.00       5.34 f
-  U344/I2 (NOR2X1AR9)                                               0.12      0.00 *     5.34 f
-  U344/O (NOR2X1AR9)                                                0.19      0.15       5.49 r
-  n957 (net)                                    3         0.01                0.00       5.49 r
-  U1130/I2 (NAND2X05AR9)                                            0.19      0.00 *     5.49 r
-  U1130/O (NAND2X05AR9)                                             0.09      0.09       5.58 f
-  n958 (net)                                    1         0.00                0.00       5.58 f
-  U1131/I2 (NOR2X05AR9)                                             0.09      0.00 *     5.58 f
-  U1131/O (NOR2X05AR9)                                              0.22      0.20       5.77 r
-  n960 (net)                                    1         0.00                0.00       5.77 r
-  U1132/I1 (NOR2X1AR9)                                              0.22      0.00 *     5.77 r
-  U1132/O (NOR2X1AR9)                                               0.09      0.10       5.87 f
-  n970 (net)                                    2         0.00                0.00       5.87 f
-  U343/A1 (AOI13X05AR9)                                             0.09      0.00 *     5.87 f
-  U343/O (AOI13X05AR9)                                              0.17      0.14       6.01 r
-  n1014 (net)                                   1         0.00                0.00       6.01 r
-  U46/I (CLKBUFX3AR9)                                               0.17      0.00 *     6.01 r
-  U46/O (CLKBUFX3AR9)                                               0.28      0.27       6.27 r
-  n38 (net)                                     2         0.07                0.00       6.27 r
-  U104/I (BUFX1AR9)                                                 0.28      0.02 *     6.29 r
-  U104/O (BUFX1AR9)                                                 0.11      0.17       6.46 r
-  n86 (net)                                     3         0.01                0.00       6.46 r
-  U114/I (CLKBUFX2AR9)                                              0.11      0.00 *     6.46 r
-  U114/O (CLKBUFX2AR9)                                              0.24      0.21       6.67 r
-  n1223 (net)                                   2         0.04                0.00       6.67 r
-  U113/I (CLKBUFX2AR9)                                              0.24      0.01 *     6.67 r
-  U113/O (CLKBUFX2AR9)                                              0.28      0.27       6.94 r
-  n1222 (net)                                   6         0.04                0.00       6.94 r
-  U1174/A1 (AOI122X05AR9)                                           0.28      0.01 *     6.95 r
-  U1174/O (AOI122X05AR9)                                            0.16      0.12       7.07 f
-  n1045 (net)                                   1         0.00                0.00       7.07 f
-  U219/I (CLKBUFX2AR9)                                              0.16      0.00 *     7.08 f
-  U219/O (CLKBUFX2AR9)                                              0.24      0.24       7.31 f
-  n1137 (net)                                   2         0.04                0.00       7.31 f
-  U1213/I1 (NOR2X1AR9)                                              0.24      0.01 *     7.33 f
-  U1213/O (NOR2X1AR9)                                               0.28      0.24       7.57 r
-  memForAorB_1_D[10] (net)                      1         0.01                0.00       7.57 r
-  memForAorB_1/ram1rw_4/ram/D[10] (mem55lpw256d16sp)                0.28      0.00 *     7.57 r
-  data arrival time                                                                      7.57
+  partialSum_reg[8]/CK (DFFRBQX4K1AR9)                              0.08      0.00       0.55 r
+  partialSum_reg[8]/Q (DFFRBQX4K1AR9)                               0.10      0.24       0.79 r
+  temp_temp_when_SInt_l130_1[0] (net)           5         0.03                0.00       0.79 r
+  U488/I2 (HAX2AR9)                                                 0.10      0.01 *     0.79 r
+  U488/CO (HAX2AR9)                                                 0.05      0.11       0.91 r
+  n1187 (net)                                   1         0.00                0.00       0.91 r
+  U852/I2 (HAX2AR9)                                                 0.05      0.00 *     0.91 r
+  U852/CO (HAX2AR9)                                                 0.07      0.11       1.02 r
+  n1190 (net)                                   1         0.01                0.00       1.02 r
+  U1371/I2 (HAX2AR9)                                                0.07      0.00 *     1.02 r
+  U1371/CO (HAX2AR9)                                                0.05      0.11       1.13 r
+  n1193 (net)                                   1         0.00                0.00       1.13 r
+  U719/I2 (HAX2AR9)                                                 0.05      0.00 *     1.13 r
+  U719/CO (HAX2AR9)                                                 0.05      0.10       1.23 r
+  n1196 (net)                                   1         0.00                0.00       1.23 r
+  U1376/I2 (HAX2AR9)                                                0.05      0.00 *     1.23 r
+  U1376/CO (HAX2AR9)                                                0.05      0.10       1.33 r
+  n1199 (net)                                   1         0.00                0.00       1.33 r
+  U718/I2 (HAX2AR9)                                                 0.05      0.00 *     1.33 r
+  U718/CO (HAX2AR9)                                                 0.07      0.11       1.44 r
+  n1202 (net)                                   1         0.01                0.00       1.44 r
+  U1381/I2 (HAX2AR9)                                                0.07      0.00 *     1.44 r
+  U1381/CO (HAX2AR9)                                                0.05      0.11       1.54 r
+  n1205 (net)                                   1         0.00                0.00       1.54 r
+  U717/I2 (HAX3AR9)                                                 0.05      0.00 *     1.54 r
+  U717/CO (HAX3AR9)                                                 0.09      0.14       1.68 r
+  n1208 (net)                                   1         0.02                0.00       1.68 r
+  U1386/I2 (HAX2AR9)                                                0.09      0.00 *     1.69 r
+  U1386/CO (HAX2AR9)                                                0.05      0.11       1.80 r
+  n1211 (net)                                   1         0.00                0.00       1.80 r
+  U716/I2 (HAX2AR9)                                                 0.05      0.00 *     1.80 r
+  U716/CO (HAX2AR9)                                                 0.06      0.10       1.90 r
+  n1214 (net)                                   1         0.00                0.00       1.90 r
+  U1391/I2 (HAX2AR9)                                                0.06      0.00 *     1.90 r
+  U1391/CO (HAX2AR9)                                                0.05      0.10       2.00 r
+  n1217 (net)                                   1         0.00                0.00       2.00 r
+  U356/I2 (HAX2AR9)                                                 0.05      0.00 *     2.00 r
+  U356/CO (HAX2AR9)                                                 0.05      0.10       2.10 r
+  n873 (net)                                    1         0.00                0.00       2.10 r
+  U354/I2 (HAX2AR9)                                                 0.05      0.00 *     2.10 r
+  U354/CO (HAX2AR9)                                                 0.09      0.13       2.22 r
+  n892 (net)                                    1         0.01                0.00       2.22 r
+  U353/I2 (HAX2AR9)                                                 0.09      0.00 *     2.22 r
+  U353/CO (HAX2AR9)                                                 0.05      0.11       2.33 r
+  n894 (net)                                    1         0.00                0.00       2.33 r
+  U341/I2 (HAX3AR9)                                                 0.05      0.00 *     2.33 r
+  U341/CO (HAX3AR9)                                                 0.11      0.15       2.48 r
+  n859 (net)                                    1         0.02                0.00       2.48 r
+  U352/I2 (HAX2AR9)                                                 0.11      0.00 *     2.49 r
+  U352/CO (HAX2AR9)                                                 0.05      0.11       2.60 r
+  n860 (net)                                    1         0.00                0.00       2.60 r
+  U351/I2 (HAX2AR9)                                                 0.05      0.00 *     2.60 r
+  U351/CO (HAX2AR9)                                                 0.05      0.10       2.70 r
+  n858 (net)                                    1         0.00                0.00       2.70 r
+  U350/I2 (HAX2AR9)                                                 0.05      0.00 *     2.70 r
+  U350/CO (HAX2AR9)                                                 0.05      0.10       2.80 r
+  n861 (net)                                    1         0.00                0.00       2.80 r
+  U390/I2 (HAX2AR9)                                                 0.05      0.00 *     2.80 r
+  U390/CO (HAX2AR9)                                                 0.05      0.10       2.89 r
+  n857 (net)                                    1         0.00                0.00       2.89 r
+  U388/I2 (HAX2AR9)                                                 0.05      0.00 *     2.89 r
+  U388/CO (HAX2AR9)                                                 0.05      0.10       2.99 r
+  n856 (net)                                    1         0.00                0.00       2.99 r
+  U386/I2 (HAX3AR9)                                                 0.05      0.00 *     2.99 r
+  U386/CO (HAX3AR9)                                                 0.04      0.10       3.10 r
+  n862 (net)                                    1         0.00                0.00       3.10 r
+  U385/I2 (HAX2AR9)                                                 0.04      0.00 *     3.10 r
+  U385/CO (HAX2AR9)                                                 0.05      0.10       3.19 r
+  n855 (net)                                    1         0.00                0.00       3.19 r
+  U483/I2 (HAX1AR9)                                                 0.05      0.00 *     3.19 r
+  U483/CO (HAX1AR9)                                                 0.07      0.10       3.29 r
+  n854 (net)                                    1         0.00                0.00       3.29 r
+  U482/I2 (HAX1AR9)                                                 0.07      0.00 *     3.30 r
+  U482/CO (HAX1AR9)                                                 0.05      0.10       3.39 r
+  n865 (net)                                    1         0.00                0.00       3.39 r
+  U340/I2 (HAX05AR9)                                                0.05      0.00 *     3.39 r
+  U340/CO (HAX05AR9)                                                0.07      0.13       3.52 r
+  n867 (net)                                    1         0.00                0.00       3.52 r
+  U492/I2 (HAX05AR9)                                                0.07      0.00 *     3.52 r
+  U492/CO (HAX05AR9)                                                0.08      0.14       3.66 r
+  n869 (net)                                    2         0.00                0.00       3.66 r
+  U1191/B2 (AND2B1X3AR9)                                            0.08      0.00 *     3.66 r
+  U1191/O (AND2B1X3AR9)                                             0.10      0.17       3.83 f
+  n1168 (net)                                   4         0.03                0.00       3.83 f
+  U907/A1 (AO13X1AR9)                                               0.10      0.00 *     3.83 f
+  U907/O (AO13X1AR9)                                                0.05      0.15       3.98 f
+  n2244 (net)                                   1         0.00                0.00       3.98 f
+  U232/I (CLKINVX3AR9)                                              0.05      0.00 *     3.98 f
+  U232/O (CLKINVX3AR9)                                              0.29      0.19       4.17 r
+  n2073 (net)                                  15         0.07                0.00       4.17 r
+  U1389/I1 (NOR2X1OAR9)                                             0.29      0.03 *     4.20 r
+  U1389/O (NOR2X1OAR9)                                              0.15      0.16       4.36 f
+  n1237 (net)                                   2         0.01                0.00       4.36 f
+  U800/I1 (NOR2X1AR9)                                               0.15      0.00 *     4.36 f
+  U800/O (NOR2X1AR9)                                                0.23      0.19       4.55 r
+  memForAorB_1_D[9] (net)                       1         0.01                0.00       4.55 r
+  memForAorB_1/ram1rw_4/ram/D[9] (mem55lpw256d16sp)                 0.23      0.00 *     4.55 r
+  data arrival time                                                                      4.55
 
-  clock Int_clk (rise edge)                                                  10.00      10.00
-  clock network delay (ideal)                                                 0.55      10.55
-  clock uncertainty                                                          -0.30      10.25
-  memForAorB_1/ram1rw_4/ram/CLK (mem55lpw256d16sp)                            0.00      10.25 r
-  library setup time                                                         -0.53       9.72
-  data required time                                                                     9.72
+  clock Int_clk (rise edge)                                                   4.82       4.82
+  clock network delay (ideal)                                                 0.55       5.37
+  clock uncertainty                                                          -0.30       5.07
+  memForAorB_1/ram1rw_4/ram/CLK (mem55lpw256d16sp)                            0.00       5.07 r
+  library setup time                                                         -0.52       4.55
+  data required time                                                                     4.55
   ----------------------------------------------------------------------------------------------
-  data required time                                                                     9.72
-  data arrival time                                                                     -7.57
+  data required time                                                                     4.55
+  data arrival time                                                                     -4.55
   ----------------------------------------------------------------------------------------------
-  slack (MET)                                                                            2.16
+  slack (MET)                                                                            0.00
 
 
   Startpoint: fsm_cntLayers_value_reg[0]
               (rising edge-triggered flip-flop clocked by Int_clk)
-  Endpoint: partialSum_reg[35]
+  Endpoint: partialSum_reg[34]
             (rising edge-triggered flip-flop clocked by Int_clk)
   Path Group: REG2REG
   Path Type: max
@@ -887,193 +712,127 @@ Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_
   ----------------------------------------------------------------------------------------------
   clock Int_clk (rise edge)                                                   0.00       0.00
   clock network delay (ideal)                                                 0.55       0.55
-  fsm_cntLayers_value_reg[0]/CK (DFFRBQX4J1AR9)                     0.08      0.00       0.55 r
-  fsm_cntLayers_value_reg[0]/Q (DFFRBQX4J1AR9)                      0.30      0.44       0.99 r
-  temp_fsm_adrForWeight_1[8] (net)             23         0.10                0.00       0.99 r
-  U585/S (MUX2X3AR9)                                                0.30      0.04 *     1.03 r
-  U585/O (MUX2X3AR9)                                                0.20      0.34       1.37 r
-  n550 (net)                                   20         0.04                0.00       1.37 r
-  U866/I1 (CLKXNOR2X3AR9)                                           0.20      0.00 *     1.37 r
-  U866/O (CLKXNOR2X3AR9)                                            0.29      0.38       1.75 r
-  n632 (net)                                   19         0.07                0.00       1.75 r
-  U822/I2 (NAND2X4AR9)                                              0.29      0.00 *     1.75 r
-  U822/O (NAND2X4AR9)                                               0.24      0.23       1.98 f
-  n633 (net)                                   17         0.06                0.00       1.98 f
-  U475/B1 (OAI22X1AR9)                                              0.24      0.00 *     1.98 f
-  U475/O (OAI22X1AR9)                                               0.26      0.22       2.20 r
-  n256 (net)                                    1         0.01                0.00       2.20 r
-  U474/I2 (HAX05AR9)                                                0.26      0.00 *     2.20 r
-  U474/S (HAX05AR9)                                                 0.11      0.27       2.47 f
-  n249 (net)                                    1         0.00                0.00       2.47 f
-  U702/CI (FAX05AR9)                                                0.11      0.00 *     2.47 f
-  U702/CO (FAX05AR9)                                                0.12      0.35       2.82 f
-  n279 (net)                                    1         0.00                0.00       2.82 f
-  U709/CI (FAX05AR9)                                                0.12      0.00 *     2.82 f
-  U709/S (FAX05AR9)                                                 0.14      0.48       3.30 r
-  n262 (net)                                    1         0.01                0.00       3.30 r
-  U770/CI (FAX05AR9)                                                0.14      0.00 *     3.30 r
-  U770/S (FAX05AR9)                                                 0.19      0.47       3.77 f
-  n800 (net)                                    2         0.01                0.00       3.77 f
-  U355/A1 (OAI12X2IAR9)                                             0.19      0.00 *     3.77 f
-  U355/O (OAI12X2IAR9)                                              0.10      0.11       3.88 r
-  n259 (net)                                    1         0.01                0.00       3.88 r
-  U353/I1 (NAND2X2OAR9)                                             0.10      0.00 *     3.88 r
-  U353/O (NAND2X2OAR9)                                              0.05      0.06       3.95 f
-  n807 (net)                                    3         0.01                0.00       3.95 f
-  U16/I2 (NAND2X2AR9)                                               0.05      0.00 *     3.95 f
-  U16/O (NAND2X2AR9)                                                0.07      0.05       3.99 r
-  n10 (net)                                     1         0.00                0.00       3.99 r
-  U11/I2 (CLKNAND2X3AR9)                                            0.07      0.00 *     3.99 r
-  U11/O (CLKNAND2X3AR9)                                             0.05      0.05       4.04 f
-  n7 (net)                                      1         0.00                0.00       4.04 f
-  U13/I (CLKINVX4AR9)                                               0.05      0.00 *     4.04 f
-  U13/O (CLKINVX4AR9)                                               0.04      0.04       4.08 r
-  n8 (net)                                      1         0.01                0.00       4.08 r
-  U12/I1 (CLKNAND2X8AR9)                                            0.04      0.00 *     4.08 r
-  U12/O (CLKNAND2X8AR9)                                             0.07      0.05       4.14 f
-  n811 (net)                                    3         0.03                0.00       4.14 f
-  U396/I1 (NAND2X1IAR9)                                             0.07      0.00 *     4.14 f
-  U396/O (NAND2X1IAR9)                                              0.12      0.05       4.19 r
-  n298 (net)                                    1         0.00                0.00       4.19 r
-  U350/I2 (NAND2X2OAR9)                                             0.12      0.00 *     4.19 r
-  U350/O (NAND2X2OAR9)                                              0.04      0.05       4.24 f
-  n816 (net)                                    1         0.00                0.00       4.24 f
-  U775/CI (FAX1AR9)                                                 0.04      0.00 *     4.24 f
-  U775/CO (FAX1AR9)                                                 0.10      0.23       4.47 f
-  n820 (net)                                    3         0.01                0.00       4.47 f
-  U779/B1 (OAI12X2AR9)                                              0.10      0.00 *     4.47 f
-  U779/O (OAI12X2AR9)                                               0.09      0.08       4.55 r
-  n346 (net)                                    1         0.00                0.00       4.55 r
-  U348/I2 (CLKNAND2X2AR9)                                           0.09      0.00 *     4.55 r
-  U348/O (CLKNAND2X2AR9)                                            0.09      0.08       4.63 f
-  n825 (net)                                    1         0.01                0.00       4.63 f
-  U778/CI (FAX2AR9)                                                 0.09      0.00 *     4.63 f
-  U778/CO (FAX2AR9)                                                 0.09      0.25       4.88 f
-  n829 (net)                                    3         0.01                0.00       4.88 f
-  U347/B1 (OAI12X2IAR9)                                             0.09      0.00 *     4.88 f
-  U347/O (OAI12X2IAR9)                                              0.10      0.08       4.96 r
-  n403 (net)                                    1         0.01                0.00       4.96 r
-  U345/I1 (NAND2X4OAR9)                                             0.10      0.00 *     4.96 r
-  U345/O (NAND2X4OAR9)                                              0.06      0.06       5.02 f
-  n834 (net)                                    1         0.01                0.00       5.02 f
-  U1017/CI (FAX1AR9)                                                0.06      0.00 *     5.03 f
-  U1017/CO (FAX1AR9)                                                0.09      0.21       5.24 f
-  n838 (net)                                    1         0.00                0.00       5.24 f
-  U1020/CI (FAX2AR9)                                                0.09      0.00 *     5.24 f
-  U1020/CO (FAX2AR9)                                                0.09      0.25       5.49 f
-  n840 (net)                                    3         0.01                0.00       5.49 f
-  U782/B1 (OAI12X2IAR9)                                             0.09      0.00 *     5.49 f
-  U782/O (OAI12X2IAR9)                                              0.09      0.07       5.56 r
-  n504 (net)                                    1         0.00                0.00       5.56 r
-  U391/I1 (NAND2X2OAR9)                                             0.09      0.00 *     5.56 r
-  U391/O (NAND2X2OAR9)                                              0.05      0.06       5.61 f
-  n846 (net)                                    1         0.01                0.00       5.61 f
-  U331/CI (FAX1AR9)                                                 0.05      0.00 *     5.61 f
-  U331/CO (FAX1AR9)                                                 0.11      0.24       5.85 f
-  n850 (net)                                    3         0.01                0.00       5.85 f
-  U390/B1 (OAI12X1IAR9)                                             0.11      0.00 *     5.85 f
-  U390/O (OAI12X1IAR9)                                              0.11      0.10       5.95 r
-  n564 (net)                                    1         0.00                0.00       5.95 r
-  U342/I1 (CLKNAND2X3AR9)                                           0.11      0.00 *     5.95 r
-  U342/O (CLKNAND2X3AR9)                                            0.06      0.06       6.01 f
-  n856 (net)                                    3         0.01                0.00       6.01 f
-  U2/I2 (NAND2X2AR9)                                                0.06      0.00 *     6.01 f
-  U2/O (NAND2X2AR9)                                                 0.06      0.05       6.06 r
-  n1 (net)                                      1         0.00                0.00       6.06 r
-  U5/I3 (NAND3X3AR9)                                                0.06      0.00 *     6.06 r
-  U5/O (NAND3X3AR9)                                                 0.19      0.15       6.21 f
-  n860 (net)                                    3         0.02                0.00       6.21 f
-  U341/B1 (OAI12X2IAR9)                                             0.19      0.00 *     6.21 f
-  U341/O (OAI12X2IAR9)                                              0.10      0.10       6.31 r
-  n615 (net)                                    1         0.00                0.00       6.31 r
-  U387/I2 (CLKNAND2X4AR9)                                           0.10      0.00 *     6.31 r
-  U387/O (CLKNAND2X4AR9)                                            0.12      0.11       6.42 f
-  n865 (net)                                    1         0.03                0.00       6.42 f
-  U386/CI (FAX2AR9)                                                 0.12      0.01 *     6.43 f
-  U386/CO (FAX2AR9)                                                 0.08      0.24       6.67 f
-  n869 (net)                                    1         0.00                0.00       6.67 f
-  U1035/CI (FAX2AR9)                                                0.08      0.00 *     6.67 f
-  U1035/CO (FAX2AR9)                                                0.07      0.23       6.90 f
-  n873 (net)                                    1         0.00                0.00       6.90 f
-  U1036/CI (FAX2AR9)                                                0.07      0.00 *     6.90 f
-  U1036/CO (FAX2AR9)                                                0.09      0.24       7.14 f
-  n877 (net)                                    3         0.01                0.00       7.14 f
-  U340/B1 (OAI12X2IAR9)                                             0.09      0.00 *     7.14 f
-  U340/O (OAI12X2IAR9)                                              0.08      0.08       7.22 r
-  n694 (net)                                    1         0.00                0.00       7.22 r
-  U339/I1 (CLKNAND2X4AR9)                                           0.08      0.00 *     7.22 r
-  U339/O (CLKNAND2X4AR9)                                            0.13      0.11       7.33 f
-  n882 (net)                                    1         0.03                0.00       7.33 f
-  U1040/CI (FAX1AR9)                                                0.13      0.01 *     7.34 f
-  U1040/CO (FAX1AR9)                                                0.10      0.26       7.59 f
-  n886 (net)                                    3         0.01                0.00       7.59 f
-  U337/I1 (NAND2X1AR9)                                              0.10      0.00 *     7.59 f
-  U337/O (NAND2X1AR9)                                               0.11      0.09       7.68 r
-  n720 (net)                                    1         0.00                0.00       7.68 r
-  U336/I2 (CLKNAND2X3AR9)                                           0.11      0.00 *     7.68 r
-  U336/O (CLKNAND2X3AR9)                                            0.06      0.07       7.75 f
-  n891 (net)                                    1         0.01                0.00       7.75 f
-  U332/CI (FAX2AR9)                                                 0.06      0.00 *     7.75 f
-  U332/CO (FAX2AR9)                                                 0.09      0.24       7.99 f
-  n895 (net)                                    3         0.01                0.00       7.99 f
-  U335/B1 (OAI12X2IAR9)                                             0.09      0.00 *     7.99 f
-  U335/O (OAI12X2IAR9)                                              0.09      0.07       8.06 r
-  n740 (net)                                    1         0.00                0.00       8.06 r
-  U383/I1 (CLKNAND2X3AR9)                                           0.09      0.00 *     8.06 r
-  U383/O (CLKNAND2X3AR9)                                            0.05      0.05       8.12 f
-  n900 (net)                                    1         0.00                0.00       8.12 f
-  U382/CI (FAX1AR9)                                                 0.05      0.00 *     8.12 f
-  U382/CO (FAX1AR9)                                                 0.10      0.23       8.34 f
-  n904 (net)                                    3         0.01                0.00       8.34 f
-  U24/I2 (NAND2X2AR9)                                               0.10      0.00 *     8.34 f
-  U24/O (NAND2X2AR9)                                                0.05      0.06       8.41 r
-  n15 (net)                                     1         0.00                0.00       8.41 r
-  U18/I2 (CLKNAND2X3AR9)                                            0.05      0.00 *     8.41 r
-  U18/O (CLKNAND2X3AR9)                                             0.05      0.04       8.45 f
-  n12 (net)                                     1         0.00                0.00       8.45 f
-  U20/I (CLKINVX3AR9)                                               0.05      0.00 *     8.45 f
-  U20/O (CLKINVX3AR9)                                               0.04      0.04       8.49 r
-  n13 (net)                                     1         0.01                0.00       8.49 r
-  U19/I1 (CLKNAND2X6AR9)                                            0.04      0.00 *     8.49 r
-  U19/O (CLKNAND2X6AR9)                                             0.09      0.07       8.56 f
-  n906 (net)                                    3         0.03                0.00       8.56 f
-  U380/B1 (OAI12X2AR9)                                              0.09      0.01 *     8.57 f
-  U380/O (OAI12X2AR9)                                               0.07      0.07       8.63 r
-  n749 (net)                                    1         0.00                0.00       8.63 r
-  U334/I1 (CLKNAND2X1AR9)                                           0.07      0.00 *     8.63 r
-  U334/O (CLKNAND2X1AR9)                                            0.07      0.07       8.70 f
-  n908 (net)                                    1         0.00                0.00       8.70 f
-  U1044/CI (FAX1AR9)                                                0.07      0.00 *     8.70 f
-  U1044/CO (FAX1AR9)                                                0.08      0.21       8.92 f
-  n1077 (net)                                   1         0.00                0.00       8.92 f
-  U1233/CI (FAX1AR9)                                                0.08      0.00 *     8.92 f
-  U1233/CO (FAX1AR9)                                                0.07      0.20       9.12 f
-  n751 (net)                                    1         0.00                0.00       9.12 f
-  U333/I1 (XOR2X1AR9)                                               0.07      0.00 *     9.12 f
-  U333/O (XOR2X1AR9)                                                0.07      0.24       9.36 f
-  n752 (net)                                    1         0.00                0.00       9.36 f
-  U818/B2B (OAI22B2X1AR9)                                           0.07      0.00 *     9.36 f
-  U818/O (OAI22B2X1AR9)                                             0.09      0.11       9.47 f
-  n178 (net)                                    1         0.00                0.00       9.47 f
-  partialSum_reg[35]/D (DFFRBQX05AR9)                               0.09      0.00 *     9.47 f
-  data arrival time                                                                      9.47
+  fsm_cntLayers_value_reg[0]/CK (DFFRBQX2AR9)                       0.08      0.00       0.55 r
+  fsm_cntLayers_value_reg[0]/Q (DFFRBQX2AR9)                        0.25      0.37       0.92 r
+  temp_fsm_adrForWeight_1[8] (net)              5         0.04                0.00       0.92 r
+  U30/I (CLKBUFX6AR9)                                               0.25      0.00 *     0.92 r
+  U30/O (CLKBUFX6AR9)                                               0.22      0.24       1.17 r
+  n2252 (net)                                  29         0.10                0.00       1.17 r
+  U219/I (INVX05AR9)                                                0.22      0.03 *     1.20 r
+  U219/O (INVX05AR9)                                                0.10      0.11       1.31 f
+  n123 (net)                                    1         0.00                0.00       1.31 f
+  U216/I2 (NAND2X4AR9)                                              0.10      0.00 *     1.31 f
+  U216/O (NAND2X4AR9)                                               0.05      0.06       1.37 r
+  n124 (net)                                    1         0.01                0.00       1.37 r
+  U218/I1 (NAND2X3AR9)                                              0.05      0.00 *     1.37 r
+  U218/O (NAND2X3AR9)                                               0.30      0.20       1.57 f
+  n802 (net)                                   19         0.06                0.00       1.57 f
+  U454/I2 (XOR2X1AR9)                                               0.30      0.00 *     1.58 f
+  U454/O (XOR2X1AR9)                                                0.08      0.26       1.84 f
+  n198 (net)                                    1         0.00                0.00       1.84 f
+  U698/I1 (CLKNAND2X3AR9)                                           0.08      0.00 *     1.84 f
+  U698/O (CLKNAND2X3AR9)                                            0.08      0.06       1.90 r
+  n809 (net)                                    1         0.01                0.00       1.90 r
+  U1751/I (BUFX12AR9)                                               0.08      0.00 *     1.90 r
+  U1751/O (BUFX12AR9)                                               0.08      0.11       2.01 r
+  n1703 (net)                                  17         0.06                0.00       2.01 r
+  U930/B1 (OAI22X3AR9)                                              0.08      0.00 *     2.01 r
+  U930/O (OAI22X3AR9)                                               0.12      0.09       2.10 f
+  n506 (net)                                    1         0.01                0.00       2.10 f
+  U1042/I2 (HAX2AR9)                                                0.12      0.00 *     2.10 f
+  U1042/CO (HAX2AR9)                                                0.04      0.12       2.22 f
+  n542 (net)                                    3         0.01                0.00       2.22 f
+  U641/I1 (OR2X1AR9)                                                0.04      0.00 *     2.22 f
+  U641/O (OR2X1AR9)                                                 0.11      0.15       2.37 f
+  n590 (net)                                    1         0.01                0.00       2.37 f
+  U849/CI (FAX1AR9)                                                 0.11      0.00 *     2.37 f
+  U849/CO (FAX1AR9)                                                 0.19      0.32       2.69 f
+  n601 (net)                                    5         0.02                0.00       2.69 f
+  U1733/I1 (NAND2X1AR9)                                             0.19      0.00 *     2.69 f
+  U1733/O (NAND2X1AR9)                                              0.11      0.11       2.81 r
+  n1688 (net)                                   1         0.00                0.00       2.81 r
+  U1686/I2 (NAND3X4AR9)                                             0.11      0.00 *     2.81 r
+  U1686/O (NAND3X4AR9)                                              0.14      0.13       2.93 f
+  n662 (net)                                    5         0.02                0.00       2.93 f
+  U1685/I (CLKINVX2AR9)                                             0.14      0.00 *     2.93 f
+  U1685/O (CLKINVX2AR9)                                             0.07      0.07       3.00 r
+  n1636 (net)                                   2         0.01                0.00       3.00 r
+  U1682/I3 (NAND3X2AR9)                                             0.07      0.00 *     3.00 r
+  U1682/O (NAND3X2AR9)                                              0.12      0.11       3.11 f
+  n1639 (net)                                   2         0.01                0.00       3.11 f
+  U180/I3 (NAND4X3AR9)                                              0.12      0.00 *     3.11 f
+  U180/O (NAND4X3AR9)                                               0.07      0.08       3.19 r
+  n1445 (net)                                   2         0.01                0.00       3.19 r
+  U432/I (INVX2AR9)                                                 0.07      0.00 *     3.19 r
+  U432/O (INVX2AR9)                                                 0.04      0.05       3.23 f
+  n1926 (net)                                   2         0.01                0.00       3.23 f
+  U1984/I2 (NAND3X1AR9)                                             0.04      0.00 *     3.23 f
+  U1984/O (NAND3X1AR9)                                              0.08      0.06       3.29 r
+  n1930 (net)                                   1         0.00                0.00       3.29 r
+  U225/I2 (NAND2X2AR9)                                              0.08      0.00 *     3.29 r
+  U225/O (NAND2X2AR9)                                               0.04      0.05       3.35 f
+  n130 (net)                                    1         0.00                0.00       3.35 f
+  U227/I (CLKINVX2AR9)                                              0.04      0.00 *     3.35 f
+  U227/O (CLKINVX2AR9)                                              0.05      0.05       3.40 r
+  n131 (net)                                    1         0.01                0.00       3.40 r
+  U226/I1 (NAND2X6AR9)                                              0.05      0.00 *     3.40 r
+  U226/O (NAND2X6AR9)                                               0.08      0.07       3.47 f
+  n634 (net)                                    2         0.03                0.00       3.47 f
+  U1111/I1 (NAND2X2AR9)                                             0.08      0.01 *     3.47 f
+  U1111/O (NAND2X2AR9)                                              0.07      0.06       3.54 r
+  n1065 (net)                                   2         0.01                0.00       3.54 r
+  U381/A1 (OA12X1AR9)                                               0.07      0.00 *     3.54 r
+  U381/O (OA12X1AR9)                                                0.04      0.10       3.64 r
+  n2326 (net)                                   1         0.00                0.00       3.64 r
+  U2075/I2 (AND2X2AR9)                                              0.04      0.00 *     3.64 r
+  U2075/O (AND2X2AR9)                                               0.06      0.11       3.75 r
+  n637 (net)                                    1         0.01                0.00       3.75 r
+  U1113/A1 (OAI12X4IAR9)                                            0.06      0.00 *     3.75 r
+  U1113/O (OAI12X4IAR9)                                             0.08      0.07       3.81 f
+  n1028 (net)                                   1         0.01                0.00       3.81 f
+  U1450/I (INVX12AR9)                                               0.08      0.00 *     3.81 f
+  U1450/O (INVX12AR9)                                               0.09      0.08       3.89 r
+  n2077 (net)                                   5         0.07                0.00       3.89 r
+  U648/I1 (NOR2X4OAR9)                                              0.10      0.03 *     3.93 r
+  U648/O (NOR2X4OAR9)                                               0.03      0.04       3.96 f
+  n1420 (net)                                   1         0.00                0.00       3.96 f
+  U672/I1 (NOR2X4AR9)                                               0.03      0.00 *     3.97 f
+  U672/O (NOR2X4AR9)                                                0.12      0.08       4.05 r
+  n1055 (net)                                   2         0.01                0.00       4.05 r
+  U387/B1 (OAI12X4IAR9)                                             0.12      0.00 *     4.05 r
+  U387/O (OAI12X4IAR9)                                              0.09      0.07       4.12 f
+  n1075 (net)                                   2         0.01                0.00       4.12 f
+  U1179/B1 (AOI12X4IAR9)                                            0.09      0.00 *     4.12 f
+  U1179/O (AOI12X4IAR9)                                             0.09      0.07       4.19 r
+  n1114 (net)                                   2         0.01                0.00       4.19 r
+  U468/B1 (OAI12X4IAR9)                                             0.09      0.00 *     4.19 r
+  U468/O (OAI12X4IAR9)                                              0.09      0.05       4.24 f
+  n1108 (net)                                   2         0.01                0.00       4.24 f
+  U797/I1 (CLKXNOR2X1AR9)                                           0.09      0.00 *     4.24 f
+  U797/O (CLKXNOR2X1AR9)                                            0.05      0.19       4.43 f
+  n1110 (net)                                   1         0.00                0.00       4.43 f
+  U344/B1B (OAI22B2X2AR9)                                           0.05      0.00 *     4.43 f
+  U344/O (OAI22B2X2AR9)                                             0.04      0.12       4.55 f
+  n176 (net)                                    1         0.00                0.00       4.55 f
+  partialSum_reg[34]/D (DFFRBQX05AR9)                               0.04      0.00 *     4.55 f
+  data arrival time                                                                      4.55
 
-  clock Int_clk (rise edge)                                                  10.00      10.00
-  clock network delay (ideal)                                                 0.55      10.55
-  clock uncertainty                                                          -0.30      10.25
-  partialSum_reg[35]/CK (DFFRBQX05AR9)                                        0.00      10.25 r
-  library setup time                                                         -0.03      10.22
-  data required time                                                                    10.22
+  clock Int_clk (rise edge)                                                   4.82       4.82
+  clock network delay (ideal)                                                 0.55       5.37
+  clock uncertainty                                                          -0.30       5.07
+  partialSum_reg[34]/CK (DFFRBQX05AR9)                                        0.00       5.07 r
+  library setup time                                                         -0.02       5.05
+  data required time                                                                     5.05
   ----------------------------------------------------------------------------------------------
-  data required time                                                                    10.22
-  data arrival time                                                                     -9.47
+  data required time                                                                     5.05
+  data arrival time                                                                     -4.55
   ----------------------------------------------------------------------------------------------
-  slack (MET)                                                                            0.74
+  slack (MET)                                                                            0.50
 
 
   Startpoint: fsm_cntLayers_value_reg[0]
               (rising edge-triggered flip-flop clocked by Int_clk)
-  Endpoint: partialSum_reg[35]
+  Endpoint: partialSum_reg[34]
             (rising edge-triggered flip-flop clocked by Int_clk)
   Path Group: REG2REG
   Path Type: max
@@ -1082,188 +841,122 @@ Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_
   ----------------------------------------------------------------------------------------------
   clock Int_clk (rise edge)                                                   0.00       0.00
   clock network delay (ideal)                                                 0.55       0.55
-  fsm_cntLayers_value_reg[0]/CK (DFFRBQX4J1AR9)                     0.08      0.00       0.55 r
-  fsm_cntLayers_value_reg[0]/Q (DFFRBQX4J1AR9)                      0.30      0.44       0.99 r
-  temp_fsm_adrForWeight_1[8] (net)             23         0.10                0.00       0.99 r
-  U585/S (MUX2X3AR9)                                                0.30      0.04 *     1.03 r
-  U585/O (MUX2X3AR9)                                                0.20      0.34       1.37 r
-  n550 (net)                                   20         0.04                0.00       1.37 r
-  U866/I1 (CLKXNOR2X3AR9)                                           0.20      0.00 *     1.37 r
-  U866/O (CLKXNOR2X3AR9)                                            0.29      0.38       1.75 r
-  n632 (net)                                   19         0.07                0.00       1.75 r
-  U822/I2 (NAND2X4AR9)                                              0.29      0.00 *     1.75 r
-  U822/O (NAND2X4AR9)                                               0.24      0.23       1.98 f
-  n633 (net)                                   17         0.06                0.00       1.98 f
-  U475/B1 (OAI22X1AR9)                                              0.24      0.00 *     1.98 f
-  U475/O (OAI22X1AR9)                                               0.26      0.22       2.20 r
-  n256 (net)                                    1         0.01                0.00       2.20 r
-  U474/I2 (HAX05AR9)                                                0.26      0.00 *     2.20 r
-  U474/S (HAX05AR9)                                                 0.11      0.27       2.47 f
-  n249 (net)                                    1         0.00                0.00       2.47 f
-  U702/CI (FAX05AR9)                                                0.11      0.00 *     2.47 f
-  U702/CO (FAX05AR9)                                                0.12      0.35       2.82 f
-  n279 (net)                                    1         0.00                0.00       2.82 f
-  U709/CI (FAX05AR9)                                                0.12      0.00 *     2.82 f
-  U709/S (FAX05AR9)                                                 0.14      0.48       3.30 r
-  n262 (net)                                    1         0.01                0.00       3.30 r
-  U770/CI (FAX05AR9)                                                0.14      0.00 *     3.30 r
-  U770/S (FAX05AR9)                                                 0.19      0.47       3.77 f
-  n800 (net)                                    2         0.01                0.00       3.77 f
-  U355/A1 (OAI12X2IAR9)                                             0.19      0.00 *     3.77 f
-  U355/O (OAI12X2IAR9)                                              0.10      0.11       3.88 r
-  n259 (net)                                    1         0.01                0.00       3.88 r
-  U353/I1 (NAND2X2OAR9)                                             0.10      0.00 *     3.88 r
-  U353/O (NAND2X2OAR9)                                              0.05      0.06       3.95 f
-  n807 (net)                                    3         0.01                0.00       3.95 f
-  U16/I2 (NAND2X2AR9)                                               0.05      0.00 *     3.95 f
-  U16/O (NAND2X2AR9)                                                0.07      0.05       3.99 r
-  n10 (net)                                     1         0.00                0.00       3.99 r
-  U11/I2 (CLKNAND2X3AR9)                                            0.07      0.00 *     3.99 r
-  U11/O (CLKNAND2X3AR9)                                             0.05      0.05       4.04 f
-  n7 (net)                                      1         0.00                0.00       4.04 f
-  U13/I (CLKINVX4AR9)                                               0.05      0.00 *     4.04 f
-  U13/O (CLKINVX4AR9)                                               0.04      0.04       4.08 r
-  n8 (net)                                      1         0.01                0.00       4.08 r
-  U12/I1 (CLKNAND2X8AR9)                                            0.04      0.00 *     4.08 r
-  U12/O (CLKNAND2X8AR9)                                             0.07      0.05       4.14 f
-  n811 (net)                                    3         0.03                0.00       4.14 f
-  U396/I1 (NAND2X1IAR9)                                             0.07      0.00 *     4.14 f
-  U396/O (NAND2X1IAR9)                                              0.12      0.05       4.19 r
-  n298 (net)                                    1         0.00                0.00       4.19 r
-  U350/I2 (NAND2X2OAR9)                                             0.12      0.00 *     4.19 r
-  U350/O (NAND2X2OAR9)                                              0.04      0.05       4.24 f
-  n816 (net)                                    1         0.00                0.00       4.24 f
-  U775/CI (FAX1AR9)                                                 0.04      0.00 *     4.24 f
-  U775/CO (FAX1AR9)                                                 0.10      0.23       4.47 f
-  n820 (net)                                    3         0.01                0.00       4.47 f
-  U779/B1 (OAI12X2AR9)                                              0.10      0.00 *     4.47 f
-  U779/O (OAI12X2AR9)                                               0.09      0.08       4.55 r
-  n346 (net)                                    1         0.00                0.00       4.55 r
-  U348/I2 (CLKNAND2X2AR9)                                           0.09      0.00 *     4.55 r
-  U348/O (CLKNAND2X2AR9)                                            0.09      0.08       4.63 f
-  n825 (net)                                    1         0.01                0.00       4.63 f
-  U778/CI (FAX2AR9)                                                 0.09      0.00 *     4.63 f
-  U778/CO (FAX2AR9)                                                 0.09      0.25       4.88 f
-  n829 (net)                                    3         0.01                0.00       4.88 f
-  U347/B1 (OAI12X2IAR9)                                             0.09      0.00 *     4.88 f
-  U347/O (OAI12X2IAR9)                                              0.10      0.08       4.96 r
-  n403 (net)                                    1         0.01                0.00       4.96 r
-  U345/I1 (NAND2X4OAR9)                                             0.10      0.00 *     4.96 r
-  U345/O (NAND2X4OAR9)                                              0.06      0.06       5.02 f
-  n834 (net)                                    1         0.01                0.00       5.02 f
-  U1017/CI (FAX1AR9)                                                0.06      0.00 *     5.03 f
-  U1017/CO (FAX1AR9)                                                0.09      0.21       5.24 f
-  n838 (net)                                    1         0.00                0.00       5.24 f
-  U1020/CI (FAX2AR9)                                                0.09      0.00 *     5.24 f
-  U1020/CO (FAX2AR9)                                                0.09      0.25       5.49 f
-  n840 (net)                                    3         0.01                0.00       5.49 f
-  U782/B1 (OAI12X2IAR9)                                             0.09      0.00 *     5.49 f
-  U782/O (OAI12X2IAR9)                                              0.09      0.07       5.56 r
-  n504 (net)                                    1         0.00                0.00       5.56 r
-  U391/I1 (NAND2X2OAR9)                                             0.09      0.00 *     5.56 r
-  U391/O (NAND2X2OAR9)                                              0.05      0.06       5.61 f
-  n846 (net)                                    1         0.01                0.00       5.61 f
-  U331/CI (FAX1AR9)                                                 0.05      0.00 *     5.61 f
-  U331/CO (FAX1AR9)                                                 0.11      0.24       5.85 f
-  n850 (net)                                    3         0.01                0.00       5.85 f
-  U390/B1 (OAI12X1IAR9)                                             0.11      0.00 *     5.85 f
-  U390/O (OAI12X1IAR9)                                              0.11      0.10       5.95 r
-  n564 (net)                                    1         0.00                0.00       5.95 r
-  U342/I1 (CLKNAND2X3AR9)                                           0.11      0.00 *     5.95 r
-  U342/O (CLKNAND2X3AR9)                                            0.06      0.06       6.01 f
-  n856 (net)                                    3         0.01                0.00       6.01 f
-  U2/I2 (NAND2X2AR9)                                                0.06      0.00 *     6.01 f
-  U2/O (NAND2X2AR9)                                                 0.06      0.05       6.06 r
-  n1 (net)                                      1         0.00                0.00       6.06 r
-  U5/I3 (NAND3X3AR9)                                                0.06      0.00 *     6.06 r
-  U5/O (NAND3X3AR9)                                                 0.19      0.15       6.21 f
-  n860 (net)                                    3         0.02                0.00       6.21 f
-  U341/B1 (OAI12X2IAR9)                                             0.19      0.00 *     6.21 f
-  U341/O (OAI12X2IAR9)                                              0.10      0.10       6.31 r
-  n615 (net)                                    1         0.00                0.00       6.31 r
-  U387/I2 (CLKNAND2X4AR9)                                           0.10      0.00 *     6.31 r
-  U387/O (CLKNAND2X4AR9)                                            0.12      0.11       6.42 f
-  n865 (net)                                    1         0.03                0.00       6.42 f
-  U386/CI (FAX2AR9)                                                 0.12      0.01 *     6.43 f
-  U386/CO (FAX2AR9)                                                 0.08      0.24       6.67 f
-  n869 (net)                                    1         0.00                0.00       6.67 f
-  U1035/CI (FAX2AR9)                                                0.08      0.00 *     6.67 f
-  U1035/CO (FAX2AR9)                                                0.07      0.23       6.90 f
-  n873 (net)                                    1         0.00                0.00       6.90 f
-  U1036/CI (FAX2AR9)                                                0.07      0.00 *     6.90 f
-  U1036/CO (FAX2AR9)                                                0.09      0.24       7.14 f
-  n877 (net)                                    3         0.01                0.00       7.14 f
-  U340/B1 (OAI12X2IAR9)                                             0.09      0.00 *     7.14 f
-  U340/O (OAI12X2IAR9)                                              0.08      0.08       7.22 r
-  n694 (net)                                    1         0.00                0.00       7.22 r
-  U339/I1 (CLKNAND2X4AR9)                                           0.08      0.00 *     7.22 r
-  U339/O (CLKNAND2X4AR9)                                            0.13      0.11       7.33 f
-  n882 (net)                                    1         0.03                0.00       7.33 f
-  U1040/CI (FAX1AR9)                                                0.13      0.01 *     7.34 f
-  U1040/CO (FAX1AR9)                                                0.10      0.26       7.59 f
-  n886 (net)                                    3         0.01                0.00       7.59 f
-  U337/I1 (NAND2X1AR9)                                              0.10      0.00 *     7.59 f
-  U337/O (NAND2X1AR9)                                               0.11      0.09       7.68 r
-  n720 (net)                                    1         0.00                0.00       7.68 r
-  U336/I2 (CLKNAND2X3AR9)                                           0.11      0.00 *     7.68 r
-  U336/O (CLKNAND2X3AR9)                                            0.06      0.07       7.75 f
-  n891 (net)                                    1         0.01                0.00       7.75 f
-  U332/CI (FAX2AR9)                                                 0.06      0.00 *     7.75 f
-  U332/CO (FAX2AR9)                                                 0.09      0.24       7.99 f
-  n895 (net)                                    3         0.01                0.00       7.99 f
-  U335/B1 (OAI12X2IAR9)                                             0.09      0.00 *     7.99 f
-  U335/O (OAI12X2IAR9)                                              0.09      0.07       8.06 r
-  n740 (net)                                    1         0.00                0.00       8.06 r
-  U383/I1 (CLKNAND2X3AR9)                                           0.09      0.00 *     8.06 r
-  U383/O (CLKNAND2X3AR9)                                            0.05      0.05       8.12 f
-  n900 (net)                                    1         0.00                0.00       8.12 f
-  U382/CI (FAX1AR9)                                                 0.05      0.00 *     8.12 f
-  U382/CO (FAX1AR9)                                                 0.10      0.23       8.34 f
-  n904 (net)                                    3         0.01                0.00       8.34 f
-  U24/I2 (NAND2X2AR9)                                               0.10      0.00 *     8.34 f
-  U24/O (NAND2X2AR9)                                                0.05      0.06       8.41 r
-  n15 (net)                                     1         0.00                0.00       8.41 r
-  U18/I2 (CLKNAND2X3AR9)                                            0.05      0.00 *     8.41 r
-  U18/O (CLKNAND2X3AR9)                                             0.05      0.04       8.45 f
-  n12 (net)                                     1         0.00                0.00       8.45 f
-  U20/I (CLKINVX3AR9)                                               0.05      0.00 *     8.45 f
-  U20/O (CLKINVX3AR9)                                               0.04      0.04       8.49 r
-  n13 (net)                                     1         0.01                0.00       8.49 r
-  U19/I1 (CLKNAND2X6AR9)                                            0.04      0.00 *     8.49 r
-  U19/O (CLKNAND2X6AR9)                                             0.09      0.07       8.56 f
-  n906 (net)                                    3         0.03                0.00       8.56 f
-  U380/B1 (OAI12X2AR9)                                              0.09      0.01 *     8.57 f
-  U380/O (OAI12X2AR9)                                               0.07      0.07       8.63 r
-  n749 (net)                                    1         0.00                0.00       8.63 r
-  U334/I1 (CLKNAND2X1AR9)                                           0.07      0.00 *     8.63 r
-  U334/O (CLKNAND2X1AR9)                                            0.07      0.07       8.70 f
-  n908 (net)                                    1         0.00                0.00       8.70 f
-  U1044/CI (FAX1AR9)                                                0.07      0.00 *     8.70 f
-  U1044/CO (FAX1AR9)                                                0.08      0.21       8.92 f
-  n1077 (net)                                   1         0.00                0.00       8.92 f
-  U1233/CI (FAX1AR9)                                                0.08      0.00 *     8.92 f
-  U1233/CO (FAX1AR9)                                                0.07      0.20       9.12 f
-  n751 (net)                                    1         0.00                0.00       9.12 f
-  U333/I1 (XOR2X1AR9)                                               0.07      0.00 *     9.12 f
-  U333/O (XOR2X1AR9)                                                0.07      0.24       9.36 f
-  n752 (net)                                    1         0.00                0.00       9.36 f
-  U818/B2B (OAI22B2X1AR9)                                           0.07      0.00 *     9.36 f
-  U818/O (OAI22B2X1AR9)                                             0.09      0.11       9.47 f
-  n178 (net)                                    1         0.00                0.00       9.47 f
-  partialSum_reg[35]/D (DFFRBQX05AR9)                               0.09      0.00 *     9.47 f
-  data arrival time                                                                      9.47
+  fsm_cntLayers_value_reg[0]/CK (DFFRBQX2AR9)                       0.08      0.00       0.55 r
+  fsm_cntLayers_value_reg[0]/Q (DFFRBQX2AR9)                        0.25      0.37       0.92 r
+  temp_fsm_adrForWeight_1[8] (net)              5         0.04                0.00       0.92 r
+  U30/I (CLKBUFX6AR9)                                               0.25      0.00 *     0.92 r
+  U30/O (CLKBUFX6AR9)                                               0.22      0.24       1.17 r
+  n2252 (net)                                  29         0.10                0.00       1.17 r
+  U219/I (INVX05AR9)                                                0.22      0.03 *     1.20 r
+  U219/O (INVX05AR9)                                                0.10      0.11       1.31 f
+  n123 (net)                                    1         0.00                0.00       1.31 f
+  U216/I2 (NAND2X4AR9)                                              0.10      0.00 *     1.31 f
+  U216/O (NAND2X4AR9)                                               0.05      0.06       1.37 r
+  n124 (net)                                    1         0.01                0.00       1.37 r
+  U218/I1 (NAND2X3AR9)                                              0.05      0.00 *     1.37 r
+  U218/O (NAND2X3AR9)                                               0.30      0.20       1.57 f
+  n802 (net)                                   19         0.06                0.00       1.57 f
+  U454/I2 (XOR2X1AR9)                                               0.30      0.00 *     1.58 f
+  U454/O (XOR2X1AR9)                                                0.08      0.26       1.84 f
+  n198 (net)                                    1         0.00                0.00       1.84 f
+  U698/I1 (CLKNAND2X3AR9)                                           0.08      0.00 *     1.84 f
+  U698/O (CLKNAND2X3AR9)                                            0.08      0.06       1.90 r
+  n809 (net)                                    1         0.01                0.00       1.90 r
+  U1751/I (BUFX12AR9)                                               0.08      0.00 *     1.90 r
+  U1751/O (BUFX12AR9)                                               0.08      0.11       2.01 r
+  n1703 (net)                                  17         0.06                0.00       2.01 r
+  U930/B1 (OAI22X3AR9)                                              0.08      0.00 *     2.01 r
+  U930/O (OAI22X3AR9)                                               0.12      0.09       2.10 f
+  n506 (net)                                    1         0.01                0.00       2.10 f
+  U1042/I2 (HAX2AR9)                                                0.12      0.00 *     2.10 f
+  U1042/CO (HAX2AR9)                                                0.04      0.12       2.22 f
+  n542 (net)                                    3         0.01                0.00       2.22 f
+  U641/I1 (OR2X1AR9)                                                0.04      0.00 *     2.22 f
+  U641/O (OR2X1AR9)                                                 0.11      0.15       2.37 f
+  n590 (net)                                    1         0.01                0.00       2.37 f
+  U849/CI (FAX1AR9)                                                 0.11      0.00 *     2.37 f
+  U849/CO (FAX1AR9)                                                 0.19      0.32       2.69 f
+  n601 (net)                                    5         0.02                0.00       2.69 f
+  U1733/I1 (NAND2X1AR9)                                             0.19      0.00 *     2.69 f
+  U1733/O (NAND2X1AR9)                                              0.11      0.11       2.81 r
+  n1688 (net)                                   1         0.00                0.00       2.81 r
+  U1686/I2 (NAND3X4AR9)                                             0.11      0.00 *     2.81 r
+  U1686/O (NAND3X4AR9)                                              0.14      0.13       2.93 f
+  n662 (net)                                    5         0.02                0.00       2.93 f
+  U1685/I (CLKINVX2AR9)                                             0.14      0.00 *     2.93 f
+  U1685/O (CLKINVX2AR9)                                             0.07      0.07       3.00 r
+  n1636 (net)                                   2         0.01                0.00       3.00 r
+  U1682/I3 (NAND3X2AR9)                                             0.07      0.00 *     3.00 r
+  U1682/O (NAND3X2AR9)                                              0.12      0.11       3.11 f
+  n1639 (net)                                   2         0.01                0.00       3.11 f
+  U180/I3 (NAND4X3AR9)                                              0.12      0.00 *     3.11 f
+  U180/O (NAND4X3AR9)                                               0.07      0.08       3.19 r
+  n1445 (net)                                   2         0.01                0.00       3.19 r
+  U432/I (INVX2AR9)                                                 0.07      0.00 *     3.19 r
+  U432/O (INVX2AR9)                                                 0.04      0.05       3.23 f
+  n1926 (net)                                   2         0.01                0.00       3.23 f
+  U1984/I2 (NAND3X1AR9)                                             0.04      0.00 *     3.23 f
+  U1984/O (NAND3X1AR9)                                              0.08      0.06       3.29 r
+  n1930 (net)                                   1         0.00                0.00       3.29 r
+  U225/I2 (NAND2X2AR9)                                              0.08      0.00 *     3.29 r
+  U225/O (NAND2X2AR9)                                               0.04      0.05       3.35 f
+  n130 (net)                                    1         0.00                0.00       3.35 f
+  U227/I (CLKINVX2AR9)                                              0.04      0.00 *     3.35 f
+  U227/O (CLKINVX2AR9)                                              0.05      0.05       3.40 r
+  n131 (net)                                    1         0.01                0.00       3.40 r
+  U226/I1 (NAND2X6AR9)                                              0.05      0.00 *     3.40 r
+  U226/O (NAND2X6AR9)                                               0.08      0.07       3.47 f
+  n634 (net)                                    2         0.03                0.00       3.47 f
+  U1111/I1 (NAND2X2AR9)                                             0.08      0.01 *     3.47 f
+  U1111/O (NAND2X2AR9)                                              0.07      0.06       3.54 r
+  n1065 (net)                                   2         0.01                0.00       3.54 r
+  U381/A1 (OA12X1AR9)                                               0.07      0.00 *     3.54 r
+  U381/O (OA12X1AR9)                                                0.04      0.10       3.64 r
+  n2326 (net)                                   1         0.00                0.00       3.64 r
+  U2075/I2 (AND2X2AR9)                                              0.04      0.00 *     3.64 r
+  U2075/O (AND2X2AR9)                                               0.06      0.11       3.75 r
+  n637 (net)                                    1         0.01                0.00       3.75 r
+  U1113/A1 (OAI12X4IAR9)                                            0.06      0.00 *     3.75 r
+  U1113/O (OAI12X4IAR9)                                             0.08      0.07       3.81 f
+  n1028 (net)                                   1         0.01                0.00       3.81 f
+  U1450/I (INVX12AR9)                                               0.08      0.00 *     3.81 f
+  U1450/O (INVX12AR9)                                               0.09      0.08       3.89 r
+  n2077 (net)                                   5         0.07                0.00       3.89 r
+  U648/I1 (NOR2X4OAR9)                                              0.10      0.03 *     3.93 r
+  U648/O (NOR2X4OAR9)                                               0.03      0.04       3.96 f
+  n1420 (net)                                   1         0.00                0.00       3.96 f
+  U672/I1 (NOR2X4AR9)                                               0.03      0.00 *     3.97 f
+  U672/O (NOR2X4AR9)                                                0.12      0.08       4.05 r
+  n1055 (net)                                   2         0.01                0.00       4.05 r
+  U387/B1 (OAI12X4IAR9)                                             0.12      0.00 *     4.05 r
+  U387/O (OAI12X4IAR9)                                              0.09      0.07       4.12 f
+  n1075 (net)                                   2         0.01                0.00       4.12 f
+  U1179/B1 (AOI12X4IAR9)                                            0.09      0.00 *     4.12 f
+  U1179/O (AOI12X4IAR9)                                             0.09      0.07       4.19 r
+  n1114 (net)                                   2         0.01                0.00       4.19 r
+  U468/B1 (OAI12X4IAR9)                                             0.09      0.00 *     4.19 r
+  U468/O (OAI12X4IAR9)                                              0.09      0.05       4.24 f
+  n1108 (net)                                   2         0.01                0.00       4.24 f
+  U797/I1 (CLKXNOR2X1AR9)                                           0.09      0.00 *     4.24 f
+  U797/O (CLKXNOR2X1AR9)                                            0.05      0.19       4.43 f
+  n1110 (net)                                   1         0.00                0.00       4.43 f
+  U344/B1B (OAI22B2X2AR9)                                           0.05      0.00 *     4.43 f
+  U344/O (OAI22B2X2AR9)                                             0.04      0.12       4.55 f
+  n176 (net)                                    1         0.00                0.00       4.55 f
+  partialSum_reg[34]/D (DFFRBQX05AR9)                               0.04      0.00 *     4.55 f
+  data arrival time                                                                      4.55
 
-  clock Int_clk (rise edge)                                                  10.00      10.00
-  clock network delay (ideal)                                                 0.55      10.55
-  clock uncertainty                                                          -0.30      10.25
-  partialSum_reg[35]/CK (DFFRBQX05AR9)                                        0.00      10.25 r
-  library setup time                                                         -0.03      10.22
-  data required time                                                                    10.22
+  clock Int_clk (rise edge)                                                   4.82       4.82
+  clock network delay (ideal)                                                 0.55       5.37
+  clock uncertainty                                                          -0.30       5.07
+  partialSum_reg[34]/CK (DFFRBQX05AR9)                                        0.00       5.07 r
+  library setup time                                                         -0.02       5.05
+  data required time                                                                     5.05
   ----------------------------------------------------------------------------------------------
-  data required time                                                                    10.22
-  data arrival time                                                                     -9.47
+  data required time                                                                     5.05
+  data arrival time                                                                     -4.55
   ----------------------------------------------------------------------------------------------
-  slack (MET)                                                                            0.74
+  slack (MET)                                                                            0.50
 
 
 1

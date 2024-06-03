@@ -9,7 +9,7 @@ reset_design
 #	CLOCK
 #
 #=====================================
-set INT_CLK_PERIOD 10
+set INT_CLK_PERIOD 4.82
 
 # ----------------Internel clock----------------------
 

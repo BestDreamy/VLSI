@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running icc_shell Version O-2018.06-SP5-3 for linux64 -- Jun 06, 2019
-#@ # Date:   Mon Jun  3 21:16:51 2024
+#@ # Date:   Mon Jun  3 23:24:36 2024
 #@ # Run by: user001@2024-vlsi-22
 #@ 
 
@@ -39507,16 +39507,32 @@ source icc/icc_setup.tcl
 #@ 
 #@ # -- End source /home/tools/synopsys/icc/O-2018.06-SP5-3/auxx/syn/fp/bw/utils.tcl
 
+#@ win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
+
+#@ win_set_filter -visible -class polygon -layer {65-74 81 91}
+
+#@ win_set_filter -visible -class placement_blockage -filter {wiring} -layer {}
+
+#@ win_set_filter -expand_cell_types {std io hard_macro soft_macro ilm other  }
+
+#@ win_set_select_class -visible {cell port plan_group block_shielding plangroup_padding core_area die_area polygon group shape via terminal fill_cell placement_blockage }
+
+#@ win_set_filter -class cell -filter {cell_array cell_cover hard_macro_margin hard_margin route_blockage_margin soft_margin}
+
+#@ win_set_filter -class placement_blockage -filter {wiring} -layer {}
+
+#@ win_set_select_class {cell port plan_group group shape via placement_blockage }
+
 #@ 
 #@ remove_sdc
-#@ # GUI Debug: Building dc from empty. -- Time: 1sec 466ms
+#@ # GUI Debug: Building dc from empty. -- Time: 1sec 683ms
 
 #@ source $mw_sdc
 #@ # -- Starting source /home/user001/vlsi/pro/dc_output/mmForMLP.sdc
 
 #@ ###################################################################
 #@ 
-#@ # Created by write_sdc on Sun Jun  2 22:44:59 2024
+#@ # Created by write_sdc on Mon Jun  3 23:24:21 2024
 #@ 
 #@ ###################################################################
 #@ set sdc_version 2.1
@@ -39544,7 +39560,7 @@ source icc/icc_setup.tcl
 #@ set_load -pin_load 0.03 [get_ports {result_payload[2]}]
 #@ set_load -pin_load 0.03 [get_ports {result_payload[1]}]
 #@ set_load -pin_load 0.03 [get_ports {result_payload[0]}]
-#@ create_clock [get_ports clk]  -name Int_clk  -period 10  -waveform {0 5}
+#@ create_clock [get_ports clk]  -name Int_clk  -period 4.82  -waveform {0 2.41}
 #@ set_clock_latency -max 0.25  [get_clocks Int_clk]
 #@ set_clock_latency -source -max 0.3  [get_clocks Int_clk]
 #@ set_clock_uncertainty -setup 0.5  [get_clocks Int_clk]
@@ -39552,62 +39568,62 @@ source icc/icc_setup.tcl
 #@ set_clock_transition -max -fall 0.08 [get_clocks Int_clk]
 #@ set_clock_transition -min -rise 0.08 [get_clocks Int_clk]
 #@ set_clock_transition -min -fall 0.08 [get_clocks Int_clk]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports start_valid]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports start_valid]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports init_valid]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports init_valid]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[15]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[15]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[14]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[14]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[13]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[13]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[12]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[12]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[11]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[11]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[10]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[10]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[9]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[9]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[8]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[8]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[7]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[7]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[6]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[6]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[5]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[5]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[4]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[4]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[3]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[3]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[2]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[2]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[1]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[1]}]
-#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[0]}]
-#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[0]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports start_ready]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports init_ready]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports load_ready]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports result_valid]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[15]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[14]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[13]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[12]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[11]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[10]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[9]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[8]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[7]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[6]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[5]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[4]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[3]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[2]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[1]}]
-#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[0]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports start_valid]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports start_valid]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports init_valid]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports init_valid]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[15]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[15]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[14]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[14]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[13]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[13]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[12]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[12]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[11]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[11]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[10]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[10]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[9]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[9]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[8]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[8]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[7]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[7]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[6]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[6]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[5]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[5]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[4]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[4]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[3]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[3]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[2]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[2]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[1]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[1]}]
+#@ set_input_delay -clock Int_clk  -max 1.446  [get_ports {load_payload[0]}]
+#@ set_input_delay -clock Int_clk  -min 0.2892  [get_ports {load_payload[0]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports start_ready]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports init_ready]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports load_ready]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports result_valid]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[15]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[14]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[13]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[12]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[11]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[10]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[9]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[8]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[7]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[6]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[5]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[4]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[3]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[2]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[1]}]
+#@ set_output_delay -clock Int_clk  -max 2.892  [get_ports {result_payload[0]}]
 #@ # -- End source /home/user001/vlsi/pro/dc_output/mmForMLP.sdc
 
 #@ 
@@ -39635,16 +39651,88 @@ source icc/icc_setup.tcl
 #@ save_mw_cel -as pro2icc_setup
 #@ # -- End source icc/icc_setup.tcl
 
-win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
-win_set_filter -visible -class polygon -layer {65-74 81 91}
-win_set_filter -visible -class placement_blockage -filter {wiring} -layer {}
-win_set_filter -expand_cell_types {std io hard_macro soft_macro ilm other  }
-win_set_select_class -visible {cell port plan_group block_shielding plangroup_padding core_area die_area polygon group shape via terminal fill_cell placement_blockage }
-win_set_filter -class cell -filter {cell_array cell_cover hard_macro_margin hard_margin route_blockage_margin soft_margin}
-win_set_filter -class placement_blockage -filter {wiring} -layer {}
-win_set_select_class {cell port plan_group group shape via placement_blockage }
-::iccGUI::open_mw_cel  pro2power
-open_mw_cel pro2power
+::iccGUI::open_mw_cel  pro2icc_setup
+open_mw_cel pro2icc_setup
+source icc/pin_guide.tcl
+#@ # -- Starting source icc/pin_guide.tcl
+
+#@ create_die_area -boundary {{0 0} {300 330}}
+#@ set_pin_physical_constraints [remove_from_collection [get_ports *] [get_ports * -filter "direction==out"]] -layers {M2 M3 M4 M5}
+#@ set_pin_physical_constraints [remove_from_collection [get_ports *] [get_ports * -filter "direction==in"]] -layers {M2 M3 M4 M5}
+#@ create_pin_guide -bbox {{-3 225} {3.6 275}} [remove_from_collection [get_ports *] [get_ports * -filter "direction==out"]]
+#@ create_pin_guide -bbox {{496.4 225} {503 275}} [remove_from_collection [get_ports *] [get_ports * -filter "direction==in"]]
+#@ create_floorplan -control_type boundary -left_io2core 3.6 -bottom_io2core 3.6 -right_io2core 3.6 -top_io2core 3.6
+#@ save_mw_cel -as pro2pin
+#@ # -- End source icc/pin_guide.tcl
+
+win_select_objects -slct_targets global -at {68.945 607.645} -radius 0.5756
+win_select_objects -slct_targets global -at {67.215 586.345} -radius 0.5756
+move_objects -delta {20.145 -386.700} [get_selection]
+win_select_objects -slct_targets global -at {193.840 432.275} -radius 0.5756
+move_objects -delta {49.495 -196.000} [get_selection]
+win_select_objects -slct_targets global -at {32.110 375.340} -radius 0.5756
+move_objects -delta {16.115 -322.000} [get_selection]
+change_selection 
+win_select_objects -slct_targets global -at {301.465 364.980} -radius 0.5756
+move_objects -delta {-68.490 -314.800} [get_selection]
+win_select_objects -slct_targets global -at {61.460 221.795} -radius 0.5756
+align_objects -side Top [get_selection] -offset 15
+align_objects -side Left [get_selection] -offset 15
+win_select_objects -slct_targets global -at {230.675 251.150} -radius 0.5756
+align_objects -side Top [get_selection] -offset 15
+align_objects -side Right [get_selection] -offset 15
+win_select_objects -slct_targets global -at {83.335 64.095} -radius 0.5756
+align_objects -side Bottom [get_selection] -offset 15
+align_objects -side Left [get_selection] -offset 15
+win_select_objects -slct_targets global -at {257.150 53.735} -radius 0.5756
+align_objects -side Left [get_selection] -offset 15
+align_objects -side Right [get_selection] -offset 15
+align_objects -side Bottom [get_selection] -offset 15
+change_selection [rotate_objects -by CW180 [get_selection]]
+win_select_objects -slct_targets global -at {106.355 75.030} -radius 0.5756
+change_selection [rotate_objects -by CW180 [get_selection]]
+source icc/power.tcl
+#@ # -- Starting source icc/power.tcl
+
+#@ set_attribute [all_macro] is_fixed true
+#@ set_attribute [all_macro] is_placed true
+#@ 
+#@ set_attribute [get_terminals *] is_fixed true
+#@ 
+#@ proc add_macro_cover { d e } {
+#@     set x 0
+#@     foreach_in_collection c [get_cells -hier -filter "is_hard_macro==true"] {
+#@         set coord [get_attribute $c bbox]
+#@         set low_x [expr [lindex [lindex $coord 0] 0] - $d]
+#@         set low_y [expr [lindex [lindex $coord 0] 1] - $d]
+#@         set high_x [expr [lindex [lindex $coord 1] 0] + $d]
+#@         set high_y [expr [lindex [lindex $coord 1] 1] + $d]
+#@         create_placement_blockage -bbox "$low_x $low_y $high_x $high_y" -type hard -name McBlockH_$x
+#@         set newCord [list [list [expr $low_x  + $e ] [expr $low_y  + $e ]] [list [expr $high_x - $e ] [expr $high_y - $e ]] ]
+#@         create_route_guide -name McBlockR_$x -no_preroute_layers {ME1 ME2 ME3 ME4} -coordinate $newCord -no_snap
+#@     incr x
+#@     }
+#@ }
+#@ add_macro_cover 1.8 0.14
+#@ 
+#@ derive_pg_connection -power_net VCCK -ground_net GNDK
+#@ 
+#@ add_end_cap -respect_blockage -ignore_soft_blockage -lib_cell TAP01CR9
+#@ 
+#@ derive_pg_connection -power_net VCCK -ground_net GNDK
+#@ 
+#@ preroute_standard_cells -fill_empty_rows
+#@ 
+#@ add_tap_cell_array -master_cell_name TAP01CR9     -distance 50     -pattern stagger_every_other_row     -tap_cell_identifier T     -tap_cell_separator _     -no_tap_cell_under_layers {M1 M2}     -connect_power_name VCCK     -connect_ground_name GNDK     -fill_boundary_row true     -fill_macro_blockage_row true     -boundary_row_double_density true     -macro_blockage_row_double_density true     -ignore_soft_blockage  true     -skip_fixed_cells true
+#@ 
+#@ create_power_straps -direction vertical -nets VCCK -layer M4 -width 1.0 -start_at 0.00 -step 10 -stop 490.0 -configure step_and_stop
+#@ create_power_straps -direction vertical -nets GNDK -layer M4 -width 1.0 -start_at 5.00 -step 10 -stop 500.0 -configure step_and_stop
+#@ 
+#@ create_power_straps -direction horizontal  -nets VCCK -layer M5 -width 1.0 -start_at 0.00 -step 10 -stop 490.0 -configure step_and_stop
+#@ create_power_straps -direction horizontal  -nets GNDK -layer M5 -width 1.0 -start_at 5.00 -step 10 -stop 500.0 -configure step_and_stop
+#@ save_mw_cel -as pro2power
+#@ # -- End source icc/power.tcl
+
 source icc/place.tcl
 #@ # -- Starting source icc/place.tcl
 
@@ -39652,7 +39740,7 @@ source icc/place.tcl
 #@ set_attribute [all_macro_cells ] is_placed true
 #@ 
 #@ check_tlu_plus_files
-#@ # GUI Debug: Building dc from empty. -- Time: 192ms
+#@ # GUI Debug: Building dc from empty. -- Time: 468ms
 
 #@ 
 #@ set clock_nets [get_net -of [all_fanout -flat -clock_tree] -top_net_of_hierarchical_group]
@@ -39690,66 +39778,10 @@ source icc/place.tcl
 #@ save_mw_cel -as pro2place
 #@ # -- End source icc/place.tcl
 
-source icc/clock.tcl
-#@ # -- Starting source icc/clock.tcl
-
-#@ remove_buffer_tree -all
-#@ 
-#@ set M2W [expr [get_layer_attribute -layer M2 defaultWidth]*2.0]
-#@ set M3W [expr [get_layer_attribute -layer M3 defaultWidth]*2.0]
-#@ set M4W [expr [get_layer_attribute -layer M4 defaultWidth]*2.0]
-#@ set M5W [expr [get_layer_attribute -layer M5 defaultWidth]*2.0]
-#@ 
-#@ set M2S [expr (([get_layer_attribute -layer M2 pitch]*4.0)-$M2W-[get_layer_attribute -layer M2 defaultWidth])/2]
-#@ set M3S [expr (([get_layer_attribute -layer M3 pitch]*4.0)-$M3W-[get_layer_attribute -layer M3 defaultWidth])/2]
-#@ set M4S [expr (([get_layer_attribute -layer M4 pitch]*4.0)-$M4W-[get_layer_attribute -layer M4 defaultWidth])/2]
-#@ set M5S [expr (([get_layer_attribute -layer M5 pitch]*4.0)-$M5W-[get_layer_attribute -layer M5 defaultWidth])/2]
-#@ 
-#@ define_routing_rule clk_space_rule 	-spacings "M2 $M2S M3 $M3S M4 $M4S M5 $M5S" 	-widths   "M2 $M2W M3 $M3W M4 $M4W M5 $M5W" 
-#@ 
-#@ set_clock_tree_options -routing_rule clk_space_rule        -max_transition .08        -max_fanout 32        -buffer_sizing true        -buffer_relocation true        -gate_sizing true        -gate_relocation true        -use_default_routing_for_sinks 1        -layer_list {M3 M4 M5}        -ocv_clustering true
-#@ 
-#@ remove_ideal_network -all
-#@ reset_clock_tree_references
-#@ 
-#@ set_clock_tree_references -references {        CLKINVX12AR9  }
-#@ 
-#@ set_clock_tree_references -references { 	CLKINVX12AR9  CLKINVX16AR9  CLKINVX2AR9  CLKINVX3AR9  CLKINVX4AR9  CLKINVX6AR9  CLKINVX8AR9         CLKBUFX12AR9  CLKBUFX16AR9  CLKBUFX2AR9  CLKBUFX3AR9  CLKBUFX4AR9  CLKBUFX6AR9  CLKBUFX8AR9 } -sizing_only
-#@ set_clock_tree_references -references {         CLKINVX12AR9  CLKINVX16AR9  CLKINVX2AR9  CLKINVX3AR9  CLKINVX4AR9  CLKINVX6AR9  CLKINVX8AR9         CLKBUFX12AR9  CLKBUFX16AR9  CLKBUFX2AR9  CLKBUFX3AR9  CLKBUFX4AR9  CLKBUFX6AR9  CLKBUFX8AR9 
-#@ } -delay_in
-#@ 
-#@ report_clock_tree > ${report_dir}/rct_postSetting.rpt
-#@ 
-#@ set root_clock_source [get_ports {clk}]
-#@ 
-#@ compile_clock_tree -clock_trees $root_clock_source
-#@ optimize_clock_tree -clock_trees $root_clock_source -operating_condition max
-#@ 
-#@ 
-#@ 
-#@ propagate_all_clocks
-#@ update_clock_latency
-#@ 
-#@ report_clock_tree > ${report_dir}/rct_postCTS_func.rpt 
-#@ 
-#@ set step clock
-#@ report_design -physical > ${report_dir}/${step}_phys.rpt
-#@ report_timing -nosplit -delay max -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing.rpt
-#@ report_constraints -nosplit -all -max_delay > ${report_dir}/${step}_constrain.rpt
-#@ report_qor > ${report_dir}/${step}_qor.rpt
-#@ report_qor -summary >> ${report_dir}/${step}_qor.rpt
-#@ 
-#@ save_mw_cel -as pro2clock
-#@ # -- End source icc/clock.tcl
-
-::iccGUI::open_mw_cel  pro2place
-open_mw_cel pro2place
 source icc/fixhold.tcl
 #@ # -- Starting source icc/fixhold.tcl
 
 #@ remove_clock_uncertainty [all_clocks]
-#@ # GUI Debug: Building dc from empty. -- Time: 228ms
-
 #@ set_clock_uncertainty -setup  0.25 [all_clocks]
 #@ set_clock_uncertainty -hold  0.05 [all_clocks]
 #@ 
@@ -39803,7 +39835,7 @@ source icc/route.tcl
 #@ 
 #@ set step finish
 #@ report_design -physical > ${report_dir}/${step}_phys.rpt
-#@ # GUI Debug: Building dc for netlist invalid. -- Time: 337ms
+#@ # GUI Debug: Building dc for netlist invalid. -- Time: 487ms
 
 #@ report_timing -nosplit -delay max -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing_setup.rpt
 #@ report_timing -nosplit -delay min -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing_hold.rpt
@@ -39812,14 +39844,6 @@ source icc/route.tcl
 #@ report_qor -summary >> ${report_dir}/${step}_qor.rpt
 #@ # -- End source icc/route.tcl
 
-gui_set_error_browser_option -show_mode all
-gui_set_error_browser_option -view_mode zoom
-gui_set_error_browser_option -zoom_factor 1.000000
-gui_error_browser -show
-gui_error_browser -show
-gui_load_error_view -name {pro2place.CEL}
-gui_error_browser -hide
-gui_show_map -window [gui_get_current_window -types Layout -mru] -map {CLOCK_TREES} -show {true}
 gui_show_map -window [gui_get_current_window -types Layout -mru] -map {PATH_SLACK} -show {true}
 gui_set_bucket_option -map {PATH_SLACK} -bucket {0} -option {exagg} -value {0.25}
 gui_set_bucket_option -map {PATH_SLACK} -bucket {1} -option {exagg} -value {0.41666666790843}
@@ -39831,5 +39855,12 @@ gui_set_bucket_option -map {PATH_SLACK} -bucket {6} -option {exagg} -value {1.25
 gui_set_bucket_option -map {PATH_SLACK} -bucket {7} -option {exagg} -value {1.41666668653488}
 gui_set_bucket_option -map {PATH_SLACK} -bucket {8} -option {exagg} -value {1.58333334326744}
 gui_set_bucket_option -map {PATH_SLACK} -bucket {9} -option {exagg} -value {1.75}
-win_select_objects -slct_targets global -at {280.995 152.540} -radius 0.2739
+gui_set_error_browser_option -show_mode all
+gui_set_error_browser_option -view_mode zoom
+gui_set_error_browser_option -zoom_factor 1.000000
+gui_error_browser -show
+gui_load_error_view -name {pro2icc_setup.CEL}
+gui_error_browser -hide
 exit
+save_mw_cel  -design "START.CEL;11"
+save_mw_cel  -design "pro2icc_setup.CEL;1"

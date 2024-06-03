@@ -1,0 +1,101 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mmForMLP
+Version: O-2018.06-SP5-2
+Date   : Sun Jun  2 22:44:59 2024
+****************************************
+
+Operating Conditions: 125CSS1P08   Library: M31GPSC900HL055PR_125CSS1P08_cworst_ccs
+Wire Load Model Mode: enclosed
+
+  Startpoint: memForAorB_1/ram1rw_4/ram
+              (rising edge-triggered flip-flop clocked by Int_clk)
+  Endpoint: partialSum_reg[35]
+            (rising edge-triggered flip-flop clocked by Int_clk)
+  Path Group: Int_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mmForMLP           MW0K                  M31GPSC900HL055PR_125CSS1P08_cworst_ccs
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock Int_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.55       0.55
+  memForAorB_1/ram1rw_4/ram/CLK (mem55lpw256d16sp)        0.00       0.55 r
+  memForAorB_1/ram1rw_4/ram/Q[1] (mem55lpw256d16sp)       1.17       1.72 f
+  U852/O (MUX2X05AR9)                                     0.32       2.04 f
+  U464/O (CLKXNOR2X1AR9)                                  0.28       2.33 r
+  U373/O (NAND2X1AR9)                                     0.21       2.54 f
+  U369/O (OAI22X05AR9)                                    0.17       2.71 r
+  U398/S (HAX05AR9)                                       0.23       2.94 f
+  U859/S (FAX1AR9)                                        0.24       3.17 f
+  U989/CO (FAX1AR9)                                       0.22       3.39 f
+  U366/O (OAI12X05AR9)                                    0.08       3.47 r
+  U363/O (NAND2X05AR9)                                    0.06       3.53 f
+  U844/CO (FAX05AR9)                                      0.32       3.85 f
+  U359/O (OAI12X05AR9)                                    0.10       3.95 r
+  U357/O (NAND2X05AR9)                                    0.07       4.01 f
+  U771/CO (FAX05AR9)                                      0.32       4.33 f
+  U355/O (OAI12X05AR9)                                    0.10       4.42 r
+  U353/O (NAND2X05AR9)                                    0.07       4.49 f
+  U330/CO (FAX05AR9)                                      0.32       4.81 f
+  U351/O (OAI12X1AR9)                                     0.09       4.90 r
+  U350/O (NAND2X05AR9)                                    0.06       4.96 f
+  U775/CO (FAX05AR9)                                      0.32       5.28 f
+  U779/O (OAI12X05AR9)                                    0.10       5.37 r
+  U348/O (NAND2X05AR9)                                    0.07       5.44 f
+  U778/CO (FAX05AR9)                                      0.32       5.76 f
+  U347/O (OAI12X05AR9)                                    0.10       5.85 r
+  U345/O (CLKNAND2X1AR9)                                  0.07       5.92 f
+  U1017/CO (FAX1AR9)                                      0.19       6.11 f
+  U1020/CO (FAX1AR9)                                      0.20       6.31 f
+  U782/O (OAI12X05AR9)                                    0.08       6.39 r
+  U391/O (CLKNAND2X1AR9)                                  0.05       6.45 f
+  U331/CO (FAX05AR9)                                      0.31       6.76 f
+  U390/O (OAI12X1AR9)                                     0.09       6.85 r
+  U342/O (CLKNAND2X1AR9)                                  0.06       6.91 f
+  U1030/CO (FAX1AR9)                                      0.20       7.11 f
+  U341/O (OAI12X1AR9)                                     0.08       7.18 r
+  U387/O (CLKNAND2X1AR9)                                  0.06       7.25 f
+  U386/CO (FAX1AR9)                                       0.19       7.44 f
+  U1035/CO (FAX1AR9)                                      0.19       7.63 f
+  U1036/CO (FAX1AR9)                                      0.20       7.84 f
+  U340/O (OAI12X1AR9)                                     0.08       7.91 r
+  U339/O (CLKNAND2X1AR9)                                  0.06       7.97 f
+  U1040/CO (FAX1AR9)                                      0.20       8.17 f
+  U338/O (OAI12X1AR9)                                     0.08       8.25 r
+  U336/O (CLKNAND2X1AR9)                                  0.05       8.30 f
+  U332/CO (FAX05AR9)                                      0.31       8.61 f
+  U335/O (OAI12X1AR9)                                     0.09       8.70 r
+  U383/O (CLKNAND2X1AR9)                                  0.06       8.76 f
+  U382/CO (FAX1AR9)                                       0.19       8.95 f
+  U381/CO (FAX1AR9)                                       0.20       9.15 f
+  U380/O (OAI12X1AR9)                                     0.07       9.23 r
+  U334/O (CLKNAND2X1AR9)                                  0.06       9.29 f
+  U1044/CO (FAX1AR9)                                      0.19       9.48 f
+  U1233/CO (FAX1AR9)                                      0.18       9.66 f
+  U333/O (CLKXOR2X1AR9)                                   0.21       9.87 f
+  U818/O (OAI22B2X05AR9)                                  0.12       9.99 f
+  partialSum_reg[35]/D (DFFRBQX05AR9)                     0.00       9.99 f
+  data arrival time                                                  9.99
+
+  clock Int_clk (rise edge)                              10.00      10.00
+  clock network delay (ideal)                             0.55      10.55
+  clock uncertainty                                      -0.50      10.05
+  partialSum_reg[35]/CK (DFFRBQX05AR9)                    0.00      10.05 r
+  library setup time                                     -0.04      10.01
+  data required time                                                10.01
+  --------------------------------------------------------------------------
+  data required time                                                10.01
+  data arrival time                                                 -9.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+1

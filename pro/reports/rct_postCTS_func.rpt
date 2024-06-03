@@ -1,0 +1,65 @@
+ 
+****************************************
+Report : clock tree
+Design : mmForMLP
+Version: O-2018.06-SP5-3
+Date   : Mon Jun  3 21:23:58 2024
+****************************************
+
+Information: Float pin scale factor for the 'max' operating condition of scenario 'default' is set to 1.000 (CTS-375)
+
+============ Global Skew Report ================
+
+Clock Tree Name                : "Int_clk"
+Clock Period                   : 10.00000       
+Clock Tree root pin            : "clk"
+Number of Levels               : 3
+Number of Sinks                : 62
+Number of CT Buffers           : 19
+Number of CTS added gates      : 0
+Number of Preexisting Gates    : 0
+Number of Preexisting Buf/Inv  : 0
+Total Number of Clock Cells    : 19
+Total Area of CT Buffers       : 81.43200       
+Total Area of CT cells         : 81.43200       
+Max Global Skew                : 0.00741   
+Number of MaxTran Violators    : 0
+Number of MaxCap Violators     : 0
+Number of MaxFanout Violators  : 0
+
+
+Operating Condition               worst
+Clock global Skew                 0.007
+Longest path delay                0.090
+Shortest path delay               0.083
+
+The longest path delay end pin: partialSum_reg[27]/CK
+The shortest path delay end pin: partialSum_reg[21]/CK
+
+The longest Path:
+Pin                                         Cap       Fanout    Trans     Incr      Arri
+----------------------------------------------------------------------------------------------------
+clk                                         0.000            1  0.000     0.000     0.000     r
+clk                                         0.117            9  0.000     0.000     0.000     r
+CLKINVX12AR9_G1B1I2_1/I                     0.117            1  0.026     0.013     0.013     r
+CLKINVX12AR9_G1B1I2_1/O                     0.046            1  0.039     0.031     0.044     f
+CLKINVX12AR9_G1B2I2/I                       0.046            1  0.043     0.008     0.053     f
+CLKINVX12AR9_G1B2I2/O                       0.030           12  0.037     0.036     0.088     r
+partialSum_reg[27]/CK                       0.030            0  0.038     0.002     0.090     r
+[clock delay]                                                                       0.090
+----------------------------------------------------------------------------------------------------
+
+The Shortest Path:
+Pin                                         Cap       Fanout    Trans     Incr      Arri
+----------------------------------------------------------------------------------------------------
+clk                                         0.000            1  0.000     0.000     0.000     r
+clk                                         0.117            9  0.000     0.000     0.000     r
+CLKINVX8AR9_G1B1I3/I                        0.117            1  0.004     0.002     0.002     r
+CLKINVX8AR9_G1B1I3/O                        0.027            1  0.050     0.031     0.033     f
+CLKINVX12AR9_G1B2I4/I                       0.027            1  0.051     0.004     0.037     f
+CLKINVX12AR9_G1B2I4/O                       0.018            5  0.050     0.046     0.082     r
+partialSum_reg[21]/CK                       0.018            0  0.050     0.001     0.083     r
+[clock delay]                                                                       0.083
+----------------------------------------------------------------------------------------------------
+
+1

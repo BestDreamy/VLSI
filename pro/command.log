@@ -1,8 +1,75 @@
 #@ # 
 #@ # Running icc_shell Version O-2018.06-SP5-3 for linux64 -- Jun 06, 2019
-#@ # Date:   Sun Jun  2 21:25:55 2024
+#@ # Date:   Mon Jun  3 21:16:51 2024
 #@ # Run by: user001@2024-vlsi-22
 #@ 
+
+#@ # -- Starting source .synopsys_dc.setup
+
+#@ # Set Designer
+#@ set company {ShanghaiTech}
+#@ 
+#@ set std_path        "/home/user001/vlsi/pro/libs/M31_db"
+#@ set sram_path       "/home/user001/vlsi/pro/libs/SRAM_db"
+#@ set std_max         "M31GPSC900HL055PR_125CSS1P08_cworst_ccs.db"
+#@ set std_min         "M31GPSC900HL055PR_N40CFF1P32_cbest_ccs.db"
+#@ set sram_min_1024   "mem55lpw1024d16sp_ff1p32vn40c.db"
+#@ set sram_max_1024   "mem55lpw1024d16sp_ss1p08v125c.db"
+#@ set sram_min_256    "mem55lpw256d16sp_ff1p32vn40c.db"
+#@ set sram_max_256    "mem55lpw256d16sp_ss1p08v125c.db"
+#@ 
+#@ # Set File Direction
+#@ set my_lib_path " $sram_path $std_path"
+#@ set search_path "$search_path $my_lib_path"
+#@ set search_path "$search_path /home/tools/synopsys/syn/O-2018.06-SP5-2/dw/dw01/lib/dw01"
+#@ 
+#@ set design_dw_lib /home/tools/synopsys/syn/O-2018.06-SP5-2/libraries/syn/dw_foundation.sldb
+#@ 
+#@ # Define the target logic library, symbol library and link library
+#@ set_app_var target_library  "$std_max"
+#@ set_app_var link_library "* $sram_max_256 $sram_max_1024 $std_max $design_dw_lib"
+#@ set_app_var synthetic_library  "$std_max $design_dw_lib"
+#@ set_app_var symbol_library ""
+#@ # Synopsys Lib
+#@ #
+#@ 
+#@ 
+#@ # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#@ #  History
+#@ # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#@ 
+#@ # history keep 200
+#@ 
+#@ 
+#@ # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#@ #  Aliases
+#@ # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#@ 
+#@ alias h history
+#@ alias rc "report_constraint -all_violators"
+#@ alias rt report_timing
+#@ alias ra report_area
+#@ alias rq report_qor
+#@ alias page_on {set sh_enable_page_mode true}
+#@ alias page_off {set sh_enable_page_mode false}
+#@ alias fr "remove_design -designs"
+#@ 
+#@ 
+#@ # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#@ # Verify Settings
+#@ # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#@ echo "\n=================================================================="
+#@ echo "\nLibrary Settings:"
+#@ echo "search_path:             $search_path"
+#@ echo "link_library:            $link_library"
+#@ echo "target_library:          $target_library"
+#@ echo "symbol_library:          $symbol_library"
+#@ echo "\n=================================================================="
+#@ 
+#@ echo "\nI am ready...\n"
+#@ 
+#@ 
+#@ # -- End source .synopsys_dc.setup
 
 gui_start
 #@ # -- Starting source /home/tools/synopsys/icc/O-2018.06-SP5-3/auxx/tcllib/lib/iwidgets4.1/colors.itcl
@@ -36209,11 +36276,11 @@ gui_start
 #@ 
 #@ # -- End source /home/tools/synopsys/icc/O-2018.06-SP5-3/auxx/tcllib/lib/iwidgets4.1/watch.itk
 
-source scripts/icc_setup.tcl
-#@ # -- Starting source scripts/icc_setup.tcl
+source icc/icc_setup.tcl
+#@ # -- Starting source icc/icc_setup.tcl
 
 #@ set topLevel		mmForMLP
-#@ set work_path   /home/user001/vlsi/lab6
+#@ set work_path   /home/user001/vlsi/pro
 #@ set mw_verilog		${work_path}/dc_output/${topLevel}_netlist.v
 #@ set mw_sdc		${work_path}/dc_output/${topLevel}.sdc
 #@ 
@@ -36226,34 +36293,35 @@ source scripts/icc_setup.tcl
 #@ 
 #@ set mw_design_lib ${topLevel}.mwlib
 #@ 
-#@ set mw_tech_file ${work_path}/lab6_hw_lib/HL055P_7M6X1T4_RDL.tf
-#@ set tluplus_max  ${work_path}/lab6_hw_lib/tlup/HLMC_cl055lp_1p7m_1tm4x_rcworst.tlup
-#@ set tluplus_min  ${work_path}/lab6_hw_lib/tlup/HLMC_cl055lp_1p7m_1tm4x_rcbest.tlup
-#@ set tech2itf_map ${work_path}/lab6_hw_lib/tech2itf
+#@ set lib_path   /home/user001/vlsi/pro/libs
+#@ set mw_tech_file ${lib_path}/HL055P_7M6X1T4_RDL.tf
+#@ set tluplus_max  ${lib_path}/tlup/HLMC_cl055lp_1p7m_1tm4x_rcworst.tlup
+#@ set tluplus_min  ${lib_path}/tlup/HLMC_cl055lp_1p7m_1tm4x_rcbest.tlup
+#@ set tech2itf_map ${lib_path}/tech2itf
 #@ 
 #@ set mw_phys_refs ""
-#@ lappend mw_phys_refs ${work_path}/lab6_hw_lib/mwlib/M31GPSC900HL055PR
-#@ lappend mw_phys_refs ${work_path}/lab6_hw_lib/mwlib/mem55lpw128d16sp
-#@ lappend mw_phys_refs ${work_path}/lab6_hw_lib/mwlib/mem55lpw256d16sp
-#@ lappend mw_phys_refs ${work_path}/lab6_hw_lib/mwlib/mem55lpw1024d16sp
+#@ lappend mw_phys_refs ${lib_path}/mwlib/M31GPSC900HL055PR
+#@ lappend mw_phys_refs ${lib_path}/mwlib/mem55lpw128d16sp
+#@ lappend mw_phys_refs ${lib_path}/mwlib/mem55lpw256d16sp
+#@ lappend mw_phys_refs ${lib_path}/mwlib/mem55lpw1024d16sp
 #@ 
 #@ set link_library "*"
 #@ 
-#@ lappend link_library ${work_path}/lab6_hw_lib/M31_db/M31GPSC900HL055PR_125CSS1P08_cworst_ccs.db 
-#@ set_min_library  ${work_path}/lab6_hw_lib/M31_db/M31GPSC900HL055PR_125CSS1P08_cworst_ccs.db -min_version ${work_path}/lab6_hw_lib/M31_db/M31GPSC900HL055PR_N40CFF1P32_cbest_ccs.db
+#@ lappend link_library ${lib_path}/M31_db/M31GPSC900HL055PR_125CSS1P08_cworst_ccs.db 
+#@ set_min_library  ${lib_path}/M31_db/M31GPSC900HL055PR_125CSS1P08_cworst_ccs.db -min_version ${lib_path}/M31_db/M31GPSC900HL055PR_N40CFF1P32_cbest_ccs.db
 #@ 
-#@ lappend link_library ${work_path}/lab6_hw_lib/SRAM_db/mem55lpw128d16sp_ss1p08v125c.db
-#@ set_min_library  ${work_path}/lab6_hw_lib/SRAM_db/mem55lpw128d16sp_ss1p08v125c.db -min_version ${work_path}/lab6_hw_lib/SRAM_db/mem55lpw128d16sp_ff1p32vn40c.db
+#@ lappend link_library ${lib_path}/SRAM_db/mem55lpw128d16sp_ss1p08v125c.db
+#@ set_min_library  ${lib_path}/SRAM_db/mem55lpw128d16sp_ss1p08v125c.db -min_version ${lib_path}/SRAM_db/mem55lpw128d16sp_ff1p32vn40c.db
 #@ 
-#@ lappend link_library ${work_path}/lab6_hw_lib/SRAM_db/mem55lpw256d16sp_ss1p08v125c.db
-#@ set_min_library  ${work_path}/lab6_hw_lib/SRAM_db/mem55lpw256d16sp_ss1p08v125c.db -min_version ${work_path}/lab6_hw_lib/SRAM_db/mem55lpw256d16sp_ff1p32vn40c.db
+#@ lappend link_library ${lib_path}/SRAM_db/mem55lpw256d16sp_ss1p08v125c.db
+#@ set_min_library  ${lib_path}/SRAM_db/mem55lpw256d16sp_ss1p08v125c.db -min_version ${lib_path}/SRAM_db/mem55lpw256d16sp_ff1p32vn40c.db
 #@ 
-#@ lappend link_library ${work_path}/lab6_hw_lib/SRAM_db/mem55lpw1024d16sp_ss1p08v125c.db
-#@ set_min_library  ${work_path}/lab6_hw_lib/SRAM_db/mem55lpw1024d16sp_ss1p08v125c.db -min_version ${work_path}/lab6_hw_lib/SRAM_db/mem55lpw1024d16sp_ff1p32vn40c.db
+#@ lappend link_library ${lib_path}/SRAM_db/mem55lpw1024d16sp_ss1p08v125c.db
+#@ set_min_library  ${lib_path}/SRAM_db/mem55lpw1024d16sp_ss1p08v125c.db -min_version ${lib_path}/SRAM_db/mem55lpw1024d16sp_ff1p32vn40c.db
 #@ 
 #@ 
 #@ set target_library ""
-#@ lappend target_library ${work_path}/lab6_hw_lib/M31_db/M31GPSC900HL055PR_125CSS1P08_cworst_ccs.db 
+#@ lappend target_library ${lib_path}/M31_db/M31GPSC900HL055PR_125CSS1P08_cworst_ccs.db 
 #@ 
 #@ 
 #@ set_tlu_plus_files 	    -tech2itf_map $tech2itf_map 	    -max_tluplus $tluplus_max 	    -min_tluplus $tluplus_min
@@ -39439,32 +39507,16 @@ source scripts/icc_setup.tcl
 #@ 
 #@ # -- End source /home/tools/synopsys/icc/O-2018.06-SP5-3/auxx/syn/fp/bw/utils.tcl
 
-#@ win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
-
-#@ win_set_filter -visible -class polygon -layer {65-74 81 91}
-
-#@ win_set_filter -visible -class placement_blockage -filter {wiring} -layer {}
-
-#@ win_set_filter -expand_cell_types {std io hard_macro soft_macro ilm other  }
-
-#@ win_set_select_class -visible {cell port plan_group block_shielding plangroup_padding core_area die_area polygon group shape via terminal fill_cell placement_blockage }
-
-#@ win_set_filter -class cell -filter {cell_array cell_cover hard_macro_margin hard_margin route_blockage_margin soft_margin}
-
-#@ win_set_filter -class placement_blockage -filter {wiring} -layer {}
-
-#@ win_set_select_class {cell port plan_group group shape via placement_blockage }
-
 #@ 
 #@ remove_sdc
-#@ # GUI Debug: Building dc from empty. -- Time: 2sec 37ms
+#@ # GUI Debug: Building dc from empty. -- Time: 1sec 466ms
 
 #@ source $mw_sdc
-#@ # -- Starting source /home/user001/vlsi/lab6/dc_output/mmForMLP.sdc
+#@ # -- Starting source /home/user001/vlsi/pro/dc_output/mmForMLP.sdc
 
 #@ ###################################################################
 #@ 
-#@ # Created by write_sdc on Sat May  4 17:49:59 2024
+#@ # Created by write_sdc on Sun Jun  2 22:44:59 2024
 #@ 
 #@ ###################################################################
 #@ set sdc_version 2.1
@@ -39492,7 +39544,7 @@ source scripts/icc_setup.tcl
 #@ set_load -pin_load 0.03 [get_ports {result_payload[2]}]
 #@ set_load -pin_load 0.03 [get_ports {result_payload[1]}]
 #@ set_load -pin_load 0.03 [get_ports {result_payload[0]}]
-#@ create_clock [get_ports clk]  -name Int_clk  -period 3  -waveform {0 1.5}
+#@ create_clock [get_ports clk]  -name Int_clk  -period 10  -waveform {0 5}
 #@ set_clock_latency -max 0.25  [get_clocks Int_clk]
 #@ set_clock_latency -source -max 0.3  [get_clocks Int_clk]
 #@ set_clock_uncertainty -setup 0.5  [get_clocks Int_clk]
@@ -39500,63 +39552,63 @@ source scripts/icc_setup.tcl
 #@ set_clock_transition -max -fall 0.08 [get_clocks Int_clk]
 #@ set_clock_transition -min -rise 0.08 [get_clocks Int_clk]
 #@ set_clock_transition -min -fall 0.08 [get_clocks Int_clk]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports start_valid]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports start_valid]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports init_valid]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports init_valid]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[15]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[15]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[14]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[14]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[13]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[13]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[12]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[12]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[11]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[11]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[10]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[10]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[9]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[9]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[8]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[8]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[7]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[7]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[6]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[6]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[5]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[5]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[4]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[4]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[3]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[3]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[2]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[2]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[1]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[1]}]
-#@ set_input_delay -clock Int_clk  -max 0.9  [get_ports {load_payload[0]}]
-#@ set_input_delay -clock Int_clk  -min 0.18  [get_ports {load_payload[0]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports start_ready]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports init_ready]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports load_ready]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports result_valid]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[15]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[14]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[13]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[12]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[11]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[10]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[9]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[8]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[7]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[6]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[5]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[4]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[3]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[2]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[1]}]
-#@ set_output_delay -clock Int_clk  -max 1.8  [get_ports {result_payload[0]}]
-#@ # -- End source /home/user001/vlsi/lab6/dc_output/mmForMLP.sdc
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports start_valid]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports start_valid]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports init_valid]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports init_valid]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[15]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[15]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[14]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[14]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[13]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[13]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[12]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[12]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[11]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[11]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[10]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[10]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[9]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[9]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[8]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[8]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[7]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[7]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[6]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[6]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[5]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[5]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[4]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[4]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[3]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[3]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[2]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[2]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[1]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[1]}]
+#@ set_input_delay -clock Int_clk  -max 3  [get_ports {load_payload[0]}]
+#@ set_input_delay -clock Int_clk  -min 0.6  [get_ports {load_payload[0]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports start_ready]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports init_ready]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports load_ready]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports result_valid]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[15]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[14]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[13]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[12]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[11]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[10]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[9]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[8]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[7]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[6]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[5]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[4]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[3]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[2]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[1]}]
+#@ set_output_delay -clock Int_clk  -max 6  [get_ports {result_payload[0]}]
+#@ # -- End source /home/user001/vlsi/pro/dc_output/mmForMLP.sdc
 
 #@ 
 #@ report_ideal_network
@@ -39577,9 +39629,207 @@ source scripts/icc_setup.tcl
 #@ set_max_fanout     32    [current_design]
 #@ set_max_net_length 400.0 [current_design]
 #@ 
-#@ set_operating_conditions 	-analysis_type bc_wc 	-max_library  ${work_path}/lab6_hw_lib/M31_db/M31GPSC900HL055PR_125CSS1P08_cworst_ccs.db:M31GPSC900HL055PR_125CSS1P08_cworst_ccs 	-max 125CSS1P08 	-min_library  ${work_path}/lab6_hw_lib/M31_db/M31GPSC900HL055PR_N40CFF1P32_cbest_ccs.db:M31GPSC900HL055PR_N40CFF1P32_cbest_ccs 	-min N40CFF1P32
+#@ set_operating_conditions 	-analysis_type bc_wc 	-max_library  ${lib_path}/M31_db/M31GPSC900HL055PR_125CSS1P08_cworst_ccs.db:M31GPSC900HL055PR_125CSS1P08_cworst_ccs 	-max 125CSS1P08 	-min_library  ${lib_path}/M31_db/M31GPSC900HL055PR_N40CFF1P32_cbest_ccs.db:M31GPSC900HL055PR_N40CFF1P32_cbest_ccs 	-min N40CFF1P32
 #@ 
 #@ 
-#@ # -- End source scripts/icc_setup.tcl
+#@ save_mw_cel -as pro2icc_setup
+#@ # -- End source icc/icc_setup.tcl
 
+win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -visible -class polygon -layer {65-74 81 91}
+win_set_filter -visible -class placement_blockage -filter {wiring} -layer {}
+win_set_filter -expand_cell_types {std io hard_macro soft_macro ilm other  }
+win_set_select_class -visible {cell port plan_group block_shielding plangroup_padding core_area die_area polygon group shape via terminal fill_cell placement_blockage }
+win_set_filter -class cell -filter {cell_array cell_cover hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -class placement_blockage -filter {wiring} -layer {}
+win_set_select_class {cell port plan_group group shape via placement_blockage }
+::iccGUI::open_mw_cel  pro2power
+open_mw_cel pro2power
+source icc/place.tcl
+#@ # -- Starting source icc/place.tcl
+
+#@ set_attribute [all_macro_cells ] is_fixed true
+#@ set_attribute [all_macro_cells ] is_placed true
+#@ 
+#@ check_tlu_plus_files
+#@ # GUI Debug: Building dc from empty. -- Time: 192ms
+
+#@ 
+#@ set clock_nets [get_net -of [all_fanout -flat -clock_tree] -top_net_of_hierarchical_group]
+#@ set_ideal_network -no_propagate $clock_nets
+#@ 
+#@ group_path -name INPUTS -from [all_inputs]
+#@ group_path -name OUTPUTS -to [all_outputs]
+#@ group_path -name REG2REG -from [all_registers] -to [all_registers]
+#@ group_path -name REG2MEM -from [all_registers] -to [all_macro_cells]
+#@ group_path -name MEM2REG -from [all_macro_cells] -to [all_registers]
+#@ 
+#@ remove_clock_uncertainty [all_clocks]
+#@ set_clock_uncertainty -setup  0.3 [all_clocks]
+#@ set_clock_uncertainty -hold  0.05 [all_clocks]
+#@ 
+#@ create_placement_blockage -coordinate {{   14.8 121.8} {140.225 314.1}} -name placement_blockage_1 -type soft
+#@ create_placement_blockage -coordinate {{159.735 121.8} { 285.16 314.1}} -name placement_blockage_2 -type soft
+#@ create_placement_blockage -coordinate {{   14.8  14.2} {140.225 106.4}} -name placement_blockage_3 -type soft
+#@ create_placement_blockage -coordinate {{159.735  14.2} { 285.16 106.4}} -name placement_blockage_4 -type soft
+#@ 
+#@ set_ignored_layer 	-rc_congestion_ignored_layers "M6 T4M2 RDL" 	-min_routing_layer M2 	-max_routing_layer M5
+#@ 
+#@ create_placement
+#@ legalize_placement
+#@ 
+#@ place_opt -skip_initial_placement -power -effort high -congestion
+#@ 
+#@ set step placement
+#@ report_design -physical > ${report_dir}/${step}_phys.rpt
+#@ report_timing -nosplit -delay max -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing.rpt
+#@ report_constraints -nosplit -all -max_delay > ${report_dir}/${step}_constrain.rpt
+#@ report_qor > ${report_dir}/${step}_qor.rpt
+#@ report_qor -summary >> ${report_dir}/${step}_qor.rpt
+#@ 
+#@ save_mw_cel -as pro2place
+#@ # -- End source icc/place.tcl
+
+source icc/clock.tcl
+#@ # -- Starting source icc/clock.tcl
+
+#@ remove_buffer_tree -all
+#@ 
+#@ set M2W [expr [get_layer_attribute -layer M2 defaultWidth]*2.0]
+#@ set M3W [expr [get_layer_attribute -layer M3 defaultWidth]*2.0]
+#@ set M4W [expr [get_layer_attribute -layer M4 defaultWidth]*2.0]
+#@ set M5W [expr [get_layer_attribute -layer M5 defaultWidth]*2.0]
+#@ 
+#@ set M2S [expr (([get_layer_attribute -layer M2 pitch]*4.0)-$M2W-[get_layer_attribute -layer M2 defaultWidth])/2]
+#@ set M3S [expr (([get_layer_attribute -layer M3 pitch]*4.0)-$M3W-[get_layer_attribute -layer M3 defaultWidth])/2]
+#@ set M4S [expr (([get_layer_attribute -layer M4 pitch]*4.0)-$M4W-[get_layer_attribute -layer M4 defaultWidth])/2]
+#@ set M5S [expr (([get_layer_attribute -layer M5 pitch]*4.0)-$M5W-[get_layer_attribute -layer M5 defaultWidth])/2]
+#@ 
+#@ define_routing_rule clk_space_rule 	-spacings "M2 $M2S M3 $M3S M4 $M4S M5 $M5S" 	-widths   "M2 $M2W M3 $M3W M4 $M4W M5 $M5W" 
+#@ 
+#@ set_clock_tree_options -routing_rule clk_space_rule        -max_transition .08        -max_fanout 32        -buffer_sizing true        -buffer_relocation true        -gate_sizing true        -gate_relocation true        -use_default_routing_for_sinks 1        -layer_list {M3 M4 M5}        -ocv_clustering true
+#@ 
+#@ remove_ideal_network -all
+#@ reset_clock_tree_references
+#@ 
+#@ set_clock_tree_references -references {        CLKINVX12AR9  }
+#@ 
+#@ set_clock_tree_references -references { 	CLKINVX12AR9  CLKINVX16AR9  CLKINVX2AR9  CLKINVX3AR9  CLKINVX4AR9  CLKINVX6AR9  CLKINVX8AR9         CLKBUFX12AR9  CLKBUFX16AR9  CLKBUFX2AR9  CLKBUFX3AR9  CLKBUFX4AR9  CLKBUFX6AR9  CLKBUFX8AR9 } -sizing_only
+#@ set_clock_tree_references -references {         CLKINVX12AR9  CLKINVX16AR9  CLKINVX2AR9  CLKINVX3AR9  CLKINVX4AR9  CLKINVX6AR9  CLKINVX8AR9         CLKBUFX12AR9  CLKBUFX16AR9  CLKBUFX2AR9  CLKBUFX3AR9  CLKBUFX4AR9  CLKBUFX6AR9  CLKBUFX8AR9 
+#@ } -delay_in
+#@ 
+#@ report_clock_tree > ${report_dir}/rct_postSetting.rpt
+#@ 
+#@ set root_clock_source [get_ports {clk}]
+#@ 
+#@ compile_clock_tree -clock_trees $root_clock_source
+#@ optimize_clock_tree -clock_trees $root_clock_source -operating_condition max
+#@ 
+#@ 
+#@ 
+#@ propagate_all_clocks
+#@ update_clock_latency
+#@ 
+#@ report_clock_tree > ${report_dir}/rct_postCTS_func.rpt 
+#@ 
+#@ set step clock
+#@ report_design -physical > ${report_dir}/${step}_phys.rpt
+#@ report_timing -nosplit -delay max -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing.rpt
+#@ report_constraints -nosplit -all -max_delay > ${report_dir}/${step}_constrain.rpt
+#@ report_qor > ${report_dir}/${step}_qor.rpt
+#@ report_qor -summary >> ${report_dir}/${step}_qor.rpt
+#@ 
+#@ save_mw_cel -as pro2clock
+#@ # -- End source icc/clock.tcl
+
+::iccGUI::open_mw_cel  pro2place
+open_mw_cel pro2place
+source icc/fixhold.tcl
+#@ # -- Starting source icc/fixhold.tcl
+
+#@ remove_clock_uncertainty [all_clocks]
+#@ # GUI Debug: Building dc from empty. -- Time: 228ms
+
+#@ set_clock_uncertainty -setup  0.25 [all_clocks]
+#@ set_clock_uncertainty -hold  0.05 [all_clocks]
+#@ 
+#@ set holdDels [get_lib_cell {
+#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/DEL0N1X1CR9
+#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/DEL0N2X1CR9
+#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/DEL0N3X1CR9
+#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/DEL0N5X1CR9
+#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/BUFX2AR9
+#@ }]
+#@ 
+#@ set_prefer -min $holdDels
+#@ 
+#@ set_fix_hold [all_clocks]
+#@ set_fix_hold_options -prioritize_tns -preferred_buffer
+#@ 
+#@ psynopt -power
+#@ save_mw_cel -as pro2fixhold
+#@ # -- End source icc/fixhold.tcl
+
+derive_pg_connection -power_net VCCK -ground_net GNDK
+verify_pg_nets
+source icc/route.tcl
+#@ # -- Starting source icc/route.tcl
+
+#@ derive_pg_connection -power_net VCCK -ground_net GNDK
+#@ 
+#@ verify_pg_nets
+#@ 
+#@ route_zrt_group -all_clock_nets -max_detail_route_iterations 10
+#@ 
+#@ route_opt -skip_initial_route -power
+#@ 
+#@ verify_zrt_route
+#@ 
+#@ route_zrt_detail -incremental true -initial_drc_from_input true
+#@ 
+#@ route_zrt_detail -incremental true -max_number_iterations 15
+#@ 
+#@ insert_zrt_redundant_vias
+#@ 
+#@ report_design_physical -route
+#@ 
+#@ insert_stdcell_filler -cell_with_metal "FILLERC16CR9 FILLERC8CR9" -connect_to_power VCCK -connect_to_ground GNDK -between_std_cells_only
+#@ 
+#@ insert_stdcell_filler -cell_without_metal "FILLER16AR9 FILLER8AR9 FILLER4AR9 FILLER3AR9  FILLER2AR9 FILLER1AR9" -connect_to_power VCCK -connect_to_ground GNDK -between_std_cells_only
+#@ 
+#@ insert_metal_filler -routing_space 2.0 -from_metal 2  -to_metal 5
+#@ 
+#@ write_stream -format gds example1SRAM.gds
+#@ 
+#@ set step finish
+#@ report_design -physical > ${report_dir}/${step}_phys.rpt
+#@ # GUI Debug: Building dc for netlist invalid. -- Time: 337ms
+
+#@ report_timing -nosplit -delay max -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing_setup.rpt
+#@ report_timing -nosplit -delay min -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing_hold.rpt
+#@ report_constraints -nosplit -all -max_delay > ${report_dir}/${step}_constrain.rpt
+#@ report_qor > ${report_dir}/${step}_qor.rpt
+#@ report_qor -summary >> ${report_dir}/${step}_qor.rpt
+#@ # -- End source icc/route.tcl
+
+gui_set_error_browser_option -show_mode all
+gui_set_error_browser_option -view_mode zoom
+gui_set_error_browser_option -zoom_factor 1.000000
+gui_error_browser -show
+gui_error_browser -show
+gui_load_error_view -name {pro2place.CEL}
+gui_error_browser -hide
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {CLOCK_TREES} -show {true}
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {PATH_SLACK} -show {true}
+gui_set_bucket_option -map {PATH_SLACK} -bucket {0} -option {exagg} -value {0.25}
+gui_set_bucket_option -map {PATH_SLACK} -bucket {1} -option {exagg} -value {0.41666666790843}
+gui_set_bucket_option -map {PATH_SLACK} -bucket {2} -option {exagg} -value {0.58333333581686}
+gui_set_bucket_option -map {PATH_SLACK} -bucket {3} -option {exagg} -value {0.750000014901161}
+gui_set_bucket_option -map {PATH_SLACK} -bucket {4} -option {exagg} -value {0.91666667163372}
+gui_set_bucket_option -map {PATH_SLACK} -bucket {5} -option {exagg} -value {1.08333337306976}
+gui_set_bucket_option -map {PATH_SLACK} -bucket {6} -option {exagg} -value {1.25000002980232}
+gui_set_bucket_option -map {PATH_SLACK} -bucket {7} -option {exagg} -value {1.41666668653488}
+gui_set_bucket_option -map {PATH_SLACK} -bucket {8} -option {exagg} -value {1.58333334326744}
+gui_set_bucket_option -map {PATH_SLACK} -bucket {9} -option {exagg} -value {1.75}
+win_select_objects -slct_targets global -at {280.995 152.540} -radius 0.2739
 exit

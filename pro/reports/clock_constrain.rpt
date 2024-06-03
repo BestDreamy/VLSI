@@ -1,0 +1,146 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -max_delay
+Design : mmForMLP
+Version: O-2018.06-SP5-3
+Date   : Mon Jun  3 21:23:58 2024
+****************************************
+
+	Parasitic source    : LPE
+	Parasitic mode      : RealRVirtualC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/25/125
+
+   max_delay/setup ('MEM2REG' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   partialSum_reg[35]/D         9.77          10.68 f        -0.91  (VIOLATED)
+   partialSum_reg[34]/D         9.97          10.54 r        -0.57  (VIOLATED)
+   partialSum_reg[33]/D         9.74          10.30 f        -0.56  (VIOLATED)
+   partialSum_reg[32]/D        10.03          10.21 f        -0.18  (VIOLATED)
+   partialSum_reg[31]/D        10.03          10.18 f        -0.15  (VIOLATED)
+
+
+   max_delay/setup ('REG2MEM' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   memForAorB_1/ram1rw_4/ram/ME     8.59      11.87 r        -3.28  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[11]     9.50    12.27 f       -2.76  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[11]     9.50    12.25 f       -2.74  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/ME     8.57      11.29 r        -2.72  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[10]     9.50    12.21 f       -2.70  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/ADR[1]     9.48    12.15 r      -2.67  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/ADR[0]     9.49    12.15 r      -2.66  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[10]     9.51    12.16 f       -2.65  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/ADR[2]     9.48    12.13 r      -2.65  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[9]     9.51    12.16 f        -2.65  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[0]     9.53    12.17 r        -2.64  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/ADR[3]     9.50    12.12 r      -2.63  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[9]     9.51    12.13 f        -2.62  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[6]     9.52    12.11 r        -2.59  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[1]     9.54    12.13 r        -2.59  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[5]     9.53    12.11 r        -2.59  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[4]     9.52    12.10 r        -2.58  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[7]     9.53    12.10 r        -2.57  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[12]     9.53    12.07 r       -2.54  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[8]     9.53    12.08 r        -2.54  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[14]     9.53    12.06 r       -2.53  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[13]     9.56    12.08 r       -2.51  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[2]     9.54    12.03 r        -2.49  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[3]     9.54    12.03 r        -2.49  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/ADR[7]     9.46    11.89 r      -2.43  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/ADR[6]     9.46    11.89 r      -2.43  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/ADR[5]     9.47    11.87 r      -2.40  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/ADR[4]     9.47    11.86 r      -2.39  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[14]     9.52    11.87 f       -2.35  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/D[15]     9.56    11.87 r       -2.31  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/ADR[1]     9.48    11.60 r      -2.12  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/ADR[0]     9.48    11.59 r      -2.11  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[1]     9.52    11.62 f        -2.11  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[7]     9.53    11.62 f        -2.10  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/ADR[2]     9.48    11.57 r      -2.09  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/ADR[3]     9.49    11.57 r      -2.08  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[3]     9.52    11.60 f        -2.08  (VIOLATED)
+   memForAorB_1/ram1rw_4/ram/WE     9.25      11.32 r        -2.07  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[2]     9.52    11.54 f        -2.02  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/ADR[5]     9.45    11.32 r      -1.87  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/ADR[6]     9.46    11.29 r      -1.83  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/ADR[7]     9.46    11.29 r      -1.82  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/ADR[4]     9.46    11.29 r      -1.82  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[4]     9.53    11.33 f        -1.80  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[12]     9.54    11.03 f       -1.49  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[5]     9.51    10.99 r        -1.48  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/WE     9.36      10.83 r        -1.47  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[13]     9.52    10.97 r       -1.45  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[0]     9.52    10.97 r        -1.45  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[6]     9.52    10.95 r        -1.43  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[8]     9.52    10.95 r        -1.43  (VIOLATED)
+   memForAorB_0/ram1rw_4/ram/D[15]     9.51    10.90 r       -1.39  (VIOLATED)
+
+
+   max_delay/setup ('REG2REG' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   fsm_stateReg_reg[0]/D        9.97          13.88 r        -3.92  (VIOLATED)
+   partialSum_reg[29]/D        10.03          13.93 f        -3.90  (VIOLATED)
+   partialSum_reg[7]/D         10.04          13.92 f        -3.89  (VIOLATED)
+   partialSum_reg[30]/D        10.03          13.91 f        -3.88  (VIOLATED)
+   partialSum_reg[8]/D         10.04          13.92 f        -3.88  (VIOLATED)
+   partialSum_reg[4]/D         10.03          13.91 f        -3.88  (VIOLATED)
+   partialSum_reg[3]/D         10.03          13.91 f        -3.88  (VIOLATED)
+   partialSum_reg[6]/D         10.03          13.91 f        -3.87  (VIOLATED)
+   partialSum_reg[1]/D         10.03          13.90 f        -3.87  (VIOLATED)
+   partialSum_reg[13]/D        10.03          13.90 f        -3.87  (VIOLATED)
+   partialSum_reg[5]/D         10.04          13.91 f        -3.87  (VIOLATED)
+   partialSum_reg[11]/D        10.03          13.90 f        -3.87  (VIOLATED)
+   partialSum_reg[0]/D         10.03          13.90 f        -3.87  (VIOLATED)
+   partialSum_reg[2]/D         10.03          13.90 f        -3.87  (VIOLATED)
+   partialSum_reg[34]/D        10.03          13.89 f        -3.86  (VIOLATED)
+   partialSum_reg[28]/D        10.03          13.89 f        -3.85  (VIOLATED)
+   partialSum_reg[32]/D        10.03          13.88 f        -3.85  (VIOLATED)
+   partialSum_reg[21]/D        10.04          13.89 f        -3.85  (VIOLATED)
+   partialSum_reg[31]/D        10.03          13.88 f        -3.85  (VIOLATED)
+   partialSum_reg[23]/D        10.03          13.88 f        -3.85  (VIOLATED)
+   partialSum_reg[24]/D        10.03          13.88 f        -3.85  (VIOLATED)
+   partialSum_reg[15]/D        10.04          13.88 f        -3.84  (VIOLATED)
+   partialSum_reg[19]/D        10.04          13.88 f        -3.84  (VIOLATED)
+   partialSum_reg[9]/D         10.04          13.88 f        -3.84  (VIOLATED)
+   partialSum_reg[17]/D        10.04          13.88 f        -3.84  (VIOLATED)
+   partialSum_reg[16]/D         9.92          13.41 r        -3.49  (VIOLATED)
+   partialSum_reg[22]/D         9.92          13.41 r        -3.49  (VIOLATED)
+   partialSum_reg[14]/D         9.93          13.41 r        -3.49  (VIOLATED)
+   partialSum_reg[33]/D         9.92          13.41 r        -3.48  (VIOLATED)
+   partialSum_reg[12]/D         9.92          13.41 r        -3.48  (VIOLATED)
+   partialSum_reg[27]/D         9.92          13.40 r        -3.48  (VIOLATED)
+   partialSum_reg[10]/D         9.92          13.40 r        -3.48  (VIOLATED)
+   partialSum_reg[18]/D         9.93          13.40 r        -3.47  (VIOLATED)
+   partialSum_reg[20]/D         9.93          13.40 r        -3.47  (VIOLATED)
+   partialSum_reg[25]/D         9.93          13.40 r        -3.46  (VIOLATED)
+   partialSum_reg[26]/D         9.94          13.39 r        -3.45  (VIOLATED)
+   partialSum_reg[35]/D         9.94          13.35 r        -3.41  (VIOLATED)
+   fsm_cntGP_value_reg[7]/D     9.98          12.10 r        -2.12  (VIOLATED)
+   fsm_cntGP_value_reg[6]/D    10.04          11.95 f        -1.91  (VIOLATED)
+   fsm_cntGP_value_reg[5]/D    10.05          11.87 f        -1.83  (VIOLATED)
+   fsm_cntGP_value_reg[4]/D    10.01          11.62 f        -1.61  (VIOLATED)
+   fsm_cntGP_value_reg[3]/D    10.04          11.51 f        -1.46  (VIOLATED)
+   fsm_cntLayers_value_reg[2]/D     9.95      11.24 r        -1.29  (VIOLATED)
+   fsm_cnt16_value_reg[3]/D     9.98          11.26 r        -1.28  (VIOLATED)
+   fsm_cntGP_value_reg[2]/D    10.02          11.30 f        -1.28  (VIOLATED)
+   fsm_cntGP_value_reg[1]/D    10.04          11.25 f        -1.21  (VIOLATED)
+   fsm_cnt16_value_reg[2]/D    10.04          11.16 f        -1.12  (VIOLATED)
+   fsm_cntLayers_value_reg[1]/D    10.05      11.16 f        -1.11  (VIOLATED)
+   fsm_cnt16_value_reg[1]/D    10.04          11.11 f        -1.07  (VIOLATED)
+   fsm_cntGP_value_reg[0]/D    10.03          11.00 f        -0.97  (VIOLATED)
+   fsm_cntLayers_value_reg[0]/D    10.07      11.04 f        -0.96  (VIOLATED)
+   fsm_cnt16_value_reg[0]/D     9.93          10.72 r        -0.79  (VIOLATED)
+
+
+1

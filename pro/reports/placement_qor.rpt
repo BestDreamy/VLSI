@@ -1,0 +1,151 @@
+ 
+****************************************
+Report : qor
+Design : mmForMLP
+Version: O-2018.06-SP5-3
+Date   : Mon Jun  3 21:22:48 2024
+****************************************
+
+
+  Timing Path Group 'INPUTS'
+  -----------------------------------
+  Levels of Logic:               3.00
+  Critical Path Length:          0.43
+  Critical Path Slack:           5.75
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'MEM2REG'
+  -----------------------------------
+  Levels of Logic:              60.00
+  Critical Path Length:          9.67
+  Critical Path Slack:           0.00
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'OUTPUTS'
+  -----------------------------------
+  Levels of Logic:               4.00
+  Critical Path Length:          1.88
+  Critical Path Slack:           1.82
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'REG2MEM'
+  -----------------------------------
+  Levels of Logic:              36.00
+  Critical Path Length:          7.02
+  Critical Path Slack:           2.16
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'REG2REG'
+  -----------------------------------
+  Levels of Logic:              55.00
+  Critical Path Length:          8.92
+  Critical Path Slack:           0.74
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:               1132
+  Buf/Inv Cell Count:             194
+  Buf Cell Count:                  96
+  Inv Cell Count:                  98
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:      1070
+  Sequential Cell Count:           62
+  Macro Count:                      4
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:     3758.508011
+  Noncombinational Area:   481.571990
+  Buf/Inv Area:            291.095999
+  Total Buffer Area:           184.86
+  Total Inverter Area:         106.24
+  Macro/Black Box Area:  57333.644531
+  Net Area:                  0.000000
+  Net XLength        :       41179.93
+  Net YLength        :       39938.05
+  -----------------------------------
+  Cell Area:             61573.724533
+  Design Area:           61573.724533
+  Net Length        :        81117.98
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          1358
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: 2024-vlsi-22
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.00
+  Logic Optimization:                  0.00
+  Mapping Optimization:                7.14
+  -----------------------------------------
+  Overall Compile Time:                7.45
+  Overall Compile Wall Clock Time:     7.50
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  Nets with DRC Violations: 0
+  Total moveable cell area: 4240.1
+  Total fixed cell area: 57333.6
+  Total physical cell area: 61573.7
+  Core area: (3600 3600 296360 325800)
+
+
+  No hold constraints
+
+1

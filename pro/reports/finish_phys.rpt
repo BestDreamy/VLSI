@@ -1,0 +1,443 @@
+Information: linking reference library : /home/user001/vlsi/pro/libs/mwlib/M31GPSC900HL055PR. (PSYN-878)
+Information: linking reference library : /home/user001/vlsi/pro/libs/mwlib/mem55lpw128d16sp. (PSYN-878)
+Information: linking reference library : /home/user001/vlsi/pro/libs/mwlib/mem55lpw256d16sp. (PSYN-878)
+Information: linking reference library : /home/user001/vlsi/pro/libs/mwlib/mem55lpw1024d16sp. (PSYN-878)
+Information: Loading local_link_library attribute {/home/user001/vlsi/pro/libs/M31_db/M31GPSC900HL055PR_125CSS1P08_cworst_ccs.db}. (MWDC-290)
+
+  Linking design 'mmForMLP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  mmForMLP                    pro2place.CEL
+  M31GPSC900HL055PR_125CSS1P08_cworst_ccs (library)
+                              /home/user001/vlsi/pro/libs/M31_db/M31GPSC900HL055PR_125CSS1P08_cworst_ccs.db
+  mem55lpw128d16sp_lib (library)
+                              /home/user001/vlsi/pro/libs/SRAM_db/mem55lpw128d16sp_ss1p08v125c.db
+  mem55lpw256d16sp_lib (library)
+                              /home/user001/vlsi/pro/libs/SRAM_db/mem55lpw256d16sp_ss1p08v125c.db
+  mem55lpw1024d16sp_lib (library)
+                              /home/user001/vlsi/pro/libs/SRAM_db/mem55lpw1024d16sp_ss1p08v125c.db
+
+Information: The design has horizontal rows, and Y-symmetry has been used for sites. (MWDC-217)
+Floorplan loading succeeded.
+# GUI Debug: Building dc for netlist invalid. -- Time: 337ms
+ 
+****************************************
+Report : design
+        -physical
+Design : mmForMLP
+Version: O-2018.06-SP5-3
+Date   : Mon Jun  3 21:32:42 2024
+****************************************
+
+****************************** P&R Summary ********************************
+Date : Mon Jun  3 21:32:42 2024
+Machine Host Name: 2024-vlsi-22
+Working Directory: /home/user001/vlsi/pro
+Library Name:      mmForMLP.mwlib
+Cell Name:         pro2place.CEL;1
+Design Statistics:
+    Number of Macro Cells:         4
+    Number of Module Cells:        1128
+    Number of Pins:                14895
+    Number of IO Pins:             40
+    Number of Nets:                1360
+    Average Pins Per Net (Signal): 3.20987
+
+Chip Utilization:
+    Total Macro Cell Area:         57792.38
+    Total Std Cell Area:           4209.19
+    Total Blockage Area:           61326.72
+    Core Size:     width 292.76, height 322.20; area 94327.27
+    Chip Size:     width 300.00, height 330.00; area 99000.00
+    Std cells utilization:         12.75% 
+    Cell/Core Ratio:               65.73%
+    Cell/Chip Ratio:               62.63%
+    Number of Cell Rows:            179
+
+Master Instantiation:
+	MasterName	Type	InstCount
+	=================================
+	TAP01CR9	STD	1468
+	FILLERC16CR9	STD	934
+	FILLER4AR9	STD	445
+	FILLER2AR9	STD	335
+	FILLERC8CR9	STD	305
+	FILLER1AR9	STD	246
+	FILLER3AR9	STD	215
+	XNOR2X05AR9	STD	138
+	FILLER16AR9	STD	126
+	FAX05AR9	STD	91
+	FILLER8AR9	STD	82
+	INVX05AR9	STD	75
+	OAI22X05AR9	STD	62
+	NOR2X1AR9	STD	50
+	OAI22X2AR9	STD	45
+	NAND2X05AR9	STD	42
+	BUFX05AR9	STD	40
+	DFFRBQX05AR9	STD	36
+	OAI22X1AR9	STD	35
+	FAX1AR9		STD	32
+	CLKBUFX2AR9	STD	32
+	AO22X05AR9	STD	24
+	NOR2X05AR9	STD	17
+	CLKBUFX3AR9	STD	17
+	OAI22X3AR9	STD	16
+	DFFRBQX2AR9	STD	14
+	CLKAND2X2AR9	STD	13
+	FAX2AR9		STD	12
+	OAI22B2X05AR9	STD	11
+	CLKXNOR2X1AR9	STD	11
+	NAND2X2AR9	STD	11
+	AOI122X05AR9	STD	10
+	CLKNAND2X3AR9	STD	10
+	CLKINVX2AR9	STD	10
+	NAND2X1AR9	STD	9
+	MUX2X3AR9	STD	9
+	XOR2X05AR9	STD	8
+	MUX2X05AR9	STD	8
+	CLKXNOR2X2AR9	STD	8
+	MUX2X1AR9	STD	7
+	HAX05AR9	STD	7
+	OR2B1X05AR9	STD	7
+	CLKINVX3AR9	STD	7
+	NAND2X1IAR9	STD	7
+	NOR3X1AR9	STD	7
+	NAND2X4AR9	STD	7
+	OAI12X2IAR9	STD	7
+	OA12X05AR9	STD	6
+	AOI12X05AR9	STD	6
+	AND2B1X2AR9	STD	6
+	XOR3X05AR9	STD	6
+	AOI22B2X05AR9	STD	5
+	AOI22X05AR9	STD	5
+	CLKNAND2X2AR9	STD	5
+	DFFRBQX1AR9	STD	5
+	OR2X05AR9	STD	5
+	BUFX1AR9	STD	5
+	MUX2X2AR9	STD	5
+	AND2B1X1AR9	STD	4
+	CLKMUX2X1AR9	STD	4
+	CLKMUX2X2AR9	STD	4
+	AND2X05AR9	STD	3
+	AO12X05AR9	STD	3
+	CLKMUX2X3AR9	STD	3
+	AND2B1X3AR9	STD	3
+	AO12X2AR9	STD	3
+	AOI122X3AR9	STD	3
+	CLKNAND2X8AR9	STD	3
+	NOR4X1AR9	STD	2
+	NAND3X05AR9	STD	2
+	OAI13X05AR9	STD	2
+	NAND4X05AR9	STD	2
+	AOI13X05AR9	STD	2
+	INVX1AR9	STD	2
+	OAI12X1IAR9	STD	2
+	NAND2X2OAR9	STD	2
+	CLKXNOR2X3AR9	STD	2
+	NAND2X3AR9	STD	2
+	NOR4X2AR9	STD	2
+	CLKINVX1AR9	STD	2
+	OR2X1AR9	STD	2
+	NAND3X1AR9	STD	2
+	CLKAND2X6AR9	STD	2
+	AOI22X1AR9	STD	2
+	OAI12X2AR9	STD	2
+	CLKNAND2X6AR9	STD	2
+	CLKINVX4AR9	STD	2
+	MUX2X4AR9	STD	2
+	CLKXNOR2X4AR9	STD	2
+	CLKNAND2X4AR9	STD	2
+	OAI12X4IAR9	STD	2
+	AO12X1AR9	STD	2
+	AND2B1X05AR9	STD	1
+	OAI12X05AR9	STD	1
+	AOI112X05AR9	STD	1
+	OAI112X05AR9	STD	1
+	CLKNAND2X1AR9	STD	1
+	NOR2X2OAR9	STD	1
+	DFFRBQX4J1AR9	STD	1
+	DFFRBQBX3AR9	STD	1
+	AO122X05AR9	STD	1
+	NAND2X1OAR9	STD	1
+	CLKBUFX6AR9	STD	1
+	OAI22B2X1AR9	STD	1
+	AO13X2AR9	STD	1
+	NAND4X1AR9	STD	1
+	HAX1AR9		STD	1
+	DFFRBQX3AR9	STD	1
+	NAND2X6AR9	STD	1
+	NAND2X4IAR9	STD	1
+	OAI13X4IAR9	STD	1
+	AOI12X1IAR9	STD	1
+	AOI122X2AR9	STD	1
+	CLKAND2X3AR9	STD	1
+	AND3B2X2AR9	STD	1
+	CLKNOR2X2AR9	STD	1
+	CLKBUFX1AR9	STD	1
+	NAND3X2AR9	STD	1
+	CLKAND2X4AR9	STD	1
+	CLKNOR2X1AR9	STD	1
+	NOR4B1X1AR9	STD	1
+	NAND2B1X1AR9	STD	1
+	NAND2X2IAR9	STD	1
+	FAX3AR9		STD	1
+	XOR2X1AR9	STD	1
+	NAND3X3AR9	STD	1
+	NAND4X2AR9	STD	1
+	AOI122X1AR9	STD	1
+	mem55lpw1024d16sp	MACRO	2
+	mem55lpw256d16sp	MACRO	2
+	=================================
+
+Timing/Optimization Information:
+
+Global Routing Information:
+    layer M1, dir Hor, min width = 0.09, min space = 0.09 pitch = 0.20
+    layer M2, dir Ver, min width = 0.10, min space = 0.10 pitch = 0.26
+    layer M3, dir Hor, min width = 0.10, min space = 0.10 pitch = 0.20
+    layer M4, dir Ver, min width = 0.10, min space = 0.10 pitch = 0.20
+    layer M5, dir Hor, min width = 0.10, min space = 0.10 pitch = 0.20
+    layer M6, dir Ver, min width = 0.10, min space = 0.10 pitch = 0.20
+    layer T4M2, dir Hor, min width = 0.40, min space = 0.40 pitch = 0.80
+    layer RDL, dir Ver, min width = 3.00, min space = 2.00 pitch = 5.00
+     
+    Average gCell capacity  2.41	 on layer (1)	 M1
+    Average gCell capacity  2.47	 on layer (2)	 M2
+    Average gCell capacity  3.47	 on layer (3)	 M3
+    Average gCell capacity  5.83	 on layer (4)	 M4
+    Average gCell capacity  6.88	 on layer (5)	 M5
+    Average gCell capacity  8.98	 on layer (6)	 M6
+    Average gCell capacity  0.00	 on layer (7)	 T4M2
+    Average gCell capacity  0.00	 on layer (8)	 RDL
+     
+    Initial. Both Dirs: Overflow =    72 Max = 3 GRCs =   103 (0.17%)
+    Initial. H routing: Overflow =    15 Max = 1 (GRCs =  6) GRCs =    31 (0.10%)
+    Initial. V routing: Overflow =    56 Max = 3 (GRCs =  2) GRCs =    72 (0.24%)
+     
+    phase1. Both Dirs: Overflow =    44 Max = 3 GRCs =    51 (0.08%)
+    phase1. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+    phase1. V routing: Overflow =    44 Max = 3 (GRCs =  3) GRCs =    51 (0.17%)
+     
+    phase2. Both Dirs: Overflow =    44 Max = 3 GRCs =    49 (0.08%)
+    phase2. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+    phase2. V routing: Overflow =    44 Max = 3 (GRCs =  3) GRCs =    49 (0.16%)
+     
+    Total Wire Length = 83256.64
+    Layer M1 wire length = 0.00
+    Layer M2 wire length = 13680.66
+    Layer M3 wire length = 28098.67
+    Layer M4 wire length = 27104.44
+    Layer M5 wire length = 14372.86
+    Layer M6 wire length = 0.00
+    Layer T4M2 wire length = 0.00
+    Layer RDL wire length = 0.00
+    Total Number of Contacts = 10081
+    Via V12_X_V1S1E11 count = 4059
+    Via V23_X_V1S1E11 count = 4182
+    Via V34_X_V1S1E11 count = 1307
+    Via V45_X_V1S1E11 count = 533
+    Via V56_X_V1S1E11 count = 0
+    Via V67_X_V1S1E11 count = 0
+    Via V78_X_V1S1E11 count = 0
+     
+    Elapsed real time: 0:00:00
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:00 total = 0:00:00
+    Total Proc Memory(MB): 2746
+
+Track Assignment Information:
+    Number of wires with overlap after iteration 0 = 3026 of 12231
+
+    Number of wires with overlap after iteration 1 = 1063 of 9211
+
+    Total M1 wire length: 167.5
+    Total M2 wire length: 13148.7
+    Total M3 wire length: 28198.5
+    Total M4 wire length: 27752.6
+    Total M5 wire length: 14469.5
+    Total M6 wire length: 0.0
+    Total T4M2 wire length: 0.0
+    Total RDL wire length: 0.0
+    Total wire length: 83736.8
+
+    Elapsed real time: 0:00:01
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:01 total = 0:00:01
+    Total Proc Memory(MB): 2746
+
+Detailed Routing Information:
+    
+
+    ---------- Detail route ----------
+
+     
+    Elapsed real time: 0:00:00
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:00 total = 0:00:00
+    Total Proc Memory(MB): 2746
+     
+    Cumulative run time upto current stage: Elapsed = 0:00:00 CPU = 0:00:00
+     
+    DR finished with 0 open nets, of which 0 are frozen
+    DR finished with 0 violations
+     
+    DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	0
+    Total number of nets = 1360
+    0 open nets, of which 0 are frozen
+    Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                     0 ports without pins of 0 cells connected to 0 nets
+                                     0 ports of 0 cover cells connected to 0 non-pg nets
+    Total number of DRCs = 0
+    Total number of antenna violations = antenna checking not active
+    Total number of voltage-area violations = no voltage-areas defined
+    
+
+     
+    Elapsed real time: 0:00:00
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:00 total = 0:00:00
+    Total Proc Memory(MB): 2746
+     
+    Cumulative run time upto current stage: Elapsed = 0:00:00 CPU = 0:00:00
+    
+
+    ---------- Chip finish: insert redundant vias ----------
+
+    RedundantVia finished with 5 violations
+     
+    DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	5
+    	End of line spacing : 2
+    	Less than minimum edge length : 1
+    	Less than minimum enclosed area : 1
+    	Less than minimum width : 1
+     
+    Begin DRC fixing ...
+
+     
+    Iteration 1: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	0
+     
+    Elapsed real time: 0:00:05
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:05 total = 0:00:05
+    Total Proc Memory(MB): 2746
+     
+    Cumulative run time upto current stage: Elapsed = 0:00:05 CPU = 0:00:05
+     
+    Redundant via insertion finished with 0 open nets, of which 0 are frozen
+    Redundant via insertion finished with 0 violations
+     
+    DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	0
+    Total number of nets = 1360
+    0 open nets, of which 0 are frozen
+    Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                     0 ports without pins of 0 cells connected to 0 nets
+                                     0 ports of 0 cover cells connected to 0 non-pg nets
+    Total number of DRCs = 0
+    Total number of antenna violations = antenna checking not active
+    Total number of voltage-area violations = no voltage-areas defined
+    
+
+     
+    Elapsed real time: 0:00:00
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:00 total = 0:00:00
+    Total Proc Memory(MB): 2746
+     
+    Cumulative run time upto current stage: Elapsed = 0:00:05 CPU = 0:00:05
+
+DRC information: 
+      Total error number: 0
+
+Ring Wiring Statistics:
+
+Stripe Wiring Statistics:
+    metal2 Wire Length(count):               1636.80(2046)
+    metal4 Wire Length(count):              13022.27(111)
+    metal5 Wire Length(count):              18048.65(213)
+  ==============================================
+    Total Wire Length(count):               32707.72(2370)
+    Number of via1 Contacts:           2046
+    Number of via2 Contacts:           2046
+    Number of via3 Contacts:           2054
+    Number of via4 Contacts:           2977
+  ==============================================
+    Total Number of Contacts:     9123
+
+User Wiring Statistics:
+
+PG follow-pin Wiring Statistics:
+    metal1 Wire Length(count):              20072.64(452)
+    metal5 Wire Length(count):               1864.77(528)
+  ==============================================
+    Total Wire Length(count):               21937.41(980)
+    Number of via1 Contacts:            524
+    Number of via2 Contacts:            524
+    Number of via3 Contacts:            526
+    Number of via4 Contacts:           1044
+  ==============================================
+    Total Number of Contacts:     2618
+
+Signal Wiring Statistics:
+    metal1 Wire Length(count):                495.44(2890)
+    metal2 Wire Length(count):              12642.97(4183)
+    metal3 Wire Length(count):              28092.81(3400)
+    metal4 Wire Length(count):              28373.08(1155)
+    metal5 Wire Length(count):              14485.80(323)
+  ==============================================
+    Total Wire Length(count):               84090.10(11951)
+
+      Mask Name      Contact Code    Number Of Contacts    Percentage
+        via1    V12_X_V1S1E11(1)               121	       2.94
+        via1    V12_H_V1S1E11(2)                11	      0.267
+        via1    V12_X_V1S1E21(4)                 2	     0.0486
+        via1    V12_X_V1S1E22(5)                 1	     0.0243
+        via1_2x1  V12_X_V1S1E12(3)                 1	     0.0243
+        via1_1x2  V12_X_V1S1E22(5)                 7	       0.17
+        via1_1x2  V12_X_V1S1E12(3)                 3	     0.0729
+        via1_2x1  V12_X_V1S1E21(4)                15	      0.364
+        via1_1x2  V12_X_V1S1E21(4)                69	       1.68
+        via1_1x2  V12_H_V1S1E11(2)               284	        6.9
+        via1_2x1  V12_X_V1S1E11(1)               707	       17.2
+        via1_2x1  V12_H_V1S1E11(2)              1912	       46.5
+        via1_1x2  V12_X_V1S1E11(1)               983	       23.9
+ Default via for layer via1:                   3.28%
+ Yield-optmized via for layer via1:            96.7%
+
+        via2    V23_X_V1S1E11(10)                75	       1.58
+        via2    V23_H_V1S1E11(11)                14	      0.295
+        via2_1x2  V23_H_V1S1E11(11)               365	        7.7
+        via2_1x2  V23_X_V1S1E11(10)               620	       13.1
+        via2_2x1  V23_H_V1S1E11(11)              1107	       23.4
+        via2_2x1  V23_X_V1S1E11(10)              2558	         54
+ Default via for layer via2:                   1.88%
+ Yield-optmized via for layer via2:            98.1%
+
+        via3    V34_X_V1S1E11(19)                28	       1.71
+        via3_1x2  V34_H_V1S1E11(20)                14	      0.854
+        via3_2x1  V34_H_V1S1E11(20)                37	       2.26
+        via3_1x2  V34_X_V1S1E11(19)               372	       22.7
+        via3_2x1  V34_X_V1S1E11(19)              1189	       72.5
+ Default via for layer via3:                   1.71%
+ Yield-optmized via for layer via3:            98.3%
+
+        via4    V45_X_V1S1E11(28)                 5	      0.877
+        via4_1x2  V45_H_V1S1E11(29)                 1	      0.175
+        via4_2x1  V45_X_V1S1E11(28)               458	       80.4
+        via4_2x1  V45_H_V1S1E11(29)                17	       2.98
+        via4_1x2  V45_X_V1S1E11(28)                89	       15.6
+ Default via for layer via4:                   0.877%
+ Yield-optmized via for layer via4:            99.1%
+
+
+ Double Via rate for all layers:           97.7%
+  ==============================================
+    Total Number of Contacts:    11065
+
+  Horizontal/Vertical Wire Distribution:
+    Layer      Hor. Wire (% of Hor.)     Ver. Wire (% of Ver.)
+    metal1           177.12 ( 0.41%)           318.32 ( 0.77%)
+    metal2           175.83 ( 0.41%)         12467.14 (30.26%)
+    metal3         28042.51 (65.38%)            50.30 ( 0.12%)
+    metal4            11.53 ( 0.03%)         28361.56 (68.84%)
+    metal5         14483.60 (33.77%)             2.20 ( 0.01%)
+  ==============================================================
+    Total          42890.58                  41199.52
+1

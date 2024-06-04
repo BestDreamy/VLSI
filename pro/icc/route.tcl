@@ -31,3 +31,4 @@ report_timing -nosplit -delay min -max_path 2 -nworst 2 -input -net -trans -cap 
 report_constraints -nosplit -all -max_delay > ${report_dir}/${step}_constrain.rpt
 report_qor > ${report_dir}/${step}_qor.rpt
 report_qor -summary >> ${report_dir}/${step}_qor.rpt
+save_mw_cel -as pro2route

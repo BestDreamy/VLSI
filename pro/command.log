@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running icc_shell Version O-2018.06-SP5-3 for linux64 -- Jun 06, 2019
-#@ # Date:   Mon Jun  3 23:24:36 2024
+#@ # Date:   Tue Jun  4 14:12:20 2024
 #@ # Run by: user001@2024-vlsi-22
 #@ 
 
@@ -39525,7 +39525,7 @@ source icc/icc_setup.tcl
 
 #@ 
 #@ remove_sdc
-#@ # GUI Debug: Building dc from empty. -- Time: 1sec 683ms
+#@ # GUI Debug: Building dc from empty. -- Time: 1sec 728ms
 
 #@ source $mw_sdc
 #@ # -- Starting source /home/user001/vlsi/pro/dc_output/mmForMLP.sdc
@@ -39651,157 +39651,8 @@ source icc/icc_setup.tcl
 #@ save_mw_cel -as pro2icc_setup
 #@ # -- End source icc/icc_setup.tcl
 
-::iccGUI::open_mw_cel  pro2icc_setup
-open_mw_cel pro2icc_setup
-source icc/pin_guide.tcl
-#@ # -- Starting source icc/pin_guide.tcl
-
-#@ create_die_area -boundary {{0 0} {300 330}}
-#@ set_pin_physical_constraints [remove_from_collection [get_ports *] [get_ports * -filter "direction==out"]] -layers {M2 M3 M4 M5}
-#@ set_pin_physical_constraints [remove_from_collection [get_ports *] [get_ports * -filter "direction==in"]] -layers {M2 M3 M4 M5}
-#@ create_pin_guide -bbox {{-3 225} {3.6 275}} [remove_from_collection [get_ports *] [get_ports * -filter "direction==out"]]
-#@ create_pin_guide -bbox {{496.4 225} {503 275}} [remove_from_collection [get_ports *] [get_ports * -filter "direction==in"]]
-#@ create_floorplan -control_type boundary -left_io2core 3.6 -bottom_io2core 3.6 -right_io2core 3.6 -top_io2core 3.6
-#@ save_mw_cel -as pro2pin
-#@ # -- End source icc/pin_guide.tcl
-
-win_select_objects -slct_targets global -at {68.945 607.645} -radius 0.5756
-win_select_objects -slct_targets global -at {67.215 586.345} -radius 0.5756
-move_objects -delta {20.145 -386.700} [get_selection]
-win_select_objects -slct_targets global -at {193.840 432.275} -radius 0.5756
-move_objects -delta {49.495 -196.000} [get_selection]
-win_select_objects -slct_targets global -at {32.110 375.340} -radius 0.5756
-move_objects -delta {16.115 -322.000} [get_selection]
-change_selection 
-win_select_objects -slct_targets global -at {301.465 364.980} -radius 0.5756
-move_objects -delta {-68.490 -314.800} [get_selection]
-win_select_objects -slct_targets global -at {61.460 221.795} -radius 0.5756
-align_objects -side Top [get_selection] -offset 15
-align_objects -side Left [get_selection] -offset 15
-win_select_objects -slct_targets global -at {230.675 251.150} -radius 0.5756
-align_objects -side Top [get_selection] -offset 15
-align_objects -side Right [get_selection] -offset 15
-win_select_objects -slct_targets global -at {83.335 64.095} -radius 0.5756
-align_objects -side Bottom [get_selection] -offset 15
-align_objects -side Left [get_selection] -offset 15
-win_select_objects -slct_targets global -at {257.150 53.735} -radius 0.5756
-align_objects -side Left [get_selection] -offset 15
-align_objects -side Right [get_selection] -offset 15
-align_objects -side Bottom [get_selection] -offset 15
-change_selection [rotate_objects -by CW180 [get_selection]]
-win_select_objects -slct_targets global -at {106.355 75.030} -radius 0.5756
-change_selection [rotate_objects -by CW180 [get_selection]]
-source icc/power.tcl
-#@ # -- Starting source icc/power.tcl
-
-#@ set_attribute [all_macro] is_fixed true
-#@ set_attribute [all_macro] is_placed true
-#@ 
-#@ set_attribute [get_terminals *] is_fixed true
-#@ 
-#@ proc add_macro_cover { d e } {
-#@     set x 0
-#@     foreach_in_collection c [get_cells -hier -filter "is_hard_macro==true"] {
-#@         set coord [get_attribute $c bbox]
-#@         set low_x [expr [lindex [lindex $coord 0] 0] - $d]
-#@         set low_y [expr [lindex [lindex $coord 0] 1] - $d]
-#@         set high_x [expr [lindex [lindex $coord 1] 0] + $d]
-#@         set high_y [expr [lindex [lindex $coord 1] 1] + $d]
-#@         create_placement_blockage -bbox "$low_x $low_y $high_x $high_y" -type hard -name McBlockH_$x
-#@         set newCord [list [list [expr $low_x  + $e ] [expr $low_y  + $e ]] [list [expr $high_x - $e ] [expr $high_y - $e ]] ]
-#@         create_route_guide -name McBlockR_$x -no_preroute_layers {ME1 ME2 ME3 ME4} -coordinate $newCord -no_snap
-#@     incr x
-#@     }
-#@ }
-#@ add_macro_cover 1.8 0.14
-#@ 
-#@ derive_pg_connection -power_net VCCK -ground_net GNDK
-#@ 
-#@ add_end_cap -respect_blockage -ignore_soft_blockage -lib_cell TAP01CR9
-#@ 
-#@ derive_pg_connection -power_net VCCK -ground_net GNDK
-#@ 
-#@ preroute_standard_cells -fill_empty_rows
-#@ 
-#@ add_tap_cell_array -master_cell_name TAP01CR9     -distance 50     -pattern stagger_every_other_row     -tap_cell_identifier T     -tap_cell_separator _     -no_tap_cell_under_layers {M1 M2}     -connect_power_name VCCK     -connect_ground_name GNDK     -fill_boundary_row true     -fill_macro_blockage_row true     -boundary_row_double_density true     -macro_blockage_row_double_density true     -ignore_soft_blockage  true     -skip_fixed_cells true
-#@ 
-#@ create_power_straps -direction vertical -nets VCCK -layer M4 -width 1.0 -start_at 0.00 -step 10 -stop 490.0 -configure step_and_stop
-#@ create_power_straps -direction vertical -nets GNDK -layer M4 -width 1.0 -start_at 5.00 -step 10 -stop 500.0 -configure step_and_stop
-#@ 
-#@ create_power_straps -direction horizontal  -nets VCCK -layer M5 -width 1.0 -start_at 0.00 -step 10 -stop 490.0 -configure step_and_stop
-#@ create_power_straps -direction horizontal  -nets GNDK -layer M5 -width 1.0 -start_at 5.00 -step 10 -stop 500.0 -configure step_and_stop
-#@ save_mw_cel -as pro2power
-#@ # -- End source icc/power.tcl
-
-source icc/place.tcl
-#@ # -- Starting source icc/place.tcl
-
-#@ set_attribute [all_macro_cells ] is_fixed true
-#@ set_attribute [all_macro_cells ] is_placed true
-#@ 
-#@ check_tlu_plus_files
-#@ # GUI Debug: Building dc from empty. -- Time: 468ms
-
-#@ 
-#@ set clock_nets [get_net -of [all_fanout -flat -clock_tree] -top_net_of_hierarchical_group]
-#@ set_ideal_network -no_propagate $clock_nets
-#@ 
-#@ group_path -name INPUTS -from [all_inputs]
-#@ group_path -name OUTPUTS -to [all_outputs]
-#@ group_path -name REG2REG -from [all_registers] -to [all_registers]
-#@ group_path -name REG2MEM -from [all_registers] -to [all_macro_cells]
-#@ group_path -name MEM2REG -from [all_macro_cells] -to [all_registers]
-#@ 
-#@ remove_clock_uncertainty [all_clocks]
-#@ set_clock_uncertainty -setup  0.3 [all_clocks]
-#@ set_clock_uncertainty -hold  0.05 [all_clocks]
-#@ 
-#@ create_placement_blockage -coordinate {{   14.8 121.8} {140.225 314.1}} -name placement_blockage_1 -type soft
-#@ create_placement_blockage -coordinate {{159.735 121.8} { 285.16 314.1}} -name placement_blockage_2 -type soft
-#@ create_placement_blockage -coordinate {{   14.8  14.2} {140.225 106.4}} -name placement_blockage_3 -type soft
-#@ create_placement_blockage -coordinate {{159.735  14.2} { 285.16 106.4}} -name placement_blockage_4 -type soft
-#@ 
-#@ set_ignored_layer 	-rc_congestion_ignored_layers "M6 T4M2 RDL" 	-min_routing_layer M2 	-max_routing_layer M5
-#@ 
-#@ create_placement
-#@ legalize_placement
-#@ 
-#@ place_opt -skip_initial_placement -power -effort high -congestion
-#@ 
-#@ set step placement
-#@ report_design -physical > ${report_dir}/${step}_phys.rpt
-#@ report_timing -nosplit -delay max -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing.rpt
-#@ report_constraints -nosplit -all -max_delay > ${report_dir}/${step}_constrain.rpt
-#@ report_qor > ${report_dir}/${step}_qor.rpt
-#@ report_qor -summary >> ${report_dir}/${step}_qor.rpt
-#@ 
-#@ save_mw_cel -as pro2place
-#@ # -- End source icc/place.tcl
-
-source icc/fixhold.tcl
-#@ # -- Starting source icc/fixhold.tcl
-
-#@ remove_clock_uncertainty [all_clocks]
-#@ set_clock_uncertainty -setup  0.25 [all_clocks]
-#@ set_clock_uncertainty -hold  0.05 [all_clocks]
-#@ 
-#@ set holdDels [get_lib_cell {
-#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/DEL0N1X1CR9
-#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/DEL0N2X1CR9
-#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/DEL0N3X1CR9
-#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/DEL0N5X1CR9
-#@         M31GPSC900HL055PR_125CSS1P08_cworst_ccs/BUFX2AR9
-#@ }]
-#@ 
-#@ set_prefer -min $holdDels
-#@ 
-#@ set_fix_hold [all_clocks]
-#@ set_fix_hold_options -prioritize_tns -preferred_buffer
-#@ 
-#@ psynopt -power
-#@ save_mw_cel -as pro2fixhold
-#@ # -- End source icc/fixhold.tcl
-
+::iccGUI::open_mw_cel  pro2fixhold
+open_mw_cel pro2fixhold
 derive_pg_connection -power_net VCCK -ground_net GNDK
 verify_pg_nets
 source icc/route.tcl
@@ -39814,53 +39665,5 @@ source icc/route.tcl
 #@ route_zrt_group -all_clock_nets -max_detail_route_iterations 10
 #@ 
 #@ route_opt -skip_initial_route -power
-#@ 
-#@ verify_zrt_route
-#@ 
-#@ route_zrt_detail -incremental true -initial_drc_from_input true
-#@ 
-#@ route_zrt_detail -incremental true -max_number_iterations 15
-#@ 
-#@ insert_zrt_redundant_vias
-#@ 
-#@ report_design_physical -route
-#@ 
-#@ insert_stdcell_filler -cell_with_metal "FILLERC16CR9 FILLERC8CR9" -connect_to_power VCCK -connect_to_ground GNDK -between_std_cells_only
-#@ 
-#@ insert_stdcell_filler -cell_without_metal "FILLER16AR9 FILLER8AR9 FILLER4AR9 FILLER3AR9  FILLER2AR9 FILLER1AR9" -connect_to_power VCCK -connect_to_ground GNDK -between_std_cells_only
-#@ 
-#@ insert_metal_filler -routing_space 2.0 -from_metal 2  -to_metal 5
-#@ 
-#@ write_stream -format gds example1SRAM.gds
-#@ 
-#@ set step finish
-#@ report_design -physical > ${report_dir}/${step}_phys.rpt
-#@ # GUI Debug: Building dc for netlist invalid. -- Time: 487ms
+#@ # GUI Debug: Building dc from empty. -- Time: 1sec 87ms
 
-#@ report_timing -nosplit -delay max -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing_setup.rpt
-#@ report_timing -nosplit -delay min -max_path 2 -nworst 2 -input -net -trans -cap > ${report_dir}/${step}_timing_hold.rpt
-#@ report_constraints -nosplit -all -max_delay > ${report_dir}/${step}_constrain.rpt
-#@ report_qor > ${report_dir}/${step}_qor.rpt
-#@ report_qor -summary >> ${report_dir}/${step}_qor.rpt
-#@ # -- End source icc/route.tcl
-
-gui_show_map -window [gui_get_current_window -types Layout -mru] -map {PATH_SLACK} -show {true}
-gui_set_bucket_option -map {PATH_SLACK} -bucket {0} -option {exagg} -value {0.25}
-gui_set_bucket_option -map {PATH_SLACK} -bucket {1} -option {exagg} -value {0.41666666790843}
-gui_set_bucket_option -map {PATH_SLACK} -bucket {2} -option {exagg} -value {0.58333333581686}
-gui_set_bucket_option -map {PATH_SLACK} -bucket {3} -option {exagg} -value {0.750000014901161}
-gui_set_bucket_option -map {PATH_SLACK} -bucket {4} -option {exagg} -value {0.91666667163372}
-gui_set_bucket_option -map {PATH_SLACK} -bucket {5} -option {exagg} -value {1.08333337306976}
-gui_set_bucket_option -map {PATH_SLACK} -bucket {6} -option {exagg} -value {1.25000002980232}
-gui_set_bucket_option -map {PATH_SLACK} -bucket {7} -option {exagg} -value {1.41666668653488}
-gui_set_bucket_option -map {PATH_SLACK} -bucket {8} -option {exagg} -value {1.58333334326744}
-gui_set_bucket_option -map {PATH_SLACK} -bucket {9} -option {exagg} -value {1.75}
-gui_set_error_browser_option -show_mode all
-gui_set_error_browser_option -view_mode zoom
-gui_set_error_browser_option -zoom_factor 1.000000
-gui_error_browser -show
-gui_load_error_view -name {pro2icc_setup.CEL}
-gui_error_browser -hide
-exit
-save_mw_cel  -design "START.CEL;11"
-save_mw_cel  -design "pro2icc_setup.CEL;1"
